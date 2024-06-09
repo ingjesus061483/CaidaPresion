@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "A/aqI+m28C8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\Documents\\CaidaPresion\\CaidaPresion\\CaidaPresion.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\fsharp.core\\8.0.100\\fsharp.core.8.0.100.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\hsg.numerics\\1.0.4\\hsg.numerics.1.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

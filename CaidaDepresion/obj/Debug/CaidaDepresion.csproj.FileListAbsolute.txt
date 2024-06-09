@@ -1,0 +1,11 @@
+C:\Users\jesus\source\repos\CaidaDepresion\CaidaDepresion\bin\Debug\CaidaDepresion.exe.config
+C:\Users\jesus\source\repos\CaidaDepresion\CaidaDepresion\bin\Debug\CaidaDepresion.exe
+C:\Users\jesus\source\repos\CaidaDepresion\CaidaDepresion\bin\Debug\CaidaDepresion.pdb
+C:\Users\jesus\source\repos\CaidaDepresion\CaidaDepresion\obj\Debug\CaidaDepresion.Properties.Resources.resources
+C:\Users\jesus\source\repos\CaidaDepresion\CaidaDepresion\obj\Debug\CaidaDepresion.csproj.GenerateResource.cache
+C:\Users\jesus\source\repos\CaidaDepresion\CaidaDepresion\obj\Debug\CaidaDepresion.csproj.CoreCompileInputs.cache
+C:\Users\jesus\source\repos\CaidaDepresion\CaidaDepresion\obj\Debug\CaidaDepresion.exe
+C:\Users\jesus\source\repos\CaidaDepresion\CaidaDepresion\obj\Debug\CaidaDepresion.pdb
+C:\Users\jesus\source\repos\CaidaDepresion\CaidaDepresion\obj\Debug\CaidaDepresion.frmPrincipal.resources
+C:\Users\jesus\source\repos\CaidaDepresion\CaidaDepresion\obj\Debug\CaidaDepresion.frmGrafica.resources
+C:\Users\jesus\source\repos\CaidaDepresion\CaidaDepresion\obj\Debug\CaidaDepresion.csproj.AssemblyReference.cache
