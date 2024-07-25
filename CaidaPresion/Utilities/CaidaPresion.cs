@@ -14,6 +14,12 @@ namespace CaidaPresion.Utilities
     {
         public static double holdup { get; set; }
 
+        public static double[]? PrimerTermino;
+        public static double[]? ReynoldEnjambre;
+        public static double[]? SegundoTermino;
+        public static double[]? TercerTermino;
+        public static double[]? FuncionObjetivo;
+        public static double[]? DiametroBurbuja;
         public static double db { get; set; }
         
         public static double ub { get; set; }
@@ -122,17 +128,40 @@ namespace CaidaPresion.Utilities
 
             //Tolerancia inicial
             double tol = 0.0001;            
-            double Resb = 0; 
+            double Resb = 0;           
+            PrimerTermino=new double[1];
+            ReynoldEnjambre = new double[1];
+            SegundoTermino=new double[1];
+            TercerTermino=new double[1];
+            FuncionObjetivo=new double[1];
+            DiametroBurbuja=new double[1];
+            int i = 0;
+            int j = 1;
             while (tol > 1e-9)
-            {
+            {         
+                j++;
+
                 double p1 = (18 * miusl * Ut) / (g * (rosl - rog)); //% Primer término de la función objetivo
+                PrimerTermino[i] = p1;
+                Array.Resize(ref PrimerTermino, j );
                 Resb = db0 * Usb * rosl * (1 - holdup) / miusl; //% Re del enjambre
+                ReynoldEnjambre[i] = Resb;
+                Array.Resize(ref ReynoldEnjambre , j );
                 double y = 1 + 0.15 * Math.Pow(Resb, 0.687); //% Segundo término de la función objetivo
+                SegundoTermino[i] = y;
+                Array.Resize (ref  SegundoTermino, j );
                 double z = Math.Pow((Usb * rosl * (1 - holdup) / miusl), 0.687);// % Tercer término de la función objetivo
+                TercerTermino[i] = z;
+                Array.Resize(ref TercerTermino, j );
                 double fdb = Math.Sqrt((p1 * y)) - db0; //% Función objetivo
+                FuncionObjetivo[i]=fdb;
+                Array.Resize(ref FuncionObjetivo , j );
                 double ddb = 0.10305 * Math.Sqrt(p1) * Math.Pow(y, -0.5) * Math.Pow(db0, -0.313) * (z / 2) - 1; //% Derivada de la función objetivo
                 double db1 = db0 - fdb / ddb;// % Nuevo diametro
+                DiametroBurbuja[i] = db1;
+                Array.Resize(ref DiametroBurbuja, j );
                 tol = Math.Abs(db1 - db0);// % Tolerancia
+                i++;
                 db0 =db1;
             }
             db = db0;
@@ -161,6 +190,22 @@ namespace CaidaPresion.Utilities
             row[column [0]] = values[0];
             row[column[1]] = values[1];
             dt.Rows.Add(row);
+        }
+        public static DataTable getTerminos(string termino, double[]valores )
+        {
+            string[] columns = { "Valores "+termino , "Resultado" };
+            DataTable dt = GetDataTable(columns);
+            double[] datos = valores != null ? valores : new double[] { }; 
+            for (int i = 0; i <=datos.Length - 1; i++)
+            {
+                int c = i + 1;
+                DataRow row = dt.NewRow();
+                row[columns[0]] = "valor " + c.ToString();
+                row[columns[1]] = datos[i];
+                dt.Rows.Add(row);
+                    
+            }
+            return dt; 
         }
         public static DataTable getInitialValues()
         {

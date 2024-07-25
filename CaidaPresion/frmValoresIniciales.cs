@@ -12,7 +12,8 @@ namespace CaidaPresion
 {
     public partial class frmValoresIniciales : Form
     {
-        public DataTable dt { get; set; }
+        public DataTable? dt { get; set; }
+        
         public frmValoresIniciales()
         {
             InitializeComponent();

@@ -1,11 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "A/aqI+m28C8=",
+  "dgSpecHash": "X8xgGWzq5rg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Documents\\CaidaPresion\\CaidaPresion\\CaidaPresion.csproj",
+  "projectFilePath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\CaidaPresion.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\user\\.nuget\\packages\\fsharp.core\\8.0.100\\fsharp.core.8.0.100.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\hsg.numerics\\1.0.4\\hsg.numerics.1.0.4.nupkg.sha512"
+    "C:\\Users\\jesus\\.nuget\\packages\\fsharp.core\\8.0.100\\fsharp.core.8.0.100.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\hsg.numerics\\1.0.4\\hsg.numerics.1.0.4.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\runtime.native.system.io.ports\\8.0.0\\runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\system.io.ports\\8.0.0\\system.io.ports.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }
