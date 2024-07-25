@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 //using HSG.Numerics;
 namespace CaidaPresion.Utilities
 {
-    public abstract class CaidaPresion
+    public abstract class CaidaDePresion
     {
         public static double holdup { get; set; }
 
@@ -79,7 +79,53 @@ namespace CaidaPresion.Utilities
                                                                                   tol);
             return soln1[0];
         }
-        
+        static double GetDiametroBurbuja(double Ut,double Usb ,ref double  tol)
+        {
+            PrimerTermino = new double[1];
+            ReynoldEnjambre = new double[1];
+            SegundoTermino = new double[1];
+            TercerTermino = new double[1];
+            FuncionObjetivo = new double[1];
+            DiametroBurbuja = new double[1];
+
+            //Diametro de burbuja asumido
+            double db0 = 0.001;
+
+            //Tolerancia inicial
+            tol = 0.0001;
+            double Resb = 0;
+
+            int i = 0;
+            int j = 1;
+            while (tol > 1e-9)
+            {
+                j++;
+
+                double p1 = (18 * miusl * Ut) / (g * (rosl - rog)); //% Primer término de la función objetivo
+                PrimerTermino[i] = p1;
+                Array.Resize(ref PrimerTermino, j);
+                Resb = db0 * Usb * rosl * (1 - holdup) / miusl; //% Re del enjambre
+                ReynoldEnjambre[i] = Resb;
+                Array.Resize(ref ReynoldEnjambre, j);
+                double y = 1 + 0.15 * Math.Pow(Resb, 0.687); //% Segundo término de la función objetivo
+                SegundoTermino[i] = y;
+                Array.Resize(ref SegundoTermino, j);
+                double z = Math.Pow((Usb * rosl * (1 - holdup) / miusl), 0.687);// % Tercer término de la función objetivo
+                TercerTermino[i] = z;
+                Array.Resize(ref TercerTermino, j);
+                double fdb = Math.Sqrt((p1 * y)) - db0; //% Función objetivo
+                FuncionObjetivo[i] = fdb;
+                Array.Resize(ref FuncionObjetivo, j);
+                double ddb = 0.10305 * Math.Sqrt(p1) * Math.Pow(y, -0.5) * Math.Pow(db0, -0.313) * (z / 2) - 1; //% Derivada de la función objetivo
+                double db1 = db0 - fdb / ddb;// % Nuevo diametro
+                DiametroBurbuja[i] = db1;
+                Array.Resize(ref DiametroBurbuja, j);
+                tol = Math.Abs(db1 - db0);// % Tolerancia
+                i++;
+                db0 = db1;
+            }
+            return db0; 
+        }
 
         /// <summary>
         /// /
@@ -93,6 +139,7 @@ namespace CaidaPresion.Utilities
         /// <returns></returns>
         public static  double CalcularValorReynold(double deltap, double Jg,double jsl )
         {
+         
 
             if (Jg == 0)
             {
@@ -122,125 +169,53 @@ namespace CaidaPresion.Utilities
 
             // velocidad terminal del gas (m/s)
             double Ut =  Usb * Math.Pow(1 - holdup, (1 - m));
-
-            //Diametro de burbuja asumido
-            double db0 = 0.001;
-
-            //Tolerancia inicial
-            double tol = 0.0001;            
-            double Resb = 0;           
-            PrimerTermino=new double[1];
-            ReynoldEnjambre = new double[1];
-            SegundoTermino=new double[1];
-            TercerTermino=new double[1];
-            FuncionObjetivo=new double[1];
-            DiametroBurbuja=new double[1];
-            int i = 0;
-            int j = 1;
-            while (tol > 1e-9)
-            {         
-                j++;
-
-                double p1 = (18 * miusl * Ut) / (g * (rosl - rog)); //% Primer término de la función objetivo
-                PrimerTermino[i] = p1;
-                Array.Resize(ref PrimerTermino, j );
-                Resb = db0 * Usb * rosl * (1 - holdup) / miusl; //% Re del enjambre
-                ReynoldEnjambre[i] = Resb;
-                Array.Resize(ref ReynoldEnjambre , j );
-                double y = 1 + 0.15 * Math.Pow(Resb, 0.687); //% Segundo término de la función objetivo
-                SegundoTermino[i] = y;
-                Array.Resize (ref  SegundoTermino, j );
-                double z = Math.Pow((Usb * rosl * (1 - holdup) / miusl), 0.687);// % Tercer término de la función objetivo
-                TercerTermino[i] = z;
-                Array.Resize(ref TercerTermino, j );
-                double fdb = Math.Sqrt((p1 * y)) - db0; //% Función objetivo
-                FuncionObjetivo[i]=fdb;
-                Array.Resize(ref FuncionObjetivo , j );
-                double ddb = 0.10305 * Math.Sqrt(p1) * Math.Pow(y, -0.5) * Math.Pow(db0, -0.313) * (z / 2) - 1; //% Derivada de la función objetivo
-                double db1 = db0 - fdb / ddb;// % Nuevo diametro
-                DiametroBurbuja[i] = db1;
-                Array.Resize(ref DiametroBurbuja, j );
-                tol = Math.Abs(db1 - db0);// % Tolerancia
-                i++;
-                db0 =db1;
-            }
-            db = db0;
+            
+            double tol = 0;
+            db = GetDiametroBurbuja(Ut, Usb, ref tol);
             // Give number of variables
-            int unknownVariables1 = 1;
+            int unknownVariables = 1;
 
             // Wrap function so it can be called
             Fsolve.FunctionToSolve funcUb = new(funcToSolveUb);        
 
-            ub = getUb(funcUb, tol, unknownVariables1);
+            ub = getUb(funcUb, tol, unknownVariables);
             return db * rosl * ub  / miusl;       
         }
-        public static DataTable GetDataTable(string[] columns )
-        {
-            DataTable dt = new DataTable();
-            for (int i = 0; i <= columns.Length - 1;i++)
-            {
-                dt.Columns.Add(columns[i]);
-            }
- 
-            return dt;
-        }
-        public static  void SetRow(DataTable dt, string[] column, string[] values)
-        {
-            DataRow row = dt.NewRow();
-            row[column [0]] = values[0];
-            row[column[1]] = values[1];
-            dt.Rows.Add(row);
-        }
-        public static DataTable getTerminos(string termino, double[]valores )
-        {
-            string[] columns = { "Valores "+termino , "Resultado" };
-            DataTable dt = GetDataTable(columns);
-            double[] datos = valores != null ? valores : new double[] { }; 
-            for (int i = 0; i <=datos.Length - 1; i++)
-            {
-                int c = i + 1;
-                DataRow row = dt.NewRow();
-                row[columns[0]] = "valor " + c.ToString();
-                row[columns[1]] = datos[i];
-                dt.Rows.Add(row);
-                    
-            }
-            return dt; 
-        }
+        
         public static DataTable getInitialValues()
         {
             string[] columns = { "Variable", "Resultado" };
-            DataTable dt = GetDataTable(columns);
+            DataTable dt = Table.GetDataTable(columns);
             string[] values = { "Densidad de la particula (kg/m3)", rop.ToString() };
-            SetRow(dt, columns, values);
+            Table.SetRow(dt, columns, values);
             string[] values2 = { "Densidad del slurry (kg/m^3)", rosl.ToString() };
-            SetRow(dt, columns, values2);
+            Table.SetRow(dt, columns, values2);
             string[] values3 = { "Densidad del aire (kg/m^3)", rog.ToString() };
-            SetRow(dt, columns, values3);
+            Table.SetRow(dt, columns, values3);
             string[] value4 = { "Viscosidad del slurry (kg/m-s)", miusl.ToString() };
-            SetRow (dt, columns, value4);
+            Table.SetRow (dt, columns, value4);
             string[] values5 = {"m",m.ToString() };
-            SetRow(dt, columns, values5);
+            Table.SetRow(dt, columns, values5);
             string[] values6 = { "Densidad de la particula (kg/m3)", rog.ToString() }; 
-            SetRow(dt , columns, values6);
+            Table.SetRow(dt , columns, values6);
             string[] values7 = { "Presion de entrada (atm)", pent.ToString() };
-            SetRow(dt , columns, values7);
+            Table.SetRow(dt , columns, values7);
             string[] values8 = { "Densidad del agua (kg/m3)", row .ToString()};
-            SetRow(dt , columns, values8);
+            Table.SetRow(dt , columns, values8);
             string[] values9 = { "Porcentaje p/p del slurry (%p/p)", Cs1.ToString() };
-            SetRow(dt , columns, values9);
+            Table.SetRow(dt , columns, values9);
             string[] values10 = { "Deltha de L, medicion del holdup (m)", dl.ToString() };
-            SetRow(dt , columns, values10);
+            Table.SetRow(dt , columns, values10);
             string[] values11 = { "Temperatura (K)", T.ToString() };
-            SetRow (dt , columns, values11);
+            Table.SetRow (dt , columns, values11);
             string[] values12 = { "Viscosidad del agua(Kg/ms",miuw.ToString() };
-            SetRow(dt , columns, values12);
+            Table.SetRow(dt , columns, values12);
             string[] values13 = { "Peso molecular del gas (kg/kmol)", pmg.ToString() };
-            SetRow(dt , columns, values13);
+            Table.SetRow(dt , columns, values13);
             string[] values14 = { "gravedad (kg/m^2)",g.ToString() };
-            SetRow(dt , columns, values14);
+            Table.SetRow(dt , columns, values14);
             string[] values15 = { "Diametro de la particula (m)", dp.ToString() };
-            SetRow(dt , columns, values15);
+            Table.SetRow(dt , columns, values15);
             return dt;
 
         }

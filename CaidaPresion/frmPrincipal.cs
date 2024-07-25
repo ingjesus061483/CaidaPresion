@@ -13,13 +13,20 @@ namespace CaidaPresion
 {
     public partial class frmPrincipal : Form
     {
+        ToolTip toolTip1;
         public frmPrincipal()
         {
             InitializeComponent();
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            toolTip1 = new ToolTip
+            {
 
+                // Set up the delays for the ToolTip.
+                AutoPopDelay = 5000,
+                InitialDelay = 1000,
+                ReshowDelay = 500,
+                // Force the ToolTip text to be displayed whether or not the form is active.
+                ShowAlways = true
+            };
         }
 
         private void btnGraficar_Click(object sender, EventArgs e)
@@ -45,15 +52,15 @@ namespace CaidaPresion
                 MessageBox.Show("Jsl debe ser mayor que 0", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            double reynold = Utilities.CaidaPresion.CalcularValorReynold(DeltaP, VelLinealGas, Jsl);
+            double reynold = Utilities.CaidaDePresion.CalcularValorReynold(DeltaP, VelLinealGas, Jsl);
             string[] columns = { "Variable", "Resultado" };
-            DataTable dt = Utilities.CaidaPresion.GetDataTable(columns);
+            DataTable dt = Utilities.Table.GetDataTable(columns);
             string[] values = { "Reynold", reynold.ToString() };
-            Utilities.CaidaPresion.SetRow(dt, columns, values);
-            string[] values2 = { "Ub", Utilities.CaidaPresion.ub.ToString() };
-            Utilities.CaidaPresion.SetRow(dt, columns, values2);
-            string[] values3 = { "Hold up", Utilities.CaidaPresion.holdup.ToString() };
-            Utilities.CaidaPresion.SetRow(dt, columns, values3);
+            Utilities.Table.SetRow(dt, columns, values);
+            string[] values2 = { "Ub", Utilities.CaidaDePresion.ub.ToString() };
+            Utilities.Table.SetRow(dt, columns, values2);
+            string[] values3 = { "Hold up", Utilities.CaidaDePresion.holdup.ToString() };
+            Utilities.Table.SetRow(dt, columns, values3);
             dataGridView1.DataSource = dt;
             // frmGrafica.ShowDialog();
 
@@ -83,7 +90,7 @@ namespace CaidaPresion
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmValoresIniciales frmValoresIniciales = new frmValoresIniciales { dt = Utilities.CaidaPresion.getInitialValues() };
+            frmValoresIniciales frmValoresIniciales = new frmValoresIniciales { dt = Utilities.CaidaDePresion.getInitialValues() };
             frmValoresIniciales.ShowDialog();
         }
 
@@ -91,12 +98,12 @@ namespace CaidaPresion
         {
             frmDatosEntrada frmDatos = new frmDatosEntrada
             {
-                dt1 = Utilities.CaidaPresion.getTerminos("P1", Utilities.CaidaPresion.PrimerTermino),
-                dt2 = Utilities.CaidaPresion.getTerminos("ReynoldEnjambre", Utilities.CaidaPresion.ReynoldEnjambre),
-                dt3 = Utilities.CaidaPresion.getTerminos("SegundoTermino", Utilities.CaidaPresion.SegundoTermino),
-                dt4 = Utilities.CaidaPresion.getTerminos("TercerTermino", Utilities.CaidaPresion.TercerTermino),
-                dt5 = Utilities.CaidaPresion.getTerminos("FuncionObjetivo", Utilities.CaidaPresion.FuncionObjetivo),
-                dt6 = Utilities.CaidaPresion.getTerminos("DiametroBurbuja", Utilities.CaidaPresion.DiametroBurbuja)
+                dt1 = Utilities.Table.getTerminos("P1", Utilities.CaidaDePresion.PrimerTermino),
+                dt2 = Utilities.Table.getTerminos("ReynoldEnjambre", Utilities.CaidaDePresion.ReynoldEnjambre),
+                dt3 = Utilities.Table.getTerminos("SegundoTermino", Utilities.CaidaDePresion.SegundoTermino),
+                dt4 = Utilities.Table.getTerminos("TercerTermino", Utilities.CaidaDePresion.TercerTermino),
+                dt5 = Utilities.Table.getTerminos("FuncionObjetivo", Utilities.CaidaDePresion.FuncionObjetivo),
+                dt6 = Utilities.Table.getTerminos("DiametroBurbuja", Utilities.CaidaDePresion.DiametroBurbuja)
             };
             frmDatos.ShowDialog();
         }
@@ -105,6 +112,13 @@ namespace CaidaPresion
         {
             statusStrip1.Items[0].Text = DateTime.Now.ToString();
             timer1.Start();
+            toolTip1.SetToolTip(button4, "Mostrar otros resultados");
+            toolTip1.SetToolTip(button3, "Ver valores iniciales");
+            toolTip1.SetToolTip(btnCalibrar , "Calibrar plc");
+            toolTip1.SetToolTip(btnGraficar, "Graficar resultados");
+
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -113,6 +127,11 @@ namespace CaidaPresion
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
