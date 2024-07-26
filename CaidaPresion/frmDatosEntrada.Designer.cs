@@ -46,8 +46,9 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.BackgroundColor = Color.FromArgb(2, 11, 10);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(4, 3);
+            dataGridView1.Location = new Point(10, 15);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
@@ -58,8 +59,9 @@
             // 
             dataGridView2.AllowUserToAddRows = false;
             dataGridView2.AllowUserToDeleteRows = false;
+            dataGridView2.BackgroundColor = Color.FromArgb(2, 11, 10);
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(255, 3);
+            dataGridView2.Location = new Point(272, 15);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.ReadOnly = true;
             dataGridView2.RowHeadersVisible = false;
@@ -70,8 +72,9 @@
             // 
             dataGridView3.AllowUserToAddRows = false;
             dataGridView3.AllowUserToDeleteRows = false;
+            dataGridView3.BackgroundColor = Color.FromArgb(2, 11, 10);
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(506, 3);
+            dataGridView3.Location = new Point(536, 15);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.ReadOnly = true;
             dataGridView3.RowHeadersVisible = false;
@@ -82,8 +85,9 @@
             // 
             dataGridView4.AllowUserToAddRows = false;
             dataGridView4.AllowUserToDeleteRows = false;
+            dataGridView4.BackgroundColor = Color.FromArgb(2, 11, 10);
             dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Location = new Point(6, 243);
+            dataGridView4.Location = new Point(10, 266);
             dataGridView4.Name = "dataGridView4";
             dataGridView4.ReadOnly = true;
             dataGridView4.RowHeadersVisible = false;
@@ -94,8 +98,9 @@
             // 
             dataGridView5.AllowUserToAddRows = false;
             dataGridView5.AllowUserToDeleteRows = false;
+            dataGridView5.BackgroundColor = Color.FromArgb(2, 11, 10);
             dataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView5.Location = new Point(256, 243);
+            dataGridView5.Location = new Point(272, 266);
             dataGridView5.Name = "dataGridView5";
             dataGridView5.ReadOnly = true;
             dataGridView5.RowHeadersVisible = false;
@@ -106,8 +111,9 @@
             // 
             dataGridView6.AllowUserToAddRows = false;
             dataGridView6.AllowUserToDeleteRows = false;
+            dataGridView6.BackgroundColor = Color.FromArgb(2, 11, 10);
             dataGridView6.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView6.Location = new Point(508, 242);
+            dataGridView6.Location = new Point(536, 266);
             dataGridView6.Name = "dataGridView6";
             dataGridView6.ReadOnly = true;
             dataGridView6.RowHeadersVisible = false;
@@ -118,7 +124,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(757, 450);
+            BackColor = Color.Black;
+            ClientSize = new Size(800, 450);
             Controls.Add(dataGridView6);
             Controls.Add(dataGridView5);
             Controls.Add(dataGridView4);

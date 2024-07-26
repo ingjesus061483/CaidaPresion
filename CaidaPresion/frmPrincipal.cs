@@ -110,11 +110,11 @@ namespace CaidaPresion
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            statusStrip1.Items[0].Text = DateTime.Now.ToString();
+            lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
             timer1.Start();
             toolTip1.SetToolTip(button4, "Mostrar otros resultados");
             toolTip1.SetToolTip(button3, "Ver valores iniciales");
-            toolTip1.SetToolTip(btnCalibrar , "Calibrar plc");
+            toolTip1.SetToolTip(btnCalibrar, "Calibrar plc");
             toolTip1.SetToolTip(btnGraficar, "Graficar resultados");
 
 
@@ -123,7 +123,7 @@ namespace CaidaPresion
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            statusStrip1.Items[0].Text = DateTime.Now.ToString();
+            lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -132,6 +132,16 @@ namespace CaidaPresion
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
         }

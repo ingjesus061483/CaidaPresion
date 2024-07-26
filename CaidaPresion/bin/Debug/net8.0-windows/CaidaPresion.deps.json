@@ -9,6 +9,7 @@
       "CaidaPresion/1.0.0": {
         "dependencies": {
           "HSG.Numerics": "1.0.4",
+          "Microsoft.Chart.Controls": "4.7.2046",
           "System.IO.Ports": "8.0.0"
         },
         "runtime": {
@@ -75,6 +76,26 @@
           "lib/net6.0/HSG.Numerics.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Chart.Controls/4.7.2046": {
+        "runtime": {
+          "lib/net35/System.Web.DataVisualization.Design.dll": {
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.5.30729.116"
+          },
+          "lib/net35/System.Web.DataVisualization.dll": {
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.5.30729.116"
+          },
+          "lib/net35/System.Windows.Forms.DataVisualization.Design.dll": {
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.5.30729.116"
+          },
+          "lib/net35/System.Windows.Forms.DataVisualization.dll": {
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.5.30729.116"
           }
         }
       },
@@ -178,6 +199,13 @@
       "sha512": "sha512-Xbeovj3dCnCtOTB8VjuVyL6jWBY/dYVnnzgJlGYOP7L0J2RSM2rsSpmJhfGyy5r5i59Olh+W2cKRumUCDtCFVA==",
       "path": "hsg.numerics/1.0.4",
       "hashPath": "hsg.numerics.1.0.4.nupkg.sha512"
+    },
+    "Microsoft.Chart.Controls/4.7.2046": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tSNkrA2zBGiRFC5Xmb2pnowds+2919zGyuiNMZf5cP1OpKi/Q1qPbQ8xWr2jnr8hCfBFiRV9WeIdCANMpo/jRw==",
+      "path": "microsoft.chart.controls/4.7.2046",
+      "hashPath": "microsoft.chart.controls.4.7.2046.nupkg.sha512"
     },
     "runtime.linux-arm.runtime.native.System.IO.Ports/8.0.0": {
       "type": "package",
