@@ -55,13 +55,13 @@
             button4 = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
             panel5 = new Panel();
-            panel7 = new Panel();
+            label7 = new Label();
+            pnlGraficas = new Panel();
             panel9 = new Panel();
             lblReloj = new Label();
             panel8 = new Panel();
-            panel10 = new Panel();
             label1 = new Label();
-            label7 = new Label();
+            panel10 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
@@ -375,13 +375,25 @@
             panel5.Size = new Size(305, 171);
             panel5.TabIndex = 46;
             // 
-            // panel7
+            // label7
             // 
-            panel7.BackColor = Color.FromArgb(2, 11, 10);
-            panel7.Location = new Point(236, 7);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(584, 483);
-            panel7.TabIndex = 0;
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(72, 11);
+            label7.Margin = new Padding(2, 0, 2, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(145, 16);
+            label7.TabIndex = 53;
+            label7.Text = "DATOS DE ENTRADA";
+            // 
+            // pnlGraficas
+            // 
+            pnlGraficas.BackColor = Color.FromArgb(2, 11, 10);
+            pnlGraficas.Location = new Point(236, 7);
+            pnlGraficas.Name = "pnlGraficas";
+            pnlGraficas.Size = new Size(584, 483);
+            pnlGraficas.TabIndex = 0;
             // 
             // panel9
             // 
@@ -415,6 +427,18 @@
             panel8.Size = new Size(178, 116);
             panel8.TabIndex = 50;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(7, 6);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(160, 16);
+            label1.TabIndex = 52;
+            label1.Text = "MODO DE EJECUCIÓN";
+            // 
             // panel10
             // 
             panel10.BackColor = Color.FromArgb(2, 11, 10);
@@ -429,30 +453,6 @@
             panel10.Size = new Size(262, 91);
             panel10.TabIndex = 51;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(7, 6);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(160, 16);
-            label1.TabIndex = 52;
-            label1.Text = "MODO DE EJECUCIÓN";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(72, 11);
-            label7.Margin = new Padding(2, 0, 2, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(145, 16);
-            label7.TabIndex = 53;
-            label7.Text = "DATOS DE ENTRADA";
-            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -460,7 +460,7 @@
             BackColor = Color.Black;
             ClientSize = new Size(1134, 749);
             Controls.Add(panel1);
-            Controls.Add(panel7);
+            Controls.Add(pnlGraficas);
             Controls.Add(pictureBox1);
             Controls.Add(dataGridView1);
             Controls.Add(panel3);
@@ -515,7 +515,7 @@
         private System.Windows.Forms.Timer timer1;
         private Panel panel4;
         private Panel panel5;
-        private Panel panel7;
+        private Panel pnlGraficas;
         private Panel panel9;
         private Label lblReloj;
         private Panel panel8;

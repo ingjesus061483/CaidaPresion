@@ -53,6 +53,18 @@
               "target": "Package",
               "version": "[1.0.4, )"
             },
+            "Microsoft.Chart.Controls": {
+              "target": "Package",
+              "version": "[4.7.2046, )"
+            },
+            "System.Data.OleDb": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
             "System.IO.Ports": {
               "target": "Package",
               "version": "[8.0.0, )"

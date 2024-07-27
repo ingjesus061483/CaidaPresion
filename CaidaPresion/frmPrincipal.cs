@@ -8,15 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Windows.Forms.DataVisualization.Charting;
+//using Graficas;
 namespace CaidaPresion
 {
     public partial class frmPrincipal : Form
     {
         ToolTip toolTip1;
+        Chart graficaPrueba ;
+
         public frmPrincipal()
         {
             InitializeComponent();
+            graficaPrueba = new Chart { BackColor = Color.FromArgb(2, 11, 10) };
+
             toolTip1 = new ToolTip
             {
 
@@ -62,6 +67,7 @@ namespace CaidaPresion
             string[] values3 = { "Hold up", Utilities.CaidaDePresion.holdup.ToString() };
             Utilities.Table.SetRow(dt, columns, values3);
             dataGridView1.DataSource = dt;
+            graficaPrueba .DataSource = dt;
             // frmGrafica.ShowDialog();
 
         }
@@ -110,14 +116,14 @@ namespace CaidaPresion
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            
             lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
             timer1.Start();
             toolTip1.SetToolTip(button4, "Mostrar otros resultados");
             toolTip1.SetToolTip(button3, "Ver valores iniciales");
             toolTip1.SetToolTip(btnCalibrar, "Calibrar plc");
             toolTip1.SetToolTip(btnGraficar, "Graficar resultados");
-
-
+            pnlGraficas .Controls.Add(graficaPrueba);
 
         }
 
