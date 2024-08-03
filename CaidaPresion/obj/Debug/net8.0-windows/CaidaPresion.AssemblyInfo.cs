@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CaidaPresion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adbef640899d56697d0b2fa0db6bc2c5c1c9e7eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e88b8ca0eca9d9f431fd0bce51b067f73852321")]
 [assembly: System.Reflection.AssemblyProductAttribute("CaidaPresion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CaidaPresion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

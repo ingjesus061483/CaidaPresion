@@ -1,6 +1,6 @@
 ﻿namespace PuertoSerie
 {
-    partial class Form2
+    partial class frmSimulador
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSimulador));
             btnCalibrar = new Button();
             panel1 = new Panel();
             label1 = new Label();
@@ -110,7 +110,7 @@
             // cmbSerialPort
             // 
             cmbSerialPort.FormattingEnabled = true;
-            cmbSerialPort.Location = new Point(196, 25);
+            cmbSerialPort.Location = new Point(196, 26);
             cmbSerialPort.Margin = new Padding(4, 5, 4, 5);
             cmbSerialPort.Name = "cmbSerialPort";
             cmbSerialPort.Size = new Size(171, 33);
@@ -134,9 +134,8 @@
             txtDeltaP.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDeltaP.Location = new Point(196, 75);
             txtDeltaP.Name = "txtDeltaP";
-            txtDeltaP.Size = new Size(84, 30);
+            txtDeltaP.Size = new Size(171, 30);
             txtDeltaP.TabIndex = 46;
-            txtDeltaP.TextChanged += txtDeltaP_TextChanged;
             // 
             // label3
             // 
@@ -206,7 +205,7 @@
             numDataBit.Size = new Size(171, 31);
             numDataBit.TabIndex = 50;
             // 
-            // Form2
+            // frmSimulador
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -214,9 +213,9 @@
             ClientSize = new Size(449, 450);
             Controls.Add(btnCalibrar);
             Controls.Add(panel1);
-            Name = "Form2";
+            Name = "frmSimulador";
             Text = "Form2";
-            Load += Form2_Load;
+            Load += frmSimulador_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numBaudRate).EndInit();

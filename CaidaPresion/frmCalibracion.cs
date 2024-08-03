@@ -14,43 +14,32 @@ namespace CaidaPresion
     public partial class frmCalibracion : Form
     {
         SerialPort serialPort;
+        public string Dato { get; set; }
         public frmCalibracion()
         {
             InitializeComponent();
+            serialPort = new SerialPort();
+            Dato = "";
+            serialPort.DataReceived += SerialPort_DataReceived;
+        }
+
+        private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            Dato = serialPort.ReadExisting(); 
+            this.Invoke(new EventHandler(DisplayText)); 
+        }
+        private void DisplayText(object sender, EventArgs e)
+        {
+            txtDeltaP.AppendText(Dato);
+            this.Close();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
             string[] serialports = SerialPort.GetPortNames();
             foreach (string serialport in serialports)
             {
                 cmbSerialPort.Items.Add(serialport);
             }
-            serialPort = new SerialPort();
-            serialPort.DataReceived += SerialPort_DataReceived;
-            var valuesAsArray = Enum.GetValues(typeof(Parity));
-            foreach (var value in valuesAsArray)
-            {
-                cmbParity.Items.Add(value);
-            }
-            numBaudRate.Maximum = serialPort.BaudRate;
-            numBaudRate.Value = serialPort.BaudRate;
-            numDataBit.Value = serialPort.DataBits;
-            var valuesAsArray2 = Enum.GetValues(typeof(StopBits));
-            foreach (var value in valuesAsArray2)
-            {
-                cmbStopBits.Items.Add(value);
-            }
-
-        }
-
-        private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-            
-            string data = serialPort.ReadLine();;
-
-            txtDeltaP.Text =data;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,15 +51,6 @@ namespace CaidaPresion
             serialPort.PortName = cmbSerialPort.Text;
             serialPort.Open();
             txtDeltaP.Text = "";
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-            this.Invoke(SerialPort_DataReceived);
-
-
-
-        }
+        }     
     }
 }
