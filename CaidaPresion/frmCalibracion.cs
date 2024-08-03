@@ -23,12 +23,13 @@ namespace CaidaPresion
                 cmbSerialPort.Items.Add(serialport);
             }
             serialPort = new SerialPort();
+            serialPort.DataReceived += SerialPort_DataReceived;
             var valuesAsArray = Enum.GetValues(typeof(Parity));
             foreach (var value in valuesAsArray)
             {
                 cmbParity.Items.Add(value);
             }
-            numBaudRate.Maximum = serialPort.BaudRate; 
+            numBaudRate.Maximum = serialPort.BaudRate;
             numBaudRate.Value = serialPort.BaudRate;
             numDataBit.Value = serialPort.DataBits;
             var valuesAsArray2 = Enum.GetValues(typeof(StopBits));
@@ -36,7 +37,15 @@ namespace CaidaPresion
             {
                 cmbStopBits.Items.Add(value);
             }
+
+        }
+
+        private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
             
+            string data = serialPort.ReadLine();;
+
+            txtDeltaP.Text =data;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -46,13 +55,22 @@ namespace CaidaPresion
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if( serialPort.IsOpen)
+            if (serialPort.IsOpen)
             {
                 serialPort.Close();
             }
-            serialPort .PortName=cmbSerialPort .Text ;
-            serialPort .Open();
+            serialPort.PortName = cmbSerialPort.Text;
+            serialPort.Open();
             txtDeltaP.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            this.Invoke(SerialPort_DataReceived);
+
+
+
         }
     }
 }
