@@ -179,8 +179,7 @@ namespace CaidaPresion.Utilities
 
             ub = getUb(funcUb, tol, unknownVariables);
             return db * rosl * ub  / miusl;       
-        }
-        
+        }        
         public static DataTable getInitialValues()
         {
             string[] columns = { "Variable", "Resultado" };
