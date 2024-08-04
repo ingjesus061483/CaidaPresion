@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\utilities\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\utilities\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\utilities\\caidadepresion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\utilities\\caidadepresion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DA460A8A-4A3C-4223-ACAD-CFF6BB1F5FBA}|SerialPort\\PuertoSerie.csproj|c:\\users\\jesus\\documents\\caidapresion\\serialport\\frmsimulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA460A8A-4A3C-4223-ACAD-CFF6BB1F5FBA}|SerialPort\\PuertoSerie.csproj|solutionrelative:serialport\\frmsimulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,6 +39,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Table.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\Utilities\\Table.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\Utilities\\Table.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\Utilities\\Table.cs",
+              "RelativeToolTip": "CaidaPresion\\Utilities\\Table.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T12:29:26.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CaidaDePresion.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\Utilities\\CaidaDePresion.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\Utilities\\CaidaDePresion.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\Utilities\\CaidaDePresion.cs",
+              "RelativeToolTip": "CaidaPresion\\Utilities\\CaidaDePresion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T12:23:45.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "frmSimulador.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\SerialPort\\frmSimulador.cs",
               "RelativeDocumentMoniker": "SerialPort\\frmSimulador.cs",
@@ -43,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "frmSimulador.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\SerialPort\\frmSimulador.cs",
               "RelativeDocumentMoniker": "SerialPort\\frmSimulador.cs",
@@ -54,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "frmCalibracion.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmCalibracion.cs",
@@ -67,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "frmCalibracion.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmCalibracion.cs",

@@ -18,7 +18,6 @@ namespace CaidaPresion.Utilities
             {
                 dt.Columns.Add(columns[i]);
             }
-
             return dt;
         }
         public static void SetRow(DataTable dt, string[] column, string[] values)
@@ -44,6 +43,5 @@ namespace CaidaPresion.Utilities
             }
             return dt;
         }
-
     }
 }
