@@ -21,17 +21,19 @@ namespace CaidaPresion
             serialPort = new SerialPort();
             Dato = "";
             serialPort.DataReceived += SerialPort_DataReceived;
-        }
-
+        }        
         private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
+            Thread.Sleep(500);
             Dato = serialPort.ReadExisting(); 
-            this.Invoke(new EventHandler(DisplayText)); 
+            this.Invoke(new EventHandler(DisplayText )); 
         }
         private void DisplayText(object sender, EventArgs e)
         {
             txtDeltaP.AppendText(Dato);
+            Thread.Sleep(1000);
             this.Close();
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {

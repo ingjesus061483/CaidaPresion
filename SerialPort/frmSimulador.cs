@@ -62,7 +62,7 @@ namespace PuertoSerie
             FillCombo(cmbStopBits, StopBits);
             FillCombo(cmbParity, parities);
             FillCombo(cmbSerialPort, serialports);
-
+            
         }
     }
 }

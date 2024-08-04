@@ -74,6 +74,7 @@
             txtDeltaP.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDeltaP.Location = new Point(196, 75);
             txtDeltaP.Name = "txtDeltaP";
+            txtDeltaP.ReadOnly = true;
             txtDeltaP.Size = new Size(200, 30);
             txtDeltaP.TabIndex = 46;
             // 
@@ -96,6 +97,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(453, 186);
+            ControlBox = false;
             Controls.Add(panel1);
             Margin = new Padding(4, 5, 4, 5);
             Name = "frmCalibracion";
