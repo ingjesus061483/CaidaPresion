@@ -13,46 +13,36 @@ namespace CaidaPresion
 {
     public partial class frmCalibracion : Form
     {
-        SerialPort serialPort;
+        Utilities.PuertoSerial puertoSerial;       
         public string Dato { get; set; }
         public frmCalibracion()
         {
             InitializeComponent();
-            serialPort = new SerialPort();
+            puertoSerial = new Utilities.PuertoSerial();
+            Utilities. Control.Form=this;
+            Utilities.Control.textBox = txtDeltaP;            
             Dato = "";
-            serialPort.DataReceived += SerialPort_DataReceived;
         }        
-        private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-            Thread.Sleep(500);
-            Dato = serialPort.ReadExisting(); 
-            this.Invoke(new EventHandler(DisplayText )); 
-        }
-        private void DisplayText(object sender, EventArgs e)
-        {
-            txtDeltaP.AppendText(Dato);
-            Thread.Sleep(1000);
-            this.Close();
-
-        }
         private void Form1_Load(object sender, EventArgs e)
-        {
-            string[] serialports = SerialPort.GetPortNames();
-            foreach (string serialport in serialports)
+        {            
+            Utilities.Control.FillCombo(cmbSerialPort, puertoSerial.Serialports);
+            if (cmbSerialPort.Items .Count == 0)
             {
-                cmbSerialPort.Items.Add(serialport);
+                MessageBox.Show("No hay Dispositivos disponibles","", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
             }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (serialPort.IsOpen)
-            {
-                serialPort.Close();
+            try
+            {                
+                puertoSerial.OpenDevice(cmbSerialPort.Text);
             }
-            serialPort.PortName = cmbSerialPort.Text;
-            serialPort.Open();
-            txtDeltaP.Text = "";
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }     
     }
 }

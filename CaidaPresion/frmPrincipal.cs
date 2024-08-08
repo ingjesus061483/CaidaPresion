@@ -92,12 +92,12 @@ namespace CaidaPresion
         {
             frmCalibracion form = new frmCalibracion();
             form.ShowDialog();
-            txtDeltaP.Text = form.Dato;
+            txtDeltaP.Text = Utilities.Control.Dato;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmValoresIniciales frmValoresIniciales = new frmValoresIniciales { dt = Utilities.CaidaDePresion.getInitialValues() };
+            frmValoresIniciales frmValoresIniciales = new frmValoresIniciales { dt = Utilities.Table.GetInitialValues() };
             frmValoresIniciales.ShowDialog();
         }
 
@@ -105,12 +105,12 @@ namespace CaidaPresion
         {
             frmDatosEntrada frmDatos = new frmDatosEntrada
             {
-                dt1 = Utilities.Table.getTerminos("P1", Utilities.CaidaDePresion.PrimerTermino),
-                dt2 = Utilities.Table.getTerminos("ReynoldEnjambre", Utilities.CaidaDePresion.ReynoldEnjambre),
-                dt3 = Utilities.Table.getTerminos("SegundoTermino", Utilities.CaidaDePresion.SegundoTermino),
-                dt4 = Utilities.Table.getTerminos("TercerTermino", Utilities.CaidaDePresion.TercerTermino),
-                dt5 = Utilities.Table.getTerminos("FuncionObjetivo", Utilities.CaidaDePresion.FuncionObjetivo),
-                dt6 = Utilities.Table.getTerminos("DiametroBurbuja", Utilities.CaidaDePresion.DiametroBurbuja)
+                dt1 = Utilities.Table.GetTerminos("P1", Utilities.CaidaDePresion.PrimerTermino),
+                dt2 = Utilities.Table.GetTerminos("ReynoldEnjambre", Utilities.CaidaDePresion.ReynoldEnjambre),
+                dt3 = Utilities.Table.GetTerminos("SegundoTermino", Utilities.CaidaDePresion.SegundoTermino),
+                dt4 = Utilities.Table.GetTerminos("TercerTermino", Utilities.CaidaDePresion.TercerTermino),
+                dt5 = Utilities.Table.GetTerminos("FuncionObjetivo", Utilities.CaidaDePresion.FuncionObjetivo),
+                dt6 = Utilities.Table.GetTerminos("DiametroBurbuja", Utilities.CaidaDePresion.DiametroBurbuja)
             };
             frmDatos.ShowDialog();
         }
