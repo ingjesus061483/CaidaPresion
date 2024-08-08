@@ -3,28 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\utilities\\caidadepresion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\utilities\\caidadepresion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{508A7BB2-338A-4EB1-AF80-958C6FBF45A0}|Utilities\\Utilities.csproj|c:\\users\\jesus\\documents\\caidapresion\\utilities\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508A7BB2-338A-4EB1-AF80-958C6FBF45A0}|Utilities\\Utilities.csproj|solutionrelative:utilities\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\utilities\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\utilities\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{508A7BB2-338A-4EB1-AF80-958C6FBF45A0}|Utilities\\Utilities.csproj|c:\\users\\jesus\\documents\\caidapresion\\utilities\\puertoserial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508A7BB2-338A-4EB1-AF80-958C6FBF45A0}|Utilities\\Utilities.csproj|solutionrelative:utilities\\puertoserial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508A7BB2-338A-4EB1-AF80-958C6FBF45A0}|Utilities\\Utilities.csproj|c:\\users\\jesus\\documents\\caidapresion\\utilities\\control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508A7BB2-338A-4EB1-AF80-958C6FBF45A0}|Utilities\\Utilities.csproj|solutionrelative:utilities\\control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508A7BB2-338A-4EB1-AF80-958C6FBF45A0}|Utilities\\Utilities.csproj|c:\\users\\jesus\\documents\\caidapresion\\utilities\\caidadepresion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508A7BB2-338A-4EB1-AF80-958C6FBF45A0}|Utilities\\Utilities.csproj|solutionrelative:utilities\\caidadepresion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA460A8A-4A3C-4223-ACAD-CFF6BB1F5FBA}|SerialPort\\PuertoSerie.csproj|c:\\users\\jesus\\documents\\caidapresion\\serialport\\frmsimulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA460A8A-4A3C-4223-ACAD-CFF6BB1F5FBA}|SerialPort\\PuertoSerie.csproj|solutionrelative:serialport\\frmsimulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA460A8A-4A3C-4223-ACAD-CFF6BB1F5FBA}|SerialPort\\PuertoSerie.csproj|C:\\Users\\jesus\\Documents\\CaidaPresion\\serialport\\frmsimulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DA460A8A-4A3C-4223-ACAD-CFF6BB1F5FBA}|SerialPort\\PuertoSerie.csproj|c:\\users\\jesus\\documents\\caidapresion\\serialport\\frmsimulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DA460A8A-4A3C-4223-ACAD-CFF6BB1F5FBA}|SerialPort\\PuertoSerie.csproj|solutionrelative:serialport\\frmsimulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\frmcalibracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmcalibracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA460A8A-4A3C-4223-ACAD-CFF6BB1F5FBA}|SerialPort\\PuertoSerie.csproj|c:\\users\\jesus\\documents\\caidapresion\\serialport\\puertoserie.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DA460A8A-4A3C-4223-ACAD-CFF6BB1F5FBA}|SerialPort\\PuertoSerie.csproj|solutionrelative:serialport\\puertoserie.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|C:\\Users\\jesus\\Documents\\CaidaPresion\\caidapresion\\frmcalibracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmcalibracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\frmcalibracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmcalibracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\frmvaloresiniciales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmvaloresiniciales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\frmvaloresiniciales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmvaloresiniciales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508A7BB2-338A-4EB1-AF80-958C6FBF45A0}|Utilities\\Utilities.csproj|c:\\users\\jesus\\documents\\caidapresion\\utilities\\utilities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{508A7BB2-338A-4EB1-AF80-958C6FBF45A0}|Utilities\\Utilities.csproj|solutionrelative:utilities\\utilities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,81 +74,210 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Table.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\Utilities\\Table.cs",
-              "RelativeDocumentMoniker": "CaidaPresion\\Utilities\\Table.cs",
-              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\Utilities\\Table.cs",
-              "RelativeToolTip": "CaidaPresion\\Utilities\\Table.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T12:29:26.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CaidaDePresion.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\Utilities\\CaidaDePresion.cs",
-              "RelativeDocumentMoniker": "CaidaPresion\\Utilities\\CaidaDePresion.cs",
-              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\Utilities\\CaidaDePresion.cs",
-              "RelativeToolTip": "CaidaPresion\\Utilities\\CaidaDePresion.cs",
-              "ViewState": "AQIAALIAAAAAAAAAAAAkwLYAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T12:23:45.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "frmSimulador.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\SerialPort\\frmSimulador.cs",
               "RelativeDocumentMoniker": "SerialPort\\frmSimulador.cs",
               "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\SerialPort\\frmSimulador.cs",
               "RelativeToolTip": "SerialPort\\frmSimulador.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAAAEAAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T15:51:56.537Z",
+              "WhenOpened": "2024-08-07T20:40:12.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "CaidaDePresion.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Utilities\\CaidaDePresion.cs",
+              "RelativeDocumentMoniker": "Utilities\\CaidaDePresion.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Utilities\\CaidaDePresion.cs",
+              "RelativeToolTip": "Utilities\\CaidaDePresion.cs",
+              "ViewState": "AQIAAKYAAAAAAAAAAAAQwLQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T18:19:09.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PuertoSerial.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Utilities\\PuertoSerial.cs",
+              "RelativeDocumentMoniker": "Utilities\\PuertoSerial.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Utilities\\PuertoSerial.cs",
+              "RelativeToolTip": "Utilities\\PuertoSerial.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAQwD4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T13:49:46.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Control.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Utilities\\Control.cs",
+              "RelativeDocumentMoniker": "Utilities\\Control.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Utilities\\Control.cs",
+              "RelativeToolTip": "Utilities\\Control.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAAA4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T18:08:45.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmPrincipal.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs",
+              "RelativeToolTip": "CaidaPresion\\frmPrincipal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T18:23:06.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmCalibracion.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmCalibracion.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs",
+              "RelativeToolTip": "CaidaPresion\\frmCalibracion.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAuwCYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T20:54:36.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "frmSimulador.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\SerialPort\\frmSimulador.cs",
               "RelativeDocumentMoniker": "SerialPort\\frmSimulador.cs",
               "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\SerialPort\\frmSimulador.cs [Dise\u00F1o]",
               "RelativeToolTip": "SerialPort\\frmSimulador.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T15:51:34.37Z"
+              "WhenOpened": "2024-08-07T20:35:40.017Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmCalibracion.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs",
-              "RelativeDocumentMoniker": "CaidaPresion\\frmCalibracion.cs",
-              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs",
-              "RelativeToolTip": "CaidaPresion\\frmCalibracion.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwCIAAAAZAAAA",
+              "DocumentIndex": 0,
+              "Title": "Table.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Utilities\\Table.cs",
+              "RelativeDocumentMoniker": "Utilities\\Table.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Utilities\\Table.cs",
+              "RelativeToolTip": "Utilities\\Table.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T15:45:00.539Z",
+              "WhenOpened": "2024-08-07T18:17:29.033Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
+              "Title": "PuertoSerie",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\SerialPort\\PuertoSerie.csproj",
+              "RelativeDocumentMoniker": "SerialPort\\PuertoSerie.csproj",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\SerialPort\\PuertoSerie.csproj",
+              "RelativeToolTip": "SerialPort\\PuertoSerie.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-07T20:59:28.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmPrincipal.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CaidaPresion\\frmPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T18:22:50.08Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "frmCalibracion.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmCalibracion.cs",
               "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs [Dise\u00F1o]",
               "RelativeToolTip": "CaidaPresion\\frmCalibracion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T15:42:35.977Z"
+              "WhenOpened": "2024-08-06T20:51:06.253Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmValoresIniciales.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmValoresIniciales.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmValoresIniciales.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmValoresIniciales.cs",
+              "RelativeToolTip": "CaidaPresion\\frmValoresIniciales.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T18:25:24.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmValoresIniciales.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmValoresIniciales.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmValoresIniciales.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmValoresIniciales.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CaidaPresion\\frmValoresIniciales.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T18:25:19.196Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmDatosEntrada.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmDatosEntrada.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs",
+              "RelativeToolTip": "CaidaPresion\\frmDatosEntrada.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T18:24:52.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmDatosEntrada.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmDatosEntrada.cs",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CaidaPresion\\frmDatosEntrada.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T18:22:45.96Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Utilities.csproj",
+              "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Utilities\\Utilities.csproj",
+              "RelativeDocumentMoniker": "Utilities\\Utilities.csproj",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Utilities\\Utilities.csproj",
+              "RelativeToolTip": "Utilities\\Utilities.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-07T13:49:44.294Z",
+              "EditorCaption": ""
             }
           ]
         }
