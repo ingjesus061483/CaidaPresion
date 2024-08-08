@@ -287,3 +287,5 @@ C:\Users\jesus\Documents\CaidaPresion\CaidaPresion\bin\Debug\net8.0-windows\runt
 C:\Users\jesus\Documents\CaidaPresion\CaidaPresion\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
 C:\Users\jesus\Documents\CaidaPresion\CaidaPresion\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\jesus\Documents\CaidaPresion\CaidaPresion\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jesus\Documents\CaidaPresion\CaidaPresion\bin\Debug\net8.0-windows\Utilities.dll
+C:\Users\jesus\Documents\CaidaPresion\CaidaPresion\bin\Debug\net8.0-windows\Utilities.pdb
