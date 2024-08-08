@@ -61,5 +61,10 @@ namespace Utilities
                 throw ex;
             }
         }
+        public void CloseDevice()
+        {
+        
+            SerialPort.Close();
+        }
     }
 }

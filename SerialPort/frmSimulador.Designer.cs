@@ -43,6 +43,7 @@
             cmbStopBits = new ComboBox();
             numBaudRate = new NumericUpDown();
             numDataBit = new NumericUpDown();
+            btnCerrar = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numBaudRate).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDataBit).BeginInit();
@@ -54,7 +55,7 @@
             btnCalibrar.BackgroundImageLayout = ImageLayout.Stretch;
             btnCalibrar.FlatStyle = FlatStyle.Flat;
             btnCalibrar.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCalibrar.Location = new Point(331, 370);
+            btnCalibrar.Location = new Point(232, 370);
             btnCalibrar.Name = "btnCalibrar";
             btnCalibrar.Size = new Size(93, 50);
             btnCalibrar.TabIndex = 60;
@@ -205,12 +206,27 @@
             numDataBit.Size = new Size(171, 31);
             numDataBit.TabIndex = 50;
             // 
+            // btnCerrar
+            // 
+            btnCerrar.BackColor = SystemColors.Control;
+            btnCerrar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCerrar.FlatStyle = FlatStyle.Flat;
+            btnCerrar.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCerrar.Location = new Point(331, 370);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(93, 50);
+            btnCerrar.TabIndex = 62;
+            btnCerrar.Text = "Cerrar";
+            btnCerrar.UseVisualStyleBackColor = false;
+            btnCerrar.Click += btnCerrar_Click;
+            // 
             // frmSimulador
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(449, 450);
+            Controls.Add(btnCerrar);
             Controls.Add(btnCalibrar);
             Controls.Add(panel1);
             Name = "frmSimulador";
@@ -239,5 +255,6 @@
         private ComboBox cmbStopBits;
         private NumericUpDown numBaudRate;
         private NumericUpDown numDataBit;
+        private Button btnCerrar;
     }
 }

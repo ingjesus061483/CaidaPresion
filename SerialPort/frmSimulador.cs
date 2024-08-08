@@ -7,37 +7,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utilities;
 namespace PuertoSerie
 {
     public partial class frmSimulador : Form
-    {        
-        Utilities.PuertoSerial puertoserial;
+    {
+        Utilities.PuertoSerial puertoSerial;
         public frmSimulador()
         {
             InitializeComponent();
-            puertoserial = new Utilities.PuertoSerial();  
+            puertoSerial = new Utilities.PuertoSerial();
         }
         private void btnCalibrar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty( txtDeltaP.Text))
+            if (string.IsNullOrEmpty(txtDeltaP.Text))
             {
                 MessageBox.Show("Delta p debe ser mayor que 0", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;         
+                return;
             }
-            puertoserial.WriteData(txtDeltaP.Text);
-            this.Close();
+            puertoSerial.WriteData(txtDeltaP.Text);
+           // this.Close();
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            puertoserial. OpenDevice(cmbSerialPort.Text);
+            puertoSerial.OpenDevice(cmbSerialPort.Text);
             txtDeltaP.Text = string.Empty;
         }
 
         private void frmSimulador_Load(object sender, EventArgs e)
         {
-            Utilities.Control. FillCombo(cmbStopBits,puertoserial. StopBits);
-            Utilities.Control.  FillCombo(cmbParity,puertoserial.Parities);
-            Utilities.Control.FillCombo(cmbSerialPort,puertoserial.Serialports );            
+            Utilities.Control.FillCombo(cmbStopBits, puertoSerial.StopBits);
+            Utilities.Control.FillCombo(cmbParity, puertoSerial.Parities);
+            Utilities.Control.FillCombo(cmbSerialPort, puertoSerial.Serialports); 
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            if (!puertoSerial.SerialPort.IsOpen)
+            {
+                MessageBox.Show("El dispositivo no esta abierto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            puertoSerial.CloseDevice();
+            this.Close();
         }
     }
 }

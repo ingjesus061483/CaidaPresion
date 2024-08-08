@@ -11,20 +11,20 @@ namespace Utilities
     {
         public static Form Form;
         public static TextBox textBox;
-        public static string Dato;
+        static string Dato;
         public static void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             SerialPort serialPort=(SerialPort)sender;
             Thread.Sleep(500);
-            Dato = serialPort.ReadExisting();
-            serialPort.Close();
+            Dato = serialPort.ReadExisting()+";";
+      //      serialPort.Close();
             Form .Invoke(new EventHandler(DisplayText));
         }
         private static void DisplayText(object sender, EventArgs e)
         {
             textBox.AppendText(Dato);
             Thread.Sleep(1000);
-            Form.Close();
+         //   Form.Close();
         }
         public static void FillCombo(ComboBox comboBox, Array arr)
         {

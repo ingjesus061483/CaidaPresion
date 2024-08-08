@@ -13,22 +13,22 @@ namespace CaidaPresion
 {
     public partial class frmCalibracion : Form
     {
-        Utilities.PuertoSerial puertoSerial;       
+        Utilities.PuertoSerial puertoSerial;
         public string Dato { get; set; }
         public frmCalibracion()
         {
             InitializeComponent();
             puertoSerial = new Utilities.PuertoSerial();
-            Utilities. Control.Form=this;
-            Utilities.Control.textBox = txtDeltaP;            
+            Utilities.Control.Form = this;
+            Utilities.Control.textBox = txtDeltaP;
             Dato = "";
-        }        
+        }
         private void Form1_Load(object sender, EventArgs e)
-        {            
+        {
             Utilities.Control.FillCombo(cmbSerialPort, puertoSerial.Serialports);
-            if (cmbSerialPort.Items .Count == 0)
+            if (cmbSerialPort.Items.Count == 0)
             {
-                MessageBox.Show("No hay Dispositivos disponibles","", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No hay Dispositivos disponibles", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Close();
             }
         }
@@ -36,13 +36,24 @@ namespace CaidaPresion
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
-            {                
+            {
                 puertoSerial.OpenDevice(cmbSerialPort.Text);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }     
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+           if(!puertoSerial. SerialPort.IsOpen)
+            {
+                MessageBox.Show("El dispositivo no esta abierto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            puertoSerial.CloseDevice();
+            this.Close();
+        }
     }
 }

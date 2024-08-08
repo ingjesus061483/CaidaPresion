@@ -34,6 +34,7 @@
             panel4 = new Panel();
             txtDeltaP = new TextBox();
             panel1 = new Panel();
+            btnCerrar = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,9 +74,11 @@
             // 
             txtDeltaP.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDeltaP.Location = new Point(196, 75);
+            txtDeltaP.Multiline = true;
             txtDeltaP.Name = "txtDeltaP";
             txtDeltaP.ReadOnly = true;
-            txtDeltaP.Size = new Size(200, 30);
+            txtDeltaP.ScrollBars = ScrollBars.Vertical;
+            txtDeltaP.Size = new Size(200, 142);
             txtDeltaP.TabIndex = 46;
             // 
             // panel1
@@ -88,16 +91,31 @@
             panel1.Location = new Point(17, 20);
             panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(423, 145);
+            panel1.Size = new Size(423, 239);
             panel1.TabIndex = 56;
+            // 
+            // btnCerrar
+            // 
+            btnCerrar.BackColor = SystemColors.Control;
+            btnCerrar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCerrar.FlatStyle = FlatStyle.Flat;
+            btnCerrar.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCerrar.Location = new Point(348, 267);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(93, 50);
+            btnCerrar.TabIndex = 61;
+            btnCerrar.Text = "Cerrar";
+            btnCerrar.UseVisualStyleBackColor = false;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // frmCalibracion
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(453, 186);
+            ClientSize = new Size(453, 329);
             ControlBox = false;
+            Controls.Add(btnCerrar);
             Controls.Add(panel1);
             Margin = new Padding(4, 5, 4, 5);
             Name = "frmCalibracion";
@@ -115,5 +133,6 @@
         private Panel panel4;
         private TextBox txtDeltaP;
         private Panel panel1;
+        private Button btnCerrar;
     }
 }
