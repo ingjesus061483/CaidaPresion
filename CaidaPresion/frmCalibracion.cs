@@ -47,13 +47,32 @@ namespace CaidaPresion
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-           if(!puertoSerial. SerialPort.IsOpen)
+            if (!puertoSerial.SerialPort.IsOpen)
             {
                 MessageBox.Show("El dispositivo no esta abierto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                this.Close();
             }
             puertoSerial.CloseDevice();
             this.Close();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                CxProgrammer.Ole.ExtreaerDatos("C:\\Users\\indir\\OneDrive\\Documentos\\Bkp PLc.cxp");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
