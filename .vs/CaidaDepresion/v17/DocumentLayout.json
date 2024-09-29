@@ -98,8 +98,8 @@
               "Title": "frmPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmPrincipal.cs",
-              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs*",
-              "RelativeToolTip": "CaidaPresion\\frmPrincipal.cs*",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs",
+              "RelativeToolTip": "CaidaPresion\\frmPrincipal.cs",
               "ViewState": "AQIAAG8AAAAAAAAAAAAhwHgAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T17:54:47.498Z",
@@ -115,7 +115,8 @@
               "RelativeToolTip": "Controles\\ControlForm.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAAAcwBMAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T17:49:31.759Z"
+              "WhenOpened": "2024-09-24T17:49:31.759Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -183,8 +184,8 @@
               "Title": "frmCalibracion.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmCalibracion.cs",
-              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs*",
-              "RelativeToolTip": "CaidaPresion\\frmCalibracion.cs*",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs",
+              "RelativeToolTip": "CaidaPresion\\frmCalibracion.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAhwBsAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T17:47:16.052Z",
@@ -212,7 +213,8 @@
               "RelativeToolTip": "DataAccess\\Repository\\ResultadoRepository.cs",
               "ViewState": "AQIAACIAAAAAAAAAAADwvykAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T14:29:50.73Z"
+              "WhenOpened": "2024-09-27T14:29:50.73Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -244,8 +246,8 @@
               "Title": "frmCalibracion.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmCalibracion.cs",
-              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "CaidaPresion\\frmCalibracion.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CaidaPresion\\frmCalibracion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T17:52:53.668Z",
               "EditorCaption": " [Dise\u00F1o]"
