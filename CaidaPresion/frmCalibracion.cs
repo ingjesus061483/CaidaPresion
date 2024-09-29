@@ -19,13 +19,13 @@ namespace CaidaPresion
         {
             InitializeComponent();
             puertoSerial = new PuertoSerial();
-          Control .Form = this;
-            Control.textBox = txtDeltaP;
+          ControlForm .Form = this;
+            ControlForm.textBox = txtDeltaP;
             Dato = "";
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            Control.FillCombo(cmbSerialPort, puertoSerial.Serialports);
+            ControlForm.FillCombo( puertoSerial.Serialports, cmbSerialPort);
             if (cmbSerialPort.Items.Count == 0)
             {
                 MessageBox.Show("No hay Dispositivos disponibles", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);

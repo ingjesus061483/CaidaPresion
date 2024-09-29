@@ -118,7 +118,7 @@ namespace CaidaPresion
         {
             frmCalibracion form = new frmCalibracion();
             form.ShowDialog();
-            txtDeltaP.Text = Control.textBox.Text;
+            txtDeltaP.Text = ControlForm.textBox.Text;
         }
 
         private void button3_Click(object sender, EventArgs e)
