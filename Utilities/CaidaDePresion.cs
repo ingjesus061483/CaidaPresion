@@ -58,26 +58,49 @@ namespace Utilities
         //Diametro de la particula (m)
         public static   double dp { get { return 0.000038; } }
 
-        static void funcToSolveUb(int n, IntPtr x, IntPtr fx)
+        // Give number of variables
+        static int unknownVariables = 1;
+        public static bool EsEvaluada(string sDeltaP, string sVelLinealGas, string sJsl, ref string msg)
+        {
+            double.TryParse(sDeltaP, out double DeltaP);
+            double.TryParse(sVelLinealGas, out double VelLinealGas);
+            double.TryParse(sJsl, out double Jsl);
+            if (DeltaP == 0)
+            {
+                msg = "Delta p debe ser mayor que 0";
+                return false;
+            }
+            if (VelLinealGas == 0)
+            {
+                msg = "velocidad lineal gas debe ser mayor que 0";
+                return false;
+            }
+            if (Jsl == 0)
+            {
+                msg = "Jsl debe ser mayor que 0";
+                return false;
+            }
+            return true;
+        }
+        static void FuncToSolveUb(int n, IntPtr x, IntPtr fx)
         {
             double[] x1 = Fsolve.MakeArray(n, x);   // Make an array for 'x' values from its Pointer
             double[] fx1 = Fsolve.MakeArray(n, fx); // Make an array for 'fx' equation/function values from its Pointer
             fx1[0]= x1[0] - g * Math.Pow(db, 2) *(rosl - rog) /(18 * miusl * (1 + 0.15 *(Math.Pow((rosl  * db  * x1[0] / miusl), 0.687))));// Write equations/functions as f(x) = 0, here it becomes x - 1 = 0
-            Fsolve.CopyArray(n, fx1, fx);                // Copy fx1 array values to fx Pointer
-
+            Fsolve.CopyArray(n, fx1, fx);                // Copy fx1 array values to fx Pointer                                                         
         }
         
-        static double getUb(Fsolve.FunctionToSolve funcUb, double tol, int unknownVariables1/* Give number of variables*/)
+        static double GetUb(Fsolve.FunctionToSolve funcUb, double tol)
         {       
             double[] xGuess1 = { 0.0 };                   // Give a guess value       
             (double[] soln1, double[] fx1, string solutionCode1) = Fsolve.Fsolver(funcUb, 
-                                                                                  unknownVariables1,
+                                                                                  unknownVariables,
                                                                                   xGuess1, 
                                                                                   tol);
             return soln1[0];
         }
         
-        static double GetDiametroBurbuja(double Ut,double Usb ,ref double  tol)
+        static void Inicializar()
         {
             PrimerTermino = new double[1];
             ReynoldEnjambre = new double[1];
@@ -85,44 +108,61 @@ namespace Utilities
             TercerTermino = new double[1];
             FuncionObjetivo = new double[1];
             DiametroBurbuja = new double[1];
-
+        }
+        static  void LlenarArray( double valor,int i,int j,ref double[] arr)
+        {
+            arr[i] = valor;
+            Array.Resize(ref arr, j);
+        }
+        static double GetPrimerTerminoObjetivo(double Ut)
+        {
+            return  (18 * miusl * Ut) / (g * (rosl - rog)); //% Primer término de la función objetivo
+        }
+        static double GetSegundoTerminoObjetivo(double Resb)
+        {
+            return 1 + 0.15 * Math.Pow(Resb, 0.687); //% Segundo término de la función objetivo
+        }
+        static double GetReEnjambre(double db,double Usb )
+        {
+            return db * Usb * rosl * (1 - holdup) / miusl; //% Re del enjambre//              
+        }
+        static double GetTercerTerminoObjetivo(double Usb)
+        {
+            return Math.Pow((Usb * rosl * (1 - holdup) / miusl), 0.687);// % Tercer término de la función objetivo                
+        }
+        static double GetDiametroBurbuja(double Ut,double Usb ,ref double  tol)
+        {
+            Inicializar();
             //Diametro de burbuja asumido
-            double db0 = 0.001;
+            double db = 0.001;
 
             //Tolerancia inicial
             tol = 0.0001;
-            double Resb = 0;
-
+            
+            // double Resb = 0;
             int i = 0;
             int j = 1;
             while (tol > 1e-9)
             {
                 j++;
-
-                double p1 = (18 * miusl * Ut) / (g * (rosl - rog)); //% Primer término de la función objetivo
-                PrimerTermino[i] = p1;
-                Array.Resize(ref PrimerTermino, j);
-                Resb = db0 * Usb * rosl * (1 - holdup) / miusl; //% Re del enjambre
-                ReynoldEnjambre[i] = Resb;
-                Array.Resize(ref ReynoldEnjambre, j);
-                double y = 1 + 0.15 * Math.Pow(Resb, 0.687); //% Segundo término de la función objetivo
-                SegundoTermino[i] = y;
-                Array.Resize(ref SegundoTermino, j);
-                double z = Math.Pow((Usb * rosl * (1 - holdup) / miusl), 0.687);// % Tercer término de la función objetivo
-                TercerTermino[i] = z;
-                Array.Resize(ref TercerTermino, j);
-                double fdb = Math.Sqrt((p1 * y)) - db0; //% Función objetivo
-                FuncionObjetivo[i] = fdb;
-                Array.Resize(ref FuncionObjetivo, j);
-                double ddb = 0.10305 * Math.Sqrt(p1) * Math.Pow(y, -0.5) * Math.Pow(db0, -0.313) * (z / 2) - 1; //% Derivada de la función objetivo
-                double db1 = db0 - fdb / ddb;// % Nuevo diametro
-                DiametroBurbuja[i] = db1;
-                Array.Resize(ref DiametroBurbuja, j);
-                tol = Math.Abs(db1 - db0);// % Tolerancia
+                double p1 = GetPrimerTerminoObjetivo(Ut);// (18 * miusl * Ut) / (g * (rosl - rog)); //% Primer término de la función objetivo
+                double Resb = GetReEnjambre(db, Usb);// db0 * Usb * rosl * (1 - holdup) / miusl; //% Re del enjambre//              
+                double y = GetSegundoTerminoObjetivo(Resb);// 1 + 0.15 * Math.Pow(Resb, 0.687); //% Segundo término de la función objetivo
+                double z = GetTercerTerminoObjetivo(Usb);// Math.Pow((Usb * rosl * (1 - holdup) / miusl), 0.687);// % Tercer término de la función objetivo                
+                double fdb = Math.Sqrt((p1 * y)) - db; //% Función objetivo                
+                double ddb = 0.10305 * Math.Sqrt(p1) * Math.Pow(y, -0.5) * Math.Pow(db, -0.313) * (z / 2) - 1; //% Derivada de la función objetivo
+                double db1 = db - fdb / ddb;// % Nuevo diametro
+                LlenarArray(fdb, i, j, ref FuncionObjetivo);
+                LlenarArray(y, i, j, ref SegundoTermino);
+                LlenarArray(z, i, j, ref TercerTermino);
+                LlenarArray(db1, i, j, ref DiametroBurbuja);
+                LlenarArray(p1, i, j, ref PrimerTermino);
+                LlenarArray(Resb, i, j, ref ReynoldEnjambre);
+                tol = Math.Abs(db1 - db);// % Tolerancia
                 i++;
-                db0 = db1;
+                db = db1;
             }
-            return db0; 
+            return db; 
         }
 
         /// <summary>
@@ -167,17 +207,15 @@ namespace Utilities
              double Ut =  Usb * Math.Pow(1 - holdup, (1 - m));
             
              double tol = 0;
-             db = GetDiametroBurbuja(Ut, Usb, ref tol);
+             db = GetDiametroBurbuja(Ut, Usb, ref tol);    
              
-             // Give number of variables
-             int unknownVariables = 1;
 
              // Wrap function so it can be called
-             Fsolve.FunctionToSolve funcUb = new(funcToSolveUb);        
+             Fsolve.FunctionToSolve funcUb = new(FuncToSolveUb);        
 
-             ub = getUb(funcUb, tol, unknownVariables);
+             ub = GetUb(funcUb, tol);
              return db * rosl * ub  / miusl;       
         }
     }
 }
- 
+  

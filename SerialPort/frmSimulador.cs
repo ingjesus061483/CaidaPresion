@@ -7,16 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Utilities;
+using Controles;
 namespace PuertoSerie
 {
     public partial class frmSimulador : Form
     {
-        Utilities.PuertoSerial puertoSerial;
+        PuertoSerial puertoSerial;
         public frmSimulador()
         {
             InitializeComponent();
-            puertoSerial = new Utilities.PuertoSerial();
+            puertoSerial = new PuertoSerial();
         }
         private void btnCalibrar_Click(object sender, EventArgs e)
         {
@@ -36,9 +36,9 @@ namespace PuertoSerie
 
         private void frmSimulador_Load(object sender, EventArgs e)
         {
-            Utilities.Control.FillCombo(cmbStopBits, puertoSerial.StopBits);
-            Utilities.Control.FillCombo(cmbParity, puertoSerial.Parities);
-            Utilities.Control.FillCombo(cmbSerialPort, puertoSerial.Serialports); 
+            ControlForm.FillCombo(puertoSerial.StopBits, cmbStopBits);
+            ControlForm.FillCombo(puertoSerial.Parities, cmbParity);
+            ControlForm.FillCombo(puertoSerial.Serialports, cmbSerialPort); 
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

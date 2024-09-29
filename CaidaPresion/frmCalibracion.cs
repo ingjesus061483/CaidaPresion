@@ -8,24 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Controles;
 namespace CaidaPresion
 {
     public partial class frmCalibracion : Form
     {
-        Utilities.PuertoSerial puertoSerial;
+       PuertoSerial puertoSerial;
         public string Dato { get; set; }
         public frmCalibracion()
         {
             InitializeComponent();
-            puertoSerial = new Utilities.PuertoSerial();
-            Utilities.Control.Form = this;
-            Utilities.Control.textBox = txtDeltaP;
+            puertoSerial = new PuertoSerial();
+          Control .Form = this;
+            Control.textBox = txtDeltaP;
             Dato = "";
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            Utilities.Control.FillCombo(cmbSerialPort, puertoSerial.Serialports);
+            Control.FillCombo(cmbSerialPort, puertoSerial.Serialports);
             if (cmbSerialPort.Items.Count == 0)
             {
                 MessageBox.Show("No hay Dispositivos disponibles", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);

@@ -1,3 +1,6 @@
+using Microsoft.Extensions.DependencyInjection;
+using DataAccess;
+using DataAccess.Repository;
 namespace CaidaPresion
 {
     internal static class Program
@@ -11,7 +14,21 @@ namespace CaidaPresion
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmPrincipal());
+            ServiceCollection services = new ServiceCollection();
+            Configservice(services);
+            //using var servicesprovider = services.BuildServiceProvider();
+            var servicesprovider = services.BuildServiceProvider();
+            var frmPrincipal = servicesprovider.GetRequiredService<frmPrincipal>();
+            Application.Run(frmPrincipal);
+        }
+        static void Configservice(ServiceCollection services)
+        {
+            services.AddScoped<EspumanteRepository> ();
+            services.AddScoped<ConcentracionRepository>();
+            services.AddScoped<ResultadoRepository>();
+            
+            services.AddScoped<frmPrincipal>();
+            
         }
     }
 }

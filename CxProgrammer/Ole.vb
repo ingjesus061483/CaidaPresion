@@ -6,7 +6,7 @@ Public MustInherit Class Ole
     Shared Sub ExtreaerDatos(ruta As String)
         Try
             Dim cx As Object
-            cx = CreateObject("CX-SERVER")
+            cx = CreateObject("CX-Server")
 
             ' Abrir el proyecto
             cx.Open(ruta)
