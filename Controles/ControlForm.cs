@@ -1,19 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.IO.Ports;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms.DataVisualization.Charting;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace Controles
 {
     public abstract class ControlForm
     {
-        public static System.Windows.Forms. Form Form;
-        public static System.Windows.Forms. TextBox textBox;
+        public static Array SeriesChartType { get { return Enum.GetValues(typeof(SeriesChartType)); } }
+        public static System.Windows.Forms. Form? Form;
+        public static System.Windows.Forms. TextBox? textBox;
         static string Dato;
+        public static void SetToolTip(ToolTip toolTip , Button  button, string msg)
+        {
+            toolTip.SetToolTip(button, msg);
+
+        }
+
+        public static ToolTip GetToolTip(int AutoPopDelay, int InitialDelay, int ReshowDelay, bool ShowAlways)
+        {
+            ToolTip toolTip = new ToolTip
+            {
+                // Set up the delays for the ToolTip.
+                AutoPopDelay = AutoPopDelay,
+                InitialDelay = InitialDelay,
+                ReshowDelay = ReshowDelay,
+                // Force the ToolTip text to be displayed whether or not the form is active.
+                ShowAlways = ShowAlways
+            };
+            return toolTip;
+        }
         public static void  GetGraphic(Chart grafica,string TipoGrafica, string serie,string []  cols, DataTable table)
         {
             grafica.Series[serie].ChartType = Enum.Parse<SeriesChartType>(TipoGrafica);
@@ -31,14 +45,12 @@ namespace Controles
             SerialPort serialPort=(SerialPort)sender;
             Thread.Sleep(500);
             Dato = serialPort.ReadExisting()+";";
-      //      serialPort.Close();
             Form .Invoke(new EventHandler(DisplayText));
         }
         private static void DisplayText(object sender, EventArgs e)
         {
             textBox.AppendText(Dato);
             Thread.Sleep(1000);
-            //   Form.Close();
         }
         public static void FillCombo(DataTable table,Array arr,  System.Windows.Forms. ComboBox combo)
         {

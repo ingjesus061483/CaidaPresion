@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO.Ports;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using Controles;
-using DataAccess;
 using DataAccess.Repository;
-using Microsoft.FSharp.Core;
-using Org.BouncyCastle.Asn1.X509;
 namespace CaidaPresion
 {
     public partial class frmPrincipal : Form
@@ -23,13 +12,9 @@ namespace CaidaPresion
         double holdup;
         double ub;
         double db;
-        Array seriesChartType;
         DataTable tblConcentracion;
         Dictionary<string, double> colection;
-        ToolTip toolTip1;
-        EspumanteRepository espumanteRepository;
-        ConcentracionRepository concentracionRepository;
-        ResultadoRepository resultadoRepository;
+        ToolTip toolTip;
         public frmPrincipal(EspumanteRepository _espumanteRepository,
                             ConcentracionRepository _concentracionRepository,
                             ResultadoRepository _resultadoRepository)
@@ -59,7 +44,7 @@ namespace CaidaPresion
                 double reynold = CaidaDePresion.CalcularValorReynold(double.Parse(txtDeltaP.Text),
                                                                                double.Parse(txtVelLinealGas.Text),
                                                                                double.Parse(txtJsl.Text));
-                holdup = CaidaDePresion.holdup * 100;
+                holdup = CaidaDePresion.Holdup * 100;
                 ub = CaidaDePresion.ub * 100;
                 db = CaidaDePresion.db * 1000;
                 string[] columns = { "Variable", "Resultado" };
@@ -90,7 +75,6 @@ namespace CaidaPresion
                 txtVelLinealGas.Clear();
                 txtDeltaP.Focus();
                 LoadGraphic();
-
             }
             catch (Exception ex)
             {
@@ -106,6 +90,7 @@ namespace CaidaPresion
             txtVelLinealGas.ReadOnly = radioButton1.Checked;
             txtVelLinealGas.Clear();
             txtDeltaP.Clear();
+            txtJsl.Clear();
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -140,34 +125,23 @@ namespace CaidaPresion
             };
             frmDatos.ShowDialog();
         }
+       
 
         private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-            seriesChartType = Enum.GetValues(typeof(SeriesChartType));
+        {          
             lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
             timer1.Start();
             string[] arr = { "id", "nombre" };
             string[] arrparam = { "AirHoldup Vs Jg", "Usg Vs Air holdup", "Diámetro de burbuja Vs Jg" };
-
-            toolTip1 = new ToolTip
-            {
-                // Set up the delays for the ToolTip.
-                AutoPopDelay = 5000,
-                InitialDelay = 1000,
-                ReshowDelay = 500,
-                // Force the ToolTip text to be displayed whether or not the form is active.
-                ShowAlways = true
-            };
-            toolTip1.SetToolTip(BtnOtrosResultados, "Mostrar otros resultados");
-            toolTip1.SetToolTip(btnValoresIniciales, "Ver valores iniciales");
-            toolTip1.SetToolTip(btnNuevo, "Nuevos valores");
-            toolTip1.SetToolTip(btnCalibrar, "Calibrar plc");
-            toolTip1.SetToolTip(btnGraficar, "Graficar resultados");
+            toolTip= ControlForm.GetToolTip(5000, 1000, 500, true);
+            ControlForm.SetToolTip(toolTip, BtnOtrosResultados, "Mostrar otros resultados");
+            ControlForm.SetToolTip(toolTip, btnNuevo, "Nuevos valores");
+            ControlForm.SetToolTip(toolTip, btnCalibrar, "Calibrar plc");
+            ControlForm.SetToolTip(toolTip, btnGraficar, "Graficar resultados");
+            ControlForm.SetToolTip(toolTip, btnValoresIniciales, "Ver valores iniciales");         
             ControlForm.FillCombo(espumanteRepository.GetDataTable(), arr, cmbEspumante);
             ControlForm.FillCombo(arrparam, cmbParamGraficar);
-
-            cmbtipoGrafica.DataSource = seriesChartType;
-
+            cmbtipoGrafica.DataSource =ControlForm. SeriesChartType;
             Nuevo();
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -179,9 +153,8 @@ namespace CaidaPresion
             Application.Exit();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbEspumante_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             try
             {
                 grafica.Series.Clear();
@@ -189,13 +162,10 @@ namespace CaidaPresion
                 int.TryParse(cmbEspumante.SelectedValue != null ? cmbEspumante.SelectedValue.ToString() : "", out int espumante);
                 tblConcentracion = concentracionRepository.GetDataTable(espumante);
                 ControlForm.FillCombo(tblConcentracion, arr, cmbConcentracion);
-
-
             }
             catch (Exception ex)
             {
                 ControlForm.GetMessage(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
         void Nuevo()
@@ -244,7 +214,6 @@ namespace CaidaPresion
                                 string[] cols = { "jg", "holdup" };
                                 ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), serie, cols, table);
                             }
-
                             break;
                         }
                     case "Diámetro de burbuja Vs Jg":
@@ -258,7 +227,6 @@ namespace CaidaPresion
                                 string[] cols = { "jg", "holdup" };
                                 ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), serie, cols, table);
                             }
-
                             break;
                         }
                 }
@@ -309,7 +277,6 @@ namespace CaidaPresion
             {
                 ControlForm.GetMessage(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void cmbtipoGrafica_SelectedIndexChanged(object sender, EventArgs e)
@@ -319,8 +286,6 @@ namespace CaidaPresion
             {
                 series.ChartType= serie;
             }
-
         }
     }
-
 }

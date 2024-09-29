@@ -1,4 +1,6 @@
-﻿namespace CaidaPresion
+﻿using DataAccess.Repository;
+
+namespace CaidaPresion
 {
     partial class frmPrincipal
     {
@@ -30,12 +32,12 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0.68D, 15D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0.6D, 10D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1.2D, 20D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0.68D, 15D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0.6D, 10D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1.2D, 20D);
             dataGridView1 = new DataGridView();
             Variable = new DataGridViewTextBoxColumn();
             Resultado = new DataGridViewTextBoxColumn();
@@ -43,7 +45,7 @@
             txtJsl = new TextBox();
             label6 = new Label();
             btnNuevo = new Button();
-            radioButton2 = new RadioButton();
+            rbtManual = new RadioButton();
             radioButton1 = new RadioButton();
             txtVelLinealGas = new TextBox();
             label2 = new Label();
@@ -197,20 +199,20 @@
             btnNuevo.UseVisualStyleBackColor = true;
             btnNuevo.Click += button1_Click;
             // 
-            // radioButton2
+            // rbtManual
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Checked = true;
-            radioButton2.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            radioButton2.ForeColor = Color.White;
-            radioButton2.Location = new Point(37, 62);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(103, 28);
-            radioButton2.TabIndex = 34;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Manual";
-            radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            rbtManual.AutoSize = true;
+            rbtManual.Checked = true;
+            rbtManual.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            rbtManual.ForeColor = Color.White;
+            rbtManual.Location = new Point(37, 62);
+            rbtManual.Name = "rbtManual";
+            rbtManual.Size = new Size(103, 28);
+            rbtManual.TabIndex = 34;
+            rbtManual.TabStop = true;
+            rbtManual.Text = "Manual";
+            rbtManual.UseVisualStyleBackColor = true;
+            rbtManual.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // radioButton1
             // 
@@ -349,22 +351,22 @@
             // 
             // grafica
             // 
-            chartArea1.Name = "ChartArea1";
-            grafica.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            grafica.ChartAreas.Add(chartArea2);
             grafica.Dock = DockStyle.Fill;
-            legend1.Name = "Legend1";
-            grafica.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            grafica.Legends.Add(legend2);
             grafica.Location = new Point(0, 171);
             grafica.Margin = new Padding(4, 5, 4, 5);
             grafica.Name = "grafica";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            grafica.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.Points.Add(dataPoint4);
+            series2.Points.Add(dataPoint5);
+            series2.Points.Add(dataPoint6);
+            grafica.Series.Add(series2);
             grafica.Size = new Size(1146, 459);
             grafica.TabIndex = 0;
             grafica.Text = "chart1";
@@ -471,7 +473,7 @@
             cmbEspumante.Name = "cmbEspumante";
             cmbEspumante.Size = new Size(227, 33);
             cmbEspumante.TabIndex = 0;
-            cmbEspumante.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cmbEspumante.SelectedIndexChanged += cmbEspumante_SelectedIndexChanged;
             // 
             // panel2
             // 
@@ -510,7 +512,7 @@
             // 
             panel8.BackColor = Color.FromArgb(42, 46, 50);
             panel8.Controls.Add(label1);
-            panel8.Controls.Add(radioButton2);
+            panel8.Controls.Add(rbtManual);
             panel8.Controls.Add(radioButton1);
             panel8.Location = new Point(24, 33);
             panel8.Margin = new Padding(4, 5, 4, 5);
@@ -829,7 +831,7 @@
         private TextBox txtJsl;
         private Label label6;
         private Button btnNuevo;
-        private RadioButton radioButton2;
+        private RadioButton rbtManual;
         private RadioButton radioButton1;
         private TextBox txtVelLinealGas;
         private Label label2;
@@ -879,6 +881,10 @@
         private DataGridViewTextBoxColumn Variable;
         private DataGridViewTextBoxColumn Resultado;
         private ComboBox cmbtipoGrafica;
-        private Label label13;
+        private Label label13; 
+        private EspumanteRepository espumanteRepository;
+        private ConcentracionRepository concentracionRepository;
+        private ResultadoRepository resultadoRepository;
+
     }
 }

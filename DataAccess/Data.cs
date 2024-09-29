@@ -1,8 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Ocsp;
 using System.Data;
-using System.Security.Cryptography.X509Certificates;
 namespace DataAccess
 {
     public abstract class Data
@@ -14,6 +11,11 @@ namespace DataAccess
         {
             Connection = new MySqlConnection { ConnectionString = "server=" + server + ";uid=" + uid + ";pwd=" + pwd + ";database=" + database };
         }
+        public abstract void Save(Dictionary<string, double> colection);
+        public abstract DataTable GetDataTable();
+        public abstract DataTable GetDataTable(int id);
+
+        public abstract void Delete();
         protected void Abrir()
         {
             Connection.Open();
@@ -38,15 +40,11 @@ namespace DataAccess
             return command;
 
         }
-        public abstract void Save(Dictionary<string, double> colection);
-        public abstract DataTable GetDataTable();
-        public abstract DataTable GetDataTable(int id);
-
-        public abstract void Delete();
+        
       
-       protected  void Cerrar( )
+        protected  void Cerrar( )
         {
             Connection.Close();
         }
-          }
+    }
 }

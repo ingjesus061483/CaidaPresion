@@ -1,13 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Ocsp;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace DataAccess.Repository
 {
     public class ResultadoRepository : Data
@@ -51,7 +43,6 @@ namespace DataAccess.Repository
                 double jg =Math.Round( colection["jg"],2);
                 int.TryParse( colection["concentracion_id"].ToString(),out int concentracion_id);
                 int.TryParse(colection["espumante_id"].ToString(),out int espumante_id);
-
                 Command = GetCommand("Insertar", CommandType.StoredProcedure);
                 Command.Parameters.Add("_deltap", MySqlDbType.Decimal).Value = deltap;
                 Command.Parameters.Add("_jsl", MySqlDbType.Decimal).Value =jsl;
