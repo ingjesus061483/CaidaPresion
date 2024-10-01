@@ -80,6 +80,23 @@ insert  into `espumante_concentracion`(`espumante_id`,`concentracion_id`) values
 (6,7),
 (6,8);
 
+/*Table structure for table `grafica` */
+
+DROP TABLE IF EXISTS `grafica`;
+
+CREATE TABLE `grafica` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+/*Data for the table `grafica` */
+
+insert  into `grafica`(`id`,`nombre`) values 
+(1,'AirHoldup Vs Jg'),
+(2,'Usg Vs Air holdup'),
+(3,'Diámetro de burbuja Vs Jg');
+
 /*Table structure for table `resultados` */
 
 DROP TABLE IF EXISTS `resultados`;
@@ -96,11 +113,14 @@ CREATE TABLE `resultados` (
   `jg` decimal(10,2) NOT NULL,
   `concentracion_id` int(11) NOT NULL,
   `espumante_id` int(11) NOT NULL,
+  `grafica_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `resultados_ibfk_1` (`concentracion_id`),
   KEY `espumante_id` (`espumante_id`),
+  KEY `grafica_id` (`grafica_id`),
   CONSTRAINT `resultados_ibfk_1` FOREIGN KEY (`concentracion_id`) REFERENCES `concentracion` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `resultados_ibfk_2` FOREIGN KEY (`espumante_id`) REFERENCES `espumante` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `resultados_ibfk_2` FOREIGN KEY (`espumante_id`) REFERENCES `espumante` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `resultados_ibfk_3` FOREIGN KEY (`grafica_id`) REFERENCES `grafica` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `resultados` */
