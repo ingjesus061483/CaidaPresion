@@ -1,5 +1,5 @@
 /*
-SQLyog Community v13.2.1 (64 bit)
+SQLyog Community v13.3.0 (64 bit)
 MySQL - 10.4.32-MariaDB : Database - caidapresion
 *********************************************************************
 */
@@ -24,7 +24,15 @@ CREATE TABLE `concentracion` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+/*Data for the table `concentracion` */
+
+insert  into `concentracion`(`id`,`nombre`) values 
+(5,'20ppm'),
+(6,'50ppm'),
+(7,'75ppm'),
+(8,'100ppm');
 
 /*Table structure for table `espumante` */
 
@@ -34,7 +42,14 @@ CREATE TABLE `espumante` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+/*Data for the table `espumante` */
+
+insert  into `espumante`(`id`,`nombre`) values 
+(4,'MIBC'),
+(5,'AF65'),
+(6,'LESS');
 
 /*Table structure for table `espumante_concentracion` */
 
@@ -48,6 +63,22 @@ CREATE TABLE `espumante_concentracion` (
   CONSTRAINT `espumante_concentracion_ibfk_1` FOREIGN KEY (`espumante_id`) REFERENCES `espumante` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `espumante_concentracion_ibfk_2` FOREIGN KEY (`concentracion_id`) REFERENCES `concentracion` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+/*Data for the table `espumante_concentracion` */
+
+insert  into `espumante_concentracion`(`espumante_id`,`concentracion_id`) values 
+(4,5),
+(4,6),
+(4,7),
+(4,8),
+(5,5),
+(5,6),
+(5,7),
+(5,8),
+(6,5),
+(6,6),
+(6,7),
+(6,8);
 
 /*Table structure for table `resultados` */
 
@@ -71,6 +102,8 @@ CREATE TABLE `resultados` (
   CONSTRAINT `resultados_ibfk_1` FOREIGN KEY (`concentracion_id`) REFERENCES `concentracion` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `resultados_ibfk_2` FOREIGN KEY (`espumante_id`) REFERENCES `espumante` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+/*Data for the table `resultados` */
 
 /* Procedure structure for procedure `Insertar` */
 

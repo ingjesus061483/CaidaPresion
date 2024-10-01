@@ -23,6 +23,7 @@ namespace CaidaPresion
         }
         static void Configservice(ServiceCollection services)
         {
+            services.AddScoped < GraficaRepository>();
             services.AddScoped<EspumanteRepository> ();
             services.AddScoped<ConcentracionRepository>();
             services.AddScoped<ResultadoRepository>();

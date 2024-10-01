@@ -17,13 +17,15 @@ namespace CaidaPresion
         ToolTip toolTip;
         public frmPrincipal(EspumanteRepository _espumanteRepository,
                             ConcentracionRepository _concentracionRepository,
-                            ResultadoRepository _resultadoRepository)
+                            ResultadoRepository _resultadoRepository,
+                            GraficaRepository _graficaRepository)
         {
             InitializeComponent();
+           
             espumanteRepository = _espumanteRepository;
             concentracionRepository = _concentracionRepository;
             resultadoRepository = _resultadoRepository;
-
+            graficaRepository= _graficaRepository;
 
         }
 
@@ -140,7 +142,7 @@ namespace CaidaPresion
             ControlForm.SetToolTip(toolTip, btnGraficar, "Graficar resultados");
             ControlForm.SetToolTip(toolTip, btnValoresIniciales, "Ver valores iniciales");         
             ControlForm.FillCombo(espumanteRepository.GetDataTable(), arr, cmbEspumante);
-            ControlForm.FillCombo(arrparam, cmbParamGraficar);
+            ControlForm.FillCombo(graficaRepository.GetDataTable(),arr, cmbParamGraficar);
             cmbtipoGrafica.DataSource =ControlForm. SeriesChartType;
             Nuevo();
         }
@@ -271,7 +273,11 @@ namespace CaidaPresion
         {
             try
             {
-                LoadGraphic();
+                if (cmbParamGraficar.SelectedValue != null)
+                {
+                    LoadGraphic();
+                }
+                
             }
             catch (Exception ex)
             {

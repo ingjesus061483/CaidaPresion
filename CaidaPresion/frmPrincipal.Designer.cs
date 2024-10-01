@@ -885,6 +885,6 @@ namespace CaidaPresion
         private EspumanteRepository espumanteRepository;
         private ConcentracionRepository concentracionRepository;
         private ResultadoRepository resultadoRepository;
-
+        private GraficaRepository graficaRepository;
     }
 }
