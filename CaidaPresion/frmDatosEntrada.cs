@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,18 @@ namespace CaidaPresion
 {
     public partial class frmDatosEntrada : Form
     {
+        public OtrosResultadosRepository OtrosResultadosRepository { get;set; }
+        public DataTable? tableResultados { get; set; }
         public DataTable? dt1 { get; set; }
         public DataTable? dt2 { get; set; }
         public DataTable? dt3 { get; set; }
         public DataTable?    dt4 { get; set; }
         public DataTable? dt5 { get; set; }
         public DataTable? dt6 { get; set; }
+        
         public frmDatosEntrada()
         {
+           
             InitializeComponent();
         }
 
@@ -30,7 +35,8 @@ namespace CaidaPresion
             dataGridView3.DataSource = dt3;
             dataGridView4.DataSource = dt4; 
             dataGridView5.DataSource = dt5;
-            dataGridView6.DataSource = dt6; 
+            dataGridView6.DataSource = dt6;
+            dgResultados.DataSource = tableResultados;
         }
     }
 }

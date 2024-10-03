@@ -12,27 +12,32 @@ namespace CaidaPresion
         double holdup;
         double ub;
         double db;
-        DataTable tblConcentracion;
-        Dictionary<string, double> colection;
-        ToolTip toolTip;
+        DataTable? tblConcentracion;
+        Dictionary<string, double> ?colection;
+        ToolTip? toolTip;
         public frmPrincipal(EspumanteRepository _espumanteRepository,
                             ConcentracionRepository _concentracionRepository,
                             ResultadoRepository _resultadoRepository,
-                            GraficaRepository _graficaRepository)
+                            GraficaRepository _graficaRepository,
+                            OtrosResultadosRepository _otrosResultadosRepository)
         {
             InitializeComponent();
-           
+            OtrosResultadosRepository = _otrosResultadosRepository;
             espumanteRepository = _espumanteRepository;
             concentracionRepository = _concentracionRepository;
             resultadoRepository = _resultadoRepository;
             graficaRepository= _graficaRepository;
-
         }
 
         private void btnGraficar_Click(object sender, EventArgs e)
         {
             try
             {
+                if(cmbParamGraficar.SelectedValue==null)
+                {
+                    ControlForm.GetMessage("Debe seleccionar a que concentracion esta el espunante", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 if (cmbConcentracion.SelectedValue == null)
                 {
                     ControlForm.GetMessage("Debe seleccionar a que concentracion esta el espunante", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -67,8 +72,9 @@ namespace CaidaPresion
                     { "reb",reynold },
                     {"usg",CaidaDePresion.Usg },
                     {"jg",double.Parse( txtVelLinealGas.Text) },
-                    {"concentracion_id",double.Parse(cmbConcentracion.SelectedValue.ToString()) },
-                    {"espumante_id",double .Parse(cmbEspumante.SelectedValue.ToString()) }
+                    {"concentracion_id",double.Parse(cmbConcentracion.SelectedValue.ToString())},
+                    {"espumante_id",double .Parse(cmbEspumante.SelectedValue.ToString()) },
+                    {"grafica_id",double.Parse(cmbParamGraficar.SelectedValue.ToString()) }
                 };
                 resultadoRepository.Save(colection);
                 cmbParamGraficar.SelectedIndex = 0;
@@ -82,7 +88,6 @@ namespace CaidaPresion
             {
                 ControlForm.GetMessage(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -105,7 +110,7 @@ namespace CaidaPresion
         {
             frmCalibracion form = new frmCalibracion();
             form.ShowDialog();
-            txtDeltaP.Text = ControlForm.textBox.Text;
+            txtDeltaP.Text =ControlForm.textBox!=null? ControlForm.textBox.Text:"";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -118,6 +123,7 @@ namespace CaidaPresion
         {
             frmDatosEntrada frmDatos = new frmDatosEntrada
             {
+                tableResultados = resultadoRepository.GetDataTable(),
                 dt1 = Table.GetTerminos("P1", CaidaDePresion.PrimerTermino),
                 dt2 = Table.GetTerminos("ReynoldEnjambre", CaidaDePresion.ReynoldEnjambre),
                 dt3 = Table.GetTerminos("SegundoTermino", CaidaDePresion.SegundoTermino),
@@ -144,7 +150,7 @@ namespace CaidaPresion
             ControlForm.FillCombo(espumanteRepository.GetDataTable(), arr, cmbEspumante);
             ControlForm.FillCombo(graficaRepository.GetDataTable(),arr, cmbParamGraficar);
             cmbtipoGrafica.DataSource =ControlForm. SeriesChartType;
-            Nuevo();
+            //Nuevo();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -185,14 +191,14 @@ namespace CaidaPresion
         
         void LoadGraphic()
         {
-            DataTable table;
+            DataTable table;       
             grafica.Series.Clear();
-            int.TryParse(cmbEspumante.SelectedValue.ToString(), out int espumante);
+            int.TryParse(cmbEspumante.SelectedValue!=null?cmbEspumante.SelectedValue.ToString():"", out int espumante);
             if (cmbConcentracion.SelectedValue == null)
             {
-                switch (cmbParamGraficar.Text)
+                switch (cmbParamGraficar.SelectedValue)
                 {
-                    case "AirHoldup Vs Jg":
+                    case 1:
                         {
                             foreach (DataRow row in tblConcentracion.Rows)
                             {
@@ -205,7 +211,7 @@ namespace CaidaPresion
                             }
                             break;
                         }
-                    case "Usg Vs Air holdup":
+                    case 2:
                         {
                             foreach (DataRow row in tblConcentracion.Rows)
                             {
@@ -218,7 +224,7 @@ namespace CaidaPresion
                             }
                             break;
                         }
-                    case "Diámetro de burbuja Vs Jg":
+                    case 3:
                         {
                             foreach (DataRow row in tblConcentracion.Rows)
                             {
@@ -237,23 +243,23 @@ namespace CaidaPresion
             {
                 grafica.Series.Add(cmbParamGraficar.Text);
                 int.TryParse(cmbConcentracion.SelectedValue.ToString(), out int concentracion);
-                switch (cmbParamGraficar.Text)
+                switch (cmbParamGraficar.SelectedValue)
                 {
-                    case "AirHoldup Vs Jg":
+                    case 1:
                         {
                             table = resultadoRepository.AirHoldupVsJg(concentracion, espumante);
                             string[] cols = { "jg", "holdup" };
                             ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), cmbParamGraficar.Text, cols, table);
                             break;
                         }
-                    case "Usg Vs Air holdup":
+                    case 2:
                         {
                             table = resultadoRepository.UsgVsAirHoldup(concentracion, espumante);
                             string[] cols = { "holdup", "usg" };
                             ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), cmbParamGraficar.Text, cols, table);
                             break;
                         }
-                    case "Diámetro de burbuja Vs Jg":
+                    case 3:
                         {
                             table = resultadoRepository.DiámetroBurbujaVsJg(concentracion, espumante);
                             string[] cols = { "db", "jg" };

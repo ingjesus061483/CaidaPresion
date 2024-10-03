@@ -32,12 +32,12 @@ namespace CaidaPresion
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0.68D, 15D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0.6D, 10D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1.2D, 20D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0.68D, 15D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0.6D, 10D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1.2D, 20D);
             dataGridView1 = new DataGridView();
             Variable = new DataGridViewTextBoxColumn();
             Resultado = new DataGridViewTextBoxColumn();
@@ -52,10 +52,10 @@ namespace CaidaPresion
             btnCalibrar = new Button();
             btnGraficar = new Button();
             txtDeltaP = new TextBox();
-            panel4 = new Panel();
             BtnOtrosResultados = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
             panel5 = new Panel();
+            label15 = new Label();
             label7 = new Label();
             pnlGraficas = new Panel();
             grafica = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -70,6 +70,7 @@ namespace CaidaPresion
             cmbEspumante = new ComboBox();
             panel2 = new Panel();
             panel9 = new Panel();
+            label14 = new Label();
             lblReloj = new Label();
             panel8 = new Panel();
             label1 = new Label();
@@ -179,11 +180,11 @@ namespace CaidaPresion
             label6.AutoSize = true;
             label6.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(273, 163);
+            label6.Location = new Point(219, 161);
             label6.Name = "label6";
-            label6.Size = new Size(37, 24);
+            label6.Size = new Size(102, 24);
             label6.TabIndex = 42;
-            label6.Text = "Jsl";
+            label6.Text = "Jsl (cm/s)";
             // 
             // btnNuevo
             // 
@@ -240,11 +241,11 @@ namespace CaidaPresion
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(20, 122);
+            label2.Location = new Point(26, 121);
             label2.Name = "label2";
-            label2.Size = new Size(284, 24);
+            label2.Size = new Size(295, 24);
             label2.TabIndex = 32;
-            label2.Text = "Velocidad lineal del gas (m/s)";
+            label2.Text = "Velocidad lineal del gas (cm/s)";
             // 
             // btnCalibrar
             // 
@@ -281,16 +282,6 @@ namespace CaidaPresion
             txtDeltaP.Size = new Size(84, 30);
             txtDeltaP.TabIndex = 27;
             // 
-            // panel4
-            // 
-            panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
-            panel4.BackgroundImageLayout = ImageLayout.Stretch;
-            panel4.Location = new Point(267, 72);
-            panel4.Margin = new Padding(4, 5, 4, 5);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(54, 35);
-            panel4.TabIndex = 45;
-            // 
             // BtnOtrosResultados
             // 
             BtnOtrosResultados.BackgroundImage = (Image)resources.GetObject("BtnOtrosResultados.BackgroundImage");
@@ -312,8 +303,8 @@ namespace CaidaPresion
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(42, 46, 50);
+            panel5.Controls.Add(label15);
             panel5.Controls.Add(label7);
-            panel5.Controls.Add(panel4);
             panel5.Controls.Add(label2);
             panel5.Controls.Add(label6);
             panel5.Controls.Add(txtVelLinealGas);
@@ -324,6 +315,17 @@ namespace CaidaPresion
             panel5.Name = "panel5";
             panel5.Size = new Size(436, 218);
             panel5.TabIndex = 46;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(152, 76);
+            label15.Name = "label15";
+            label15.Size = new Size(169, 24);
+            label15.TabIndex = 54;
+            label15.Text = "Caida de presión";
             // 
             // label7
             // 
@@ -351,22 +353,23 @@ namespace CaidaPresion
             // 
             // grafica
             // 
-            chartArea2.Name = "ChartArea1";
-            grafica.ChartAreas.Add(chartArea2);
+            grafica.BackColor = Color.FromArgb(42, 46, 50);
+            chartArea1.Name = "ChartArea1";
+            grafica.ChartAreas.Add(chartArea1);
             grafica.Dock = DockStyle.Fill;
-            legend2.Name = "Legend1";
-            grafica.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            grafica.Legends.Add(legend1);
             grafica.Location = new Point(0, 171);
             grafica.Margin = new Padding(4, 5, 4, 5);
             grafica.Name = "grafica";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            series2.Points.Add(dataPoint4);
-            series2.Points.Add(dataPoint5);
-            series2.Points.Add(dataPoint6);
-            grafica.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.Points.Add(dataPoint1);
+            series1.Points.Add(dataPoint2);
+            series1.Points.Add(dataPoint3);
+            grafica.Series.Add(series1);
             grafica.Size = new Size(1146, 459);
             grafica.TabIndex = 0;
             grafica.Text = "chart1";
@@ -424,6 +427,7 @@ namespace CaidaPresion
             // 
             // cmbParamGraficar
             // 
+            cmbParamGraficar.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbParamGraficar.FormattingEnabled = true;
             cmbParamGraficar.Location = new Point(276, 100);
             cmbParamGraficar.Margin = new Padding(4, 5, 4, 5);
@@ -488,12 +492,24 @@ namespace CaidaPresion
             // panel9
             // 
             panel9.BackColor = Color.FromArgb(42, 46, 50);
+            panel9.Controls.Add(label14);
             panel9.Controls.Add(lblReloj);
             panel9.Location = new Point(24, 447);
             panel9.Margin = new Padding(4, 5, 4, 5);
             panel9.Name = "panel9";
             panel9.Size = new Size(294, 112);
             panel9.TabIndex = 49;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(11, 4);
+            label14.Name = "label14";
+            label14.Size = new Size(76, 24);
+            label14.TabIndex = 53;
+            label14.Text = "RELOJ";
             // 
             // lblReloj
             // 
@@ -840,7 +856,6 @@ namespace CaidaPresion
         private TextBox txtDeltaP;
         private Button BtnOtrosResultados;
         private System.Windows.Forms.Timer timer1;
-        private Panel panel4;
         private Panel panel5;
         private Panel pnlGraficas;
         private Panel panel9;
@@ -886,5 +901,8 @@ namespace CaidaPresion
         private ConcentracionRepository concentracionRepository;
         private ResultadoRepository resultadoRepository;
         private GraficaRepository graficaRepository;
+        private OtrosResultadosRepository OtrosResultadosRepository;
+        private Label label14;
+        private Label label15;
     }
 }

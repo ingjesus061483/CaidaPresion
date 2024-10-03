@@ -3,7 +3,7 @@ namespace Controles
 {
     public abstract class CaidaDePresion
     {
-        
+        public static Dictionary<string, double> otrosResutadosColection;
         public static double[]? PrimerTermino;
         public static double[]? ReynoldEnjambre;
         public static double[]? SegundoTermino;
@@ -108,6 +108,7 @@ namespace Controles
             TercerTermino = new double[1];
             FuncionObjetivo = new double[1];
             DiametroBurbuja = new double[1];
+            otrosResutadosColection = new Dictionary<string, double>();
         }       
 
         static void LlenarArray( double valor,int i,int j,ref double[] arr)
@@ -158,10 +159,15 @@ namespace Controles
                 LlenarArray(z, i, j, ref TercerTermino);
                 LlenarArray(db1, i, j, ref DiametroBurbuja);
                 LlenarArray(p1, i, j, ref PrimerTermino);
-                LlenarArray(Resb, i, j, ref ReynoldEnjambre);
+                LlenarArray(Resb, i, j, ref ReynoldEnjambre);                
                 tol = Math.Abs(db1 - db);// % Tolerancia
                 i++;
                 db = db1;
+                otrosResutadosColection.Add("PrimerTermino" + i, p1);
+                otrosResutadosColection.Add("SegundoTermino" + i, y);
+                otrosResutadosColection.Add("TercerTermino" + i, z);
+                otrosResutadosColection.Add("DiametroBurbuja" + i, db1);
+                otrosResutadosColection.Add("ReynoldEnjambre" + i, Resb);
             }
             return db; 
         }

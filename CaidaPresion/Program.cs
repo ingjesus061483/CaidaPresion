@@ -27,7 +27,7 @@ namespace CaidaPresion
             services.AddScoped<EspumanteRepository> ();
             services.AddScoped<ConcentracionRepository>();
             services.AddScoped<ResultadoRepository>();
-            
+            services.AddScoped<OtrosResultadosRepository>();
             services.AddScoped<frmPrincipal>();
             
         }
