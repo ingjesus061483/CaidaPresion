@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Documents\\GitHub\\CaidaPresion\\SerialPort\\PuertoSerie.csproj": {}
+    "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\SerialPort\\PuertoSerie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Documents\\GitHub\\CaidaPresion\\Controles\\Controles.csproj": {
+    "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Controles.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\CaidaPresion\\Controles\\Controles.csproj",
+        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Controles.csproj",
         "projectName": "Controles",
-        "projectPath": "C:\\Users\\user\\Documents\\GitHub\\CaidaPresion\\Controles\\Controles.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\GitHub\\CaidaPresion\\Controles\\obj\\",
+        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Controles.csproj",
+        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -86,20 +86,20 @@
         }
       }
     },
-    "C:\\Users\\user\\Documents\\GitHub\\CaidaPresion\\SerialPort\\PuertoSerie.csproj": {
+    "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\SerialPort\\PuertoSerie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\CaidaPresion\\SerialPort\\PuertoSerie.csproj",
+        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\SerialPort\\PuertoSerie.csproj",
         "projectName": "PuertoSerie",
-        "projectPath": "C:\\Users\\user\\Documents\\GitHub\\CaidaPresion\\SerialPort\\PuertoSerie.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\GitHub\\CaidaPresion\\SerialPort\\obj\\",
+        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\SerialPort\\PuertoSerie.csproj",
+        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\SerialPort\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -115,8 +115,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\user\\Documents\\GitHub\\CaidaPresion\\Controles\\Controles.csproj": {
-                "projectPath": "C:\\Users\\user\\Documents\\GitHub\\CaidaPresion\\Controles\\Controles.csproj"
+              "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Controles.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Controles.csproj"
               }
             }
           }

@@ -12,8 +12,10 @@ namespace CaidaPresion
         double holdup;
         double ub;
         double db;
+
         DataTable? tblConcentracion;
-        Dictionary<string, double> ?colection;
+        Dictionary<string, double>? colection;
+
         ToolTip? toolTip;
         public frmPrincipal(EspumanteRepository _espumanteRepository,
                             ConcentracionRepository _concentracionRepository,
@@ -26,14 +28,14 @@ namespace CaidaPresion
             espumanteRepository = _espumanteRepository;
             concentracionRepository = _concentracionRepository;
             resultadoRepository = _resultadoRepository;
-            graficaRepository= _graficaRepository;
+            graficaRepository = _graficaRepository;
         }
 
         private void btnGraficar_Click(object sender, EventArgs e)
         {
             try
             {
-                if(cmbParamGraficar.SelectedValue==null)
+                if (cmbParamGraficar.SelectedValue == null)
                 {
                     ControlForm.GetMessage("Debe seleccionar a que concentracion esta el espunante", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -62,6 +64,8 @@ namespace CaidaPresion
                 Table.SetRow(dt, columns, values2);
                 string[] values3 = { "Hold up", holdup.ToString() };
                 Table.SetRow(dt, columns, values3);
+                string[] values4 = { "Usg", CaidaDePresion.Usg.ToString() };
+                Table.SetRow(dt, columns, values4);
                 dataGridView1.DataSource = dt;
                 colection = new Dictionary<string, double> {
                     { "deltap", double.Parse(txtDeltaP.Text) },
@@ -76,7 +80,21 @@ namespace CaidaPresion
                     {"espumante_id",double .Parse(cmbEspumante.SelectedValue.ToString()) },
                     {"grafica_id",double.Parse(cmbParamGraficar.SelectedValue.ToString()) }
                 };
-                resultadoRepository.Save(colection);
+                int idresultado = 0;
+                resultadoRepository.Save(colection, ref idresultado);
+                foreach (DataRow row in CaidaDePresion.tblOtrosResultados.Rows)
+                {
+                    colection = new Dictionary<string, double> {
+                        { "PrimerTermino",double.Parse( row["PrimerTermino"].ToString()) },
+                        { "ReynoldEnjambre",double.Parse( row["ReynoldEnjambre"].ToString()) },
+                        { "SegundoTermino",double.Parse( row["SegundoTermino"].ToString()) },
+                        { "TercerTermino",double.Parse( row["TercerTermino"].ToString()) },
+                        { "FuncionObjetivo",double.Parse( row["FuncionObjetivo"].ToString()) },
+                        { "DiametroBurbuja",double.Parse( row["DiametroBurbuja"].ToString()) }
+                    };
+                    OtrosResultadosRepository.Save(colection, ref idresultado);
+                }
+
                 cmbParamGraficar.SelectedIndex = 0;
                 txtDeltaP.Clear();
                 txtJsl.Clear();
@@ -110,7 +128,7 @@ namespace CaidaPresion
         {
             frmCalibracion form = new frmCalibracion();
             form.ShowDialog();
-            txtDeltaP.Text =ControlForm.textBox!=null? ControlForm.textBox.Text:"";
+            txtDeltaP.Text = ControlForm.textBox != null ? ControlForm.textBox.Text : "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -123,42 +141,35 @@ namespace CaidaPresion
         {
             frmDatosEntrada frmDatos = new frmDatosEntrada
             {
-                tableResultados = resultadoRepository.GetDataTable(),
-                dt1 = Table.GetTerminos("P1", CaidaDePresion.PrimerTermino),
-                dt2 = Table.GetTerminos("ReynoldEnjambre", CaidaDePresion.ReynoldEnjambre),
-                dt3 = Table.GetTerminos("SegundoTermino", CaidaDePresion.SegundoTermino),
-                dt4 = Table.GetTerminos("TercerTermino", CaidaDePresion.TercerTermino),
-                dt5 = Table.GetTerminos("FuncionObjetivo", CaidaDePresion.FuncionObjetivo),
-                dt6 = Table.GetTerminos("DiametroBurbuja", CaidaDePresion.DiametroBurbuja)
+                ResultadoRepository = resultadoRepository,
+                EspumanteRepository = espumanteRepository,
+                ConcentracionRepository = concentracionRepository,
+                OtrosResultadosRepository = OtrosResultadosRepository
             };
             frmDatos.ShowDialog();
         }
-       
+
 
         private void frmPrincipal_Load(object sender, EventArgs e)
-        {          
+        {
             lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
             timer1.Start();
             string[] arr = { "id", "nombre" };
             string[] arrparam = { "AirHoldup Vs Jg", "Usg Vs Air holdup", "Diámetro de burbuja Vs Jg" };
-            toolTip= ControlForm.GetToolTip(5000, 1000, 500, true);
+            toolTip = ControlForm.GetToolTip(5000, 1000, 500, true);
             ControlForm.SetToolTip(toolTip, BtnOtrosResultados, "Mostrar otros resultados");
             ControlForm.SetToolTip(toolTip, btnNuevo, "Nuevos valores");
             ControlForm.SetToolTip(toolTip, btnCalibrar, "Calibrar plc");
             ControlForm.SetToolTip(toolTip, btnGraficar, "Graficar resultados");
-            ControlForm.SetToolTip(toolTip, btnValoresIniciales, "Ver valores iniciales");         
+            ControlForm.SetToolTip(toolTip, btnValoresIniciales, "Ver valores iniciales");
             ControlForm.FillCombo(espumanteRepository.GetDataTable(), arr, cmbEspumante);
-            ControlForm.FillCombo(graficaRepository.GetDataTable(),arr, cmbParamGraficar);
-            cmbtipoGrafica.DataSource =ControlForm. SeriesChartType;
-            //Nuevo();
+            ControlForm.FillCombo(graficaRepository.GetDataTable(), arr, cmbParamGraficar);
+            cmbtipoGrafica.DataSource = ControlForm.SeriesChartType;
+            //  Nuevo();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
-        }
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void cmbEspumante_SelectedIndexChanged(object sender, EventArgs e)
@@ -188,12 +199,12 @@ namespace CaidaPresion
                 ControlForm.GetMessage(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
         void LoadGraphic()
         {
-            DataTable table;       
+            DataTable table;
             grafica.Series.Clear();
-            int.TryParse(cmbEspumante.SelectedValue!=null?cmbEspumante.SelectedValue.ToString():"", out int espumante);
+            int.TryParse(cmbEspumante.SelectedValue != null ? cmbEspumante.SelectedValue.ToString() : "", out int espumante);
             if (cmbConcentracion.SelectedValue == null)
             {
                 switch (cmbParamGraficar.SelectedValue)
@@ -207,7 +218,7 @@ namespace CaidaPresion
                                 int.TryParse(row["concentracion_id"].ToString(), out int concentracion);
                                 table = resultadoRepository.AirHoldupVsJg(concentracion, espumante);
                                 string[] cols = { "jg", "holdup" };
-                                ControlForm.GetGraphic(grafica,cmbtipoGrafica.SelectedValue.ToString(), serie,  cols, table);
+                                ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), serie, cols, table);
                             }
                             break;
                         }
@@ -283,7 +294,7 @@ namespace CaidaPresion
                 {
                     LoadGraphic();
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -294,10 +305,21 @@ namespace CaidaPresion
         private void cmbtipoGrafica_SelectedIndexChanged(object sender, EventArgs e)
         {
             var serie = Enum.Parse<SeriesChartType>(cmbtipoGrafica.SelectedValue.ToString());
-            foreach(var series in grafica .Series)
+            foreach (var series in grafica.Series)
             {
-                series.ChartType= serie;
+                series.ChartType = serie;
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            AboutBox1 aboutBox1 = new AboutBox1();
+            aboutBox1.ShowDialog();
         }
     }
 }

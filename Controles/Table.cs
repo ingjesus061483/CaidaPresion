@@ -19,6 +19,7 @@ namespace Controles
             row[column[1]] = values[1];
             dt.Rows.Add(row);
         }
+
         public static DataTable GetTerminos(string termino, double[] valores)
         {
             string[] columns = { "Valores " + termino, "Resultado" };

@@ -33,7 +33,7 @@ namespace DataAccess.Repository
             throw new NotImplementedException();
         }
 
-        public override void Save(Dictionary<string, double> colection)
+        public override void Save(Dictionary<string, double> colection, ref int id)
         {
             throw new NotImplementedException();
         }

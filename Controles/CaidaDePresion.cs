@@ -1,15 +1,16 @@
 ﻿using HSG.Numerics;
+using System.Data;
 namespace Controles
 {
     public abstract class CaidaDePresion
     {
-        public static Dictionary<string, double> otrosResutadosColection;
         public static double[]? PrimerTermino;
         public static double[]? ReynoldEnjambre;
         public static double[]? SegundoTermino;
         public static double[]? TercerTermino;
         public static double[]? FuncionObjetivo;
         public static double[]? DiametroBurbuja;
+        public static DataTable? tblOtrosResultados;
 
         public static double Holdup { get; set; }
         public static double db { get; set; }
@@ -102,20 +103,17 @@ namespace Controles
         
         static void Inicializar()
         {
-            PrimerTermino = new double[1];
-            ReynoldEnjambre = new double[1];
-            SegundoTermino = new double[1];
-            TercerTermino = new double[1];
-            FuncionObjetivo = new double[1];
-            DiametroBurbuja = new double[1];
-            otrosResutadosColection = new Dictionary<string, double>();
+            tblOtrosResultados = new DataTable();
+            tblOtrosResultados.Columns.Add("PrimerTermino");
+            tblOtrosResultados.Columns.Add("ReynoldEnjambre");
+            tblOtrosResultados.Columns.Add("SegundoTermino");
+            tblOtrosResultados.Columns.Add("TercerTermino");
+            tblOtrosResultados.Columns.Add("FuncionObjetivo");
+            tblOtrosResultados.Columns.Add("DiametroBurbuja");
+
         }       
 
-        static void LlenarArray( double valor,int i,int j,ref double[] arr)
-        {
-            arr[i] = valor;
-            Array.Resize(ref arr, j);
-        }
+        
         static double GetPrimerTerminoObjetivo(double Ut)
         {
             return  (18 * miusl * Ut) / (g * (rosl - rog)); //% Primer término de la función objetivo
@@ -154,20 +152,23 @@ namespace Controles
                 double fdb = Math.Sqrt((p1 * y)) - db; //% Función objetivo                
                 double ddb = 0.10305 * Math.Sqrt(p1) * Math.Pow(y, -0.5) * Math.Pow(db, -0.313) * (z / 2) - 1; //% Derivada de la función objetivo
                 double db1 = db - fdb / ddb;// % Nuevo diametro
-                LlenarArray(fdb, i, j, ref FuncionObjetivo);
-                LlenarArray(y, i, j, ref SegundoTermino);
-                LlenarArray(z, i, j, ref TercerTermino);
-                LlenarArray(db1, i, j, ref DiametroBurbuja);
-                LlenarArray(p1, i, j, ref PrimerTermino);
-                LlenarArray(Resb, i, j, ref ReynoldEnjambre);                
+               DataRow row= tblOtrosResultados.NewRow();
+                row["PrimerTermino"]=p1;
+                row["ReynoldEnjambre"]=Resb;
+                row["SegundoTermino"]=y;
+                row["TercerTermino"]=z;
+                row["FuncionObjetivo"]=fdb;
+                row["DiametroBurbuja"]=db1;
+                tblOtrosResultados.Rows.Add(row);   
+                //       LlenarArray(fdb, i, j, ref FuncionObjetivo);
+                //     LlenarArray(y, i, j, ref SegundoTermino);
+                //   LlenarArray(z, i, j, ref TercerTermino);
+                // LlenarArray(db1, i, j, ref DiametroBurbuja);
+                // LlenarArray(p1, i, j, ref PrimerTermino);
+                // LlenarArray(Resb, i, j, ref ReynoldEnjambre);                
                 tol = Math.Abs(db1 - db);// % Tolerancia
                 i++;
                 db = db1;
-                otrosResutadosColection.Add("PrimerTermino" + i, p1);
-                otrosResutadosColection.Add("SegundoTermino" + i, y);
-                otrosResutadosColection.Add("TercerTermino" + i, z);
-                otrosResutadosColection.Add("DiametroBurbuja" + i, db1);
-                otrosResutadosColection.Add("ReynoldEnjambre" + i, Resb);
             }
             return db; 
         }

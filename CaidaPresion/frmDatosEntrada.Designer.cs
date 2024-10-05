@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            dataGridView2 = new DataGridView();
-            dataGridView3 = new DataGridView();
-            dataGridView4 = new DataGridView();
-            dataGridView5 = new DataGridView();
-            dataGridView6 = new DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatosEntrada));
+            dgOtrosResultados = new DataGridView();
+            idOtro = new DataGridViewTextBoxColumn();
+            PrimerTermino = new DataGridViewTextBoxColumn();
+            ReynoldEnjambre = new DataGridViewTextBoxColumn();
+            SegundoTermino = new DataGridViewTextBoxColumn();
+            TercerTermino = new DataGridViewTextBoxColumn();
+            FuncionObjetivo = new DataGridViewTextBoxColumn();
+            DiametroBurbuja = new DataGridViewTextBoxColumn();
+            resultado_id = new DataGridViewTextBoxColumn();
             dgResultados = new DataGridView();
             id = new DataGridViewTextBoxColumn();
             Jg = new DataGridViewTextBoxColumn();
@@ -48,121 +52,132 @@
             concentracion = new DataGridViewTextBoxColumn();
             espumante_id = new DataGridViewTextBoxColumn();
             espumante = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView6).BeginInit();
+            panel18 = new Panel();
+            btnExportar = new Button();
+            label5 = new Label();
+            cmbConcentracion = new ComboBox();
+            label10 = new Label();
+            cmbEspumante = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)dgOtrosResultados).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgResultados).BeginInit();
+            panel18.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgOtrosResultados
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.BackgroundColor = Color.FromArgb(42, 46, 50);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(0, 178);
-            dataGridView1.Margin = new Padding(4, 5, 4, 5);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(353, 390);
-            dataGridView1.TabIndex = 0;
+            dgOtrosResultados.AllowUserToAddRows = false;
+            dgOtrosResultados.AllowUserToDeleteRows = false;
+            dgOtrosResultados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgOtrosResultados.BackgroundColor = Color.FromArgb(42, 46, 50);
+            dgOtrosResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgOtrosResultados.Columns.AddRange(new DataGridViewColumn[] { idOtro, PrimerTermino, ReynoldEnjambre, SegundoTermino, TercerTermino, FuncionObjetivo, DiametroBurbuja, resultado_id });
+            dgOtrosResultados.Location = new Point(39, 375);
+            dgOtrosResultados.Margin = new Padding(4, 5, 4, 5);
+            dgOtrosResultados.Name = "dgOtrosResultados";
+            dgOtrosResultados.ReadOnly = true;
+            dgOtrosResultados.RowHeadersVisible = false;
+            dgOtrosResultados.RowHeadersWidth = 62;
+            dgOtrosResultados.Size = new Size(1075, 231);
+            dgOtrosResultados.TabIndex = 0;
             // 
-            // dataGridView2
+            // idOtro
             // 
-            dataGridView2.AllowUserToAddRows = false;
-            dataGridView2.AllowUserToDeleteRows = false;
-            dataGridView2.BackgroundColor = Color.FromArgb(2, 11, 10);
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(375, 178);
-            dataGridView2.Margin = new Padding(4, 5, 4, 5);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.ReadOnly = true;
-            dataGridView2.RowHeadersVisible = false;
-            dataGridView2.RowHeadersWidth = 62;
-            dataGridView2.Size = new Size(353, 390);
-            dataGridView2.TabIndex = 1;
+            idOtro.DataPropertyName = "id";
+            idOtro.HeaderText = "Id";
+            idOtro.MinimumWidth = 8;
+            idOtro.Name = "idOtro";
+            idOtro.ReadOnly = true;
+            idOtro.Visible = false;
+            idOtro.Width = 150;
             // 
-            // dataGridView3
+            // PrimerTermino
             // 
-            dataGridView3.AllowUserToAddRows = false;
-            dataGridView3.AllowUserToDeleteRows = false;
-            dataGridView3.BackgroundColor = Color.FromArgb(2, 11, 10);
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(752, 178);
-            dataGridView3.Margin = new Padding(4, 5, 4, 5);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.ReadOnly = true;
-            dataGridView3.RowHeadersVisible = false;
-            dataGridView3.RowHeadersWidth = 62;
-            dataGridView3.Size = new Size(353, 390);
-            dataGridView3.TabIndex = 2;
+            PrimerTermino.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            PrimerTermino.DataPropertyName = "PrimerTermino";
+            PrimerTermino.HeaderText = "Primer termino";
+            PrimerTermino.MinimumWidth = 8;
+            PrimerTermino.Name = "PrimerTermino";
+            PrimerTermino.ReadOnly = true;
+            PrimerTermino.Width = 153;
             // 
-            // dataGridView4
+            // ReynoldEnjambre
             // 
-            dataGridView4.AllowUserToAddRows = false;
-            dataGridView4.AllowUserToDeleteRows = false;
-            dataGridView4.BackgroundColor = Color.FromArgb(2, 11, 10);
-            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Location = new Point(0, 596);
-            dataGridView4.Margin = new Padding(4, 5, 4, 5);
-            dataGridView4.Name = "dataGridView4";
-            dataGridView4.ReadOnly = true;
-            dataGridView4.RowHeadersVisible = false;
-            dataGridView4.RowHeadersWidth = 62;
-            dataGridView4.Size = new Size(353, 390);
-            dataGridView4.TabIndex = 3;
+            ReynoldEnjambre.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            ReynoldEnjambre.DataPropertyName = "ReynoldEnjambre";
+            ReynoldEnjambre.HeaderText = "Reynold enjambre";
+            ReynoldEnjambre.MinimumWidth = 8;
+            ReynoldEnjambre.Name = "ReynoldEnjambre";
+            ReynoldEnjambre.ReadOnly = true;
+            ReynoldEnjambre.Width = 175;
             // 
-            // dataGridView5
+            // SegundoTermino
             // 
-            dataGridView5.AllowUserToAddRows = false;
-            dataGridView5.AllowUserToDeleteRows = false;
-            dataGridView5.BackgroundColor = Color.FromArgb(2, 11, 10);
-            dataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView5.Location = new Point(375, 596);
-            dataGridView5.Margin = new Padding(4, 5, 4, 5);
-            dataGridView5.Name = "dataGridView5";
-            dataGridView5.ReadOnly = true;
-            dataGridView5.RowHeadersVisible = false;
-            dataGridView5.RowHeadersWidth = 62;
-            dataGridView5.Size = new Size(353, 390);
-            dataGridView5.TabIndex = 4;
+            SegundoTermino.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            SegundoTermino.DataPropertyName = "SegundoTermino";
+            SegundoTermino.HeaderText = "Segundo término";
+            SegundoTermino.MinimumWidth = 8;
+            SegundoTermino.Name = "SegundoTermino";
+            SegundoTermino.ReadOnly = true;
+            SegundoTermino.Width = 171;
             // 
-            // dataGridView6
+            // TercerTermino
             // 
-            dataGridView6.AllowUserToAddRows = false;
-            dataGridView6.AllowUserToDeleteRows = false;
-            dataGridView6.BackgroundColor = Color.FromArgb(2, 11, 10);
-            dataGridView6.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView6.Location = new Point(752, 596);
-            dataGridView6.Margin = new Padding(4, 5, 4, 5);
-            dataGridView6.Name = "dataGridView6";
-            dataGridView6.ReadOnly = true;
-            dataGridView6.RowHeadersVisible = false;
-            dataGridView6.RowHeadersWidth = 62;
-            dataGridView6.Size = new Size(353, 390);
-            dataGridView6.TabIndex = 5;
+            TercerTermino.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            TercerTermino.DataPropertyName = "TercerTermino";
+            TercerTermino.HeaderText = "Tercer término";
+            TercerTermino.MinimumWidth = 8;
+            TercerTermino.Name = "TercerTermino";
+            TercerTermino.ReadOnly = true;
+            TercerTermino.Width = 147;
+            // 
+            // FuncionObjetivo
+            // 
+            FuncionObjetivo.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            FuncionObjetivo.DataPropertyName = "FuncionObjetivo";
+            FuncionObjetivo.HeaderText = "Función objetivo";
+            FuncionObjetivo.MinimumWidth = 8;
+            FuncionObjetivo.Name = "FuncionObjetivo";
+            FuncionObjetivo.ReadOnly = true;
+            FuncionObjetivo.Width = 165;
+            // 
+            // DiametroBurbuja
+            // 
+            DiametroBurbuja.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            DiametroBurbuja.DataPropertyName = "DiametroBurbuja";
+            DiametroBurbuja.HeaderText = "Diámetro Burbuja";
+            DiametroBurbuja.MinimumWidth = 8;
+            DiametroBurbuja.Name = "DiametroBurbuja";
+            DiametroBurbuja.ReadOnly = true;
+            DiametroBurbuja.Width = 171;
+            // 
+            // resultado_id
+            // 
+            resultado_id.DataPropertyName = "resultado_id";
+            resultado_id.HeaderText = "resultado_id";
+            resultado_id.MinimumWidth = 8;
+            resultado_id.Name = "resultado_id";
+            resultado_id.ReadOnly = true;
+            resultado_id.Visible = false;
+            resultado_id.Width = 150;
             // 
             // dgResultados
             // 
             dgResultados.AllowUserToAddRows = false;
             dgResultados.AllowUserToDeleteRows = false;
+            dgResultados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgResultados.BackgroundColor = Color.FromArgb(42, 46, 50);
             dgResultados.BorderStyle = BorderStyle.Fixed3D;
             dgResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgResultados.Columns.AddRange(new DataGridViewColumn[] { id, Jg, DeltaP, Jsl, Holdup, Db, Ub, Reb, Usg, concentracion_id, concentracion, espumante_id, espumante });
-            dgResultados.Location = new Point(30, 30);
+            dgResultados.Location = new Point(39, 141);
             dgResultados.Name = "dgResultados";
             dgResultados.ReadOnly = true;
             dgResultados.RowHeadersVisible = false;
             dgResultados.RowHeadersWidth = 62;
             dgResultados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgResultados.Size = new Size(1075, 299);
+            dgResultados.Size = new Size(1075, 188);
             dgResultados.TabIndex = 45;
+            dgResultados.CellContentClick += dgResultados_CellContentClick;
             // 
             // id
             // 
@@ -252,8 +267,8 @@
             concentracion_id.MinimumWidth = 8;
             concentracion_id.Name = "concentracion_id";
             concentracion_id.ReadOnly = true;
+            concentracion_id.Visible = false;
             concentracion_id.Width = 150;
-            concentracion_id.Visible=false;
             // 
             // concentracion
             // 
@@ -271,8 +286,8 @@
             espumante_id.MinimumWidth = 8;
             espumante_id.Name = "espumante_id";
             espumante_id.ReadOnly = true;
-            espumante_id.Width = 150;
             espumante_id.Visible = false;
+            espumante_id.Width = 150;
             // 
             // espumante
             // 
@@ -283,41 +298,102 @@
             espumante.ReadOnly = true;
             espumante.Width = 150;
             // 
+            // panel18
+            // 
+            panel18.BackColor = Color.FromArgb(42, 46, 50);
+            panel18.Controls.Add(btnExportar);
+            panel18.Controls.Add(label5);
+            panel18.Controls.Add(cmbConcentracion);
+            panel18.Controls.Add(label10);
+            panel18.Controls.Add(cmbEspumante);
+            panel18.Dock = DockStyle.Top;
+            panel18.Location = new Point(0, 0);
+            panel18.Margin = new Padding(4, 5, 4, 5);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(1143, 115);
+            panel18.TabIndex = 46;
+            // 
+            // btnExportar
+            // 
+            btnExportar.BackgroundImage = (Image)resources.GetObject("btnExportar.BackgroundImage");
+            btnExportar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnExportar.FlatStyle = FlatStyle.Flat;
+            btnExportar.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExportar.Location = new Point(862, 34);
+            btnExportar.Name = "btnExportar";
+            btnExportar.Size = new Size(64, 50);
+            btnExportar.TabIndex = 37;
+            btnExportar.UseVisualStyleBackColor = true;
+            btnExportar.Click += btnExportar_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(54, 49);
+            label5.Name = "label5";
+            label5.Size = new Size(116, 24);
+            label5.TabIndex = 36;
+            label5.Text = "Espumante";
+            // 
+            // cmbConcentracion
+            // 
+            cmbConcentracion.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbConcentracion.FormattingEnabled = true;
+            cmbConcentracion.Location = new Point(601, 43);
+            cmbConcentracion.Margin = new Padding(4, 5, 4, 5);
+            cmbConcentracion.Name = "cmbConcentracion";
+            cmbConcentracion.Size = new Size(227, 33);
+            cmbConcentracion.TabIndex = 35;
+            cmbConcentracion.SelectedIndexChanged += cmbConcentracion_SelectedIndexChanged;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(445, 48);
+            label10.Name = "label10";
+            label10.Size = new Size(148, 24);
+            label10.TabIndex = 34;
+            label10.Text = "Concentración";
+            // 
+            // cmbEspumante
+            // 
+            cmbEspumante.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEspumante.FormattingEnabled = true;
+            cmbEspumante.Location = new Point(182, 44);
+            cmbEspumante.Margin = new Padding(4, 5, 4, 5);
+            cmbEspumante.Name = "cmbEspumante";
+            cmbEspumante.Size = new Size(227, 33);
+            cmbEspumante.TabIndex = 0;
+            cmbEspumante.SelectedIndexChanged += cmbEspumante_SelectedIndexChanged;
+            // 
             // frmDatosEntrada
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1143, 750);
+            ClientSize = new Size(1143, 639);
+            Controls.Add(dgOtrosResultados);
+            Controls.Add(panel18);
             Controls.Add(dgResultados);
-            Controls.Add(dataGridView6);
-            Controls.Add(dataGridView5);
-            Controls.Add(dataGridView4);
-            Controls.Add(dataGridView3);
-            Controls.Add(dataGridView2);
-            Controls.Add(dataGridView1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(4, 5, 4, 5);
             Name = "frmDatosEntrada";
             Text = "frmDatosEntrada";
             Load += frmDatosEntrada_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgOtrosResultados).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgResultados).EndInit();
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private DataGridView dataGridView2;
-        private DataGridView dataGridView3;
-        private DataGridView dataGridView4;
-        private DataGridView dataGridView5;
-        private DataGridView dataGridView6;
+        private DataGridView dgOtrosResultados;
         private DataGridView dgResultados;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn Jg;
@@ -332,5 +408,19 @@
         private DataGridViewTextBoxColumn concentracion;
         private DataGridViewTextBoxColumn espumante_id;
         private DataGridViewTextBoxColumn espumante;
+        private Panel panel18;
+        private Label label5;
+        private ComboBox cmbConcentracion;
+        private Label label10;
+        private ComboBox cmbEspumante;
+        private Button btnExportar;
+        private DataGridViewTextBoxColumn idOtro;
+        private DataGridViewTextBoxColumn PrimerTermino;
+        private DataGridViewTextBoxColumn ReynoldEnjambre;
+        private DataGridViewTextBoxColumn SegundoTermino;
+        private DataGridViewTextBoxColumn TercerTermino;
+        private DataGridViewTextBoxColumn FuncionObjetivo;
+        private DataGridViewTextBoxColumn DiametroBurbuja;
+        private DataGridViewTextBoxColumn resultado_id;
     }
 }

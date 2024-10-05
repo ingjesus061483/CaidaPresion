@@ -77,9 +77,10 @@ namespace CaidaPresion
             panel10 = new Panel();
             panel11 = new Panel();
             panel6 = new Panel();
-            pictureBox4 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            btnAyuda = new PictureBox();
+            btnMinimizar = new PictureBox();
+            btnMaximizar = new PictureBox();
+            btnCerrar = new PictureBox();
             panel3 = new Panel();
             label9 = new Label();
             label8 = new Label();
@@ -105,9 +106,10 @@ namespace CaidaPresion
             panel10.SuspendLayout();
             panel11.SuspendLayout();
             panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnAyuda).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMaximizar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             panel3.SuspendLayout();
             panel12.SuspendLayout();
             panel1.SuspendLayout();
@@ -160,7 +162,7 @@ namespace CaidaPresion
             btnValoresIniciales.BackgroundImageLayout = ImageLayout.Stretch;
             btnValoresIniciales.FlatStyle = FlatStyle.Flat;
             btnValoresIniciales.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnValoresIniciales.Location = new Point(73, 60);
+            btnValoresIniciales.Location = new Point(124, 60);
             btnValoresIniciales.Name = "btnValoresIniciales";
             btnValoresIniciales.Size = new Size(44, 50);
             btnValoresIniciales.TabIndex = 43;
@@ -188,12 +190,11 @@ namespace CaidaPresion
             // 
             // btnNuevo
             // 
-            btnNuevo.BackgroundImage = Properties.Resources.nuevo;
+            btnNuevo.BackgroundImage = (Image)resources.GetObject("btnNuevo.BackgroundImage");
             btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
-            btnNuevo.Enabled = false;
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnNuevo.Location = new Point(123, 60);
+            btnNuevo.Location = new Point(24, 62);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(44, 50);
             btnNuevo.TabIndex = 35;
@@ -249,7 +250,7 @@ namespace CaidaPresion
             // 
             // btnCalibrar
             // 
-            btnCalibrar.BackgroundImage = Properties.Resources.descarga__1_;
+            btnCalibrar.BackgroundImage = (Image)resources.GetObject("btnCalibrar.BackgroundImage");
             btnCalibrar.BackgroundImageLayout = ImageLayout.Stretch;
             btnCalibrar.Enabled = false;
             btnCalibrar.FlatStyle = FlatStyle.Flat;
@@ -263,7 +264,7 @@ namespace CaidaPresion
             // 
             // btnGraficar
             // 
-            btnGraficar.BackgroundImage = Properties.Resources.grafica;
+            btnGraficar.BackgroundImage = (Image)resources.GetObject("btnGraficar.BackgroundImage");
             btnGraficar.BackgroundImageLayout = ImageLayout.Stretch;
             btnGraficar.FlatStyle = FlatStyle.Flat;
             btnGraficar.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -288,7 +289,7 @@ namespace CaidaPresion
             BtnOtrosResultados.BackgroundImageLayout = ImageLayout.Stretch;
             BtnOtrosResultados.FlatStyle = FlatStyle.Flat;
             BtnOtrosResultados.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BtnOtrosResultados.Location = new Point(23, 60);
+            BtnOtrosResultados.Location = new Point(74, 60);
             BtnOtrosResultados.Name = "BtnOtrosResultados";
             BtnOtrosResultados.Size = new Size(44, 50);
             BtnOtrosResultados.TabIndex = 44;
@@ -553,8 +554,8 @@ namespace CaidaPresion
             panel10.Controls.Add(BtnOtrosResultados);
             panel10.Controls.Add(btnGraficar);
             panel10.Controls.Add(btnValoresIniciales);
-            panel10.Controls.Add(btnCalibrar);
             panel10.Controls.Add(btnNuevo);
+            panel10.Controls.Add(btnCalibrar);
             panel10.Location = new Point(24, 260);
             panel10.Margin = new Padding(4, 5, 4, 5);
             panel10.Name = "panel10";
@@ -577,47 +578,66 @@ namespace CaidaPresion
             // 
             // panel6
             // 
-            panel6.Controls.Add(pictureBox4);
-            panel6.Controls.Add(pictureBox2);
-            panel6.Controls.Add(pictureBox3);
+            panel6.Controls.Add(btnAyuda);
+            panel6.Controls.Add(btnMinimizar);
+            panel6.Controls.Add(btnMaximizar);
+            panel6.Controls.Add(btnCerrar);
             panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(1705, 0);
+            panel6.Location = new Point(1648, 0);
             panel6.Margin = new Padding(4, 5, 4, 5);
             panel6.Name = "panel6";
-            panel6.Size = new Size(89, 138);
+            panel6.Size = new Size(146, 138);
             panel6.TabIndex = 47;
             // 
-            // pictureBox4
+            // btnAyuda
             // 
-            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
-            pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox4.Location = new Point(196, 50);
-            pictureBox4.Margin = new Padding(4, 5, 4, 5);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(37, 47);
-            pictureBox4.TabIndex = 43;
-            pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click;
+            btnAyuda.BackgroundImage = (Image)resources.GetObject("btnAyuda.BackgroundImage");
+            btnAyuda.BackgroundImageLayout = ImageLayout.Stretch;
+            btnAyuda.Dock = DockStyle.Fill;
+            btnAyuda.Location = new Point(0, 0);
+            btnAyuda.Margin = new Padding(4, 5, 4, 5);
+            btnAyuda.Name = "btnAyuda";
+            btnAyuda.Size = new Size(35, 138);
+            btnAyuda.TabIndex = 43;
+            btnAyuda.TabStop = false;
+            btnAyuda.Click += btnAyuda_Click;
             // 
-            // pictureBox2
+            // btnMinimizar
             // 
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.Location = new Point(104, 50);
-            pictureBox2.Margin = new Padding(4, 5, 4, 5);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(37, 47);
-            pictureBox2.TabIndex = 41;
-            pictureBox2.TabStop = false;
+            btnMinimizar.BackgroundImage = (Image)resources.GetObject("btnMinimizar.BackgroundImage");
+            btnMinimizar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMinimizar.Dock = DockStyle.Right;
+            btnMinimizar.Location = new Point(35, 0);
+            btnMinimizar.Margin = new Padding(4, 5, 4, 5);
+            btnMinimizar.Name = "btnMinimizar";
+            btnMinimizar.Size = new Size(37, 138);
+            btnMinimizar.TabIndex = 44;
+            btnMinimizar.TabStop = false;
             // 
-            // pictureBox3
+            // btnMaximizar
             // 
-            pictureBox3.Location = new Point(149, 50);
-            pictureBox3.Margin = new Padding(4, 5, 4, 5);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(37, 47);
-            pictureBox3.TabIndex = 42;
-            pictureBox3.TabStop = false;
+            btnMaximizar.BackgroundImage = (Image)resources.GetObject("btnMaximizar.BackgroundImage");
+            btnMaximizar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMaximizar.Dock = DockStyle.Right;
+            btnMaximizar.Location = new Point(72, 0);
+            btnMaximizar.Margin = new Padding(4, 5, 4, 5);
+            btnMaximizar.Name = "btnMaximizar";
+            btnMaximizar.Size = new Size(37, 138);
+            btnMaximizar.TabIndex = 41;
+            btnMaximizar.TabStop = false;
+            // 
+            // btnCerrar
+            // 
+            btnCerrar.BackgroundImage = (Image)resources.GetObject("btnCerrar.BackgroundImage");
+            btnCerrar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCerrar.Dock = DockStyle.Right;
+            btnCerrar.Location = new Point(109, 0);
+            btnCerrar.Margin = new Padding(4, 5, 4, 5);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(37, 138);
+            btnCerrar.TabIndex = 42;
+            btnCerrar.TabStop = false;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // panel3
             // 
@@ -625,10 +645,10 @@ namespace CaidaPresion
             panel3.Controls.Add(label9);
             panel3.Controls.Add(label8);
             panel3.Dock = DockStyle.Left;
-            panel3.Location = new Point(299, 0);
+            panel3.Location = new Point(277, 0);
             panel3.Margin = new Padding(4, 5, 4, 5);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1406, 138);
+            panel3.Size = new Size(1371, 138);
             panel3.TabIndex = 46;
             // 
             // label9
@@ -636,7 +656,7 @@ namespace CaidaPresion
             label9.AutoSize = true;
             label9.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(116, 68);
+            label9.Location = new Point(88, 68);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
             label9.Size = new Size(1132, 32);
@@ -649,7 +669,7 @@ namespace CaidaPresion
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(26, 15);
+            label8.Location = new Point(-2, 15);
             label8.Name = "label8";
             label8.Size = new Size(1366, 32);
             label8.TabIndex = 40;
@@ -664,7 +684,7 @@ namespace CaidaPresion
             panel12.Location = new Point(0, 0);
             panel12.Margin = new Padding(4, 5, 4, 5);
             panel12.Name = "panel12";
-            panel12.Size = new Size(299, 138);
+            panel12.Size = new Size(277, 138);
             panel12.TabIndex = 40;
             // 
             // label4
@@ -672,7 +692,7 @@ namespace CaidaPresion
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(36, 78);
+            label4.Location = new Point(21, 67);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(232, 25);
@@ -685,7 +705,7 @@ namespace CaidaPresion
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(66, 33);
+            label3.Location = new Point(51, 22);
             label3.Name = "label3";
             label3.Size = new Size(170, 25);
             label3.TabIndex = 39;
@@ -823,9 +843,10 @@ namespace CaidaPresion
             panel11.ResumeLayout(false);
             panel11.PerformLayout();
             panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnAyuda).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinimizar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMaximizar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel12.ResumeLayout(false);
@@ -869,9 +890,9 @@ namespace CaidaPresion
         private Label label10;
         private ComboBox cmbEspumante;
         private Panel panel11;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
+        private PictureBox btnAyuda;
+        private PictureBox btnCerrar;
+        private PictureBox btnMaximizar;
         private Panel panel12;
         private Label label9;
         private Label label8;
@@ -904,5 +925,6 @@ namespace CaidaPresion
         private OtrosResultadosRepository OtrosResultadosRepository;
         private Label label14;
         private Label label15;
+        private PictureBox btnMinimizar;
     }
 }

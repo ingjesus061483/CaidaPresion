@@ -1,7 +1,12 @@
-﻿using System;
+﻿using Microsoft.FSharp.Data.UnitSystems.SI.UnitNames;
+using System;
 using System.Data;
+using System.Data.Common;
 using System.IO.Ports;
+using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using static Microsoft.FSharp.Core.ByRefKinds;
+using static System.Net.Mime.MediaTypeNames;
 namespace Controles
 {
     public abstract class ControlForm
@@ -90,5 +95,6 @@ namespace Controles
         {
             MessageBox.Show(message, caption,buttons, icon );
         }
+     
     }
 }

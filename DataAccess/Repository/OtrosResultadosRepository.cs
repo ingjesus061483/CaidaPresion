@@ -25,7 +25,7 @@ namespace DataAccess.Repository
             try
             {
                 Abrir();
-                Command = GetCommand("select PrimerTermino,ReynoldEnjambre,SegundoTermino,TercerTermino,FuncionObjetivo,DiametroBurbuja from otros_resultados where resultado_id=" + id, CommandType.Text);
+                Command = GetCommand("select id, PrimerTermino,ReynoldEnjambre,SegundoTermino,TercerTermino,FuncionObjetivo,DiametroBurbuja,resultado_id  from otros_resultados where resultado_id=" + id, CommandType.Text);
                 DataTable dataTable = GetTableCommand(Command);
                 return dataTable;
 
@@ -45,13 +45,12 @@ namespace DataAccess.Repository
             try
             {
                 Abrir();               
-                double PrimerTermino = Math.Round(colection["PrimerTermino"], 2);
-                double ReynoldEnjambre = Math.Round(colection["ReynoldEnjambre"], 2);
-                double SegundoTermino = Math.Round(colection["SegundoTermino"], 2);
-                double TercerTermino = Math.Round(colection["TercerTermino"], 2);
-                double FuncionObjetivo = Math.Round(colection["FuncionObjetivo"], 2);
-                double DiametroBurbuja = Math.Round(colection["DiametroBurbuja"], 2);
-                int.TryParse(colection["resultado_id"].ToString(), out int resultadoId);
+                double PrimerTermino = Math.Round(colection["PrimerTermino"], 15);
+                double ReynoldEnjambre = Math.Round(colection["ReynoldEnjambre"], 15);
+                double SegundoTermino = Math.Round(colection["SegundoTermino"], 15);
+                double TercerTermino = Math.Round(colection["TercerTermino"], 15);
+                double FuncionObjetivo = Math.Round(colection["FuncionObjetivo"], 15);
+                double DiametroBurbuja = Math.Round(colection["DiametroBurbuja"], 15);
                 Command = GetCommand("insertar_otros_resultados", CommandType.StoredProcedure);
                 Command.Parameters.Add("_PrimerTermino", MySqlDbType.Decimal).Value = PrimerTermino;
                 Command.Parameters.Add("_ReynoldEnjambre", MySqlDbType.Decimal).Value = ReynoldEnjambre;
@@ -59,7 +58,7 @@ namespace DataAccess.Repository
                 Command.Parameters.Add("_TercerTermino", MySqlDbType.Decimal).Value = TercerTermino;
                 Command.Parameters.Add("_FuncionObjetivo", MySqlDbType.Decimal).Value = FuncionObjetivo;
                 Command.Parameters.Add("_DiametroBurbuja", MySqlDbType.Decimal).Value = DiametroBurbuja;                
-                Command.Parameters.Add("_resultado_id", MySqlDbType.Int32).Value = resultadoId;
+                Command.Parameters.Add("_resultado_id", MySqlDbType.Int32).Value = id;
                 Command.ExecuteNonQuery();
             }
             catch (Exception ex)

@@ -23,7 +23,6 @@ namespace DataAccess.Repository
                 Cerrar();
             }
         }
-
         public override DataTable GetDataTable()
         {
             try
@@ -33,6 +32,30 @@ namespace DataAccess.Repository
                                    "Db,Ub,Reb,Usg,concentracion_id," +
                                    "concentracion,espumante_id,espumante " +
                                    "from view_resultados", CommandType.Text);
+                DataTable dt = GetTableCommand(Command);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+            finally
+            {
+                Cerrar();
+            }
+        }
+
+        public  DataTable GetDataTableEspumateConcentracion(int espumante,int concentracion)
+        {
+            try
+            {
+                Abrir();
+                Command = GetCommand("select id,Jg,DeltaP,Jsl,Holdup," +
+                                   "Db,Ub,Reb,Usg,concentracion_id," +
+                                   "concentracion,espumante_id,espumante " +
+                                   "from view_resultados where espumante_id="+espumante+" and " +
+                                   "concentracion_id="+concentracion, CommandType.Text);
                 DataTable dt = GetTableCommand(Command);
                 return dt;
             }
@@ -46,6 +69,7 @@ namespace DataAccess.Repository
                 Cerrar();
             }
         }
+
 
         public override void Save(Dictionary<string, double> colection, ref int id)
         {
