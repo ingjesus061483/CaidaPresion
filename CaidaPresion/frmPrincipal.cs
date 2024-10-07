@@ -165,7 +165,7 @@ namespace CaidaPresion
             ControlForm.FillCombo(espumanteRepository.GetDataTable(), arr, cmbEspumante);
             ControlForm.FillCombo(graficaRepository.GetDataTable(), arr, cmbParamGraficar);
             cmbtipoGrafica.DataSource = ControlForm.SeriesChartType;
-            //  Nuevo();
+            Nuevo();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -320,6 +320,16 @@ namespace CaidaPresion
         {
             AboutBox1 aboutBox1 = new AboutBox1();
             aboutBox1.ShowDialog();
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

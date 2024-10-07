@@ -54,7 +54,6 @@ namespace CaidaPresion
             txtDeltaP = new TextBox();
             BtnOtrosResultados = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
-            panel5 = new Panel();
             label15 = new Label();
             label7 = new Label();
             pnlGraficas = new Panel();
@@ -69,12 +68,8 @@ namespace CaidaPresion
             label10 = new Label();
             cmbEspumante = new ComboBox();
             panel2 = new Panel();
-            panel9 = new Panel();
-            label14 = new Label();
             lblReloj = new Label();
-            panel8 = new Panel();
             label1 = new Label();
-            panel10 = new Panel();
             panel11 = new Panel();
             panel6 = new Panel();
             btnAyuda = new PictureBox();
@@ -95,15 +90,17 @@ namespace CaidaPresion
             pictureBox1 = new PictureBox();
             panel15 = new Panel();
             panel17 = new Panel();
+            customPanel3 = new Controles.CustomPanel();
+            label16 = new Label();
+            customPanel2 = new Controles.CustomPanel();
+            customPanel1 = new Controles.CustomPanel();
             panel16 = new Panel();
+            customPanel5 = new Controles.CustomPanel();
+            customPanel4 = new Controles.CustomPanel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel5.SuspendLayout();
             pnlGraficas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grafica).BeginInit();
             panel18.SuspendLayout();
-            panel9.SuspendLayout();
-            panel8.SuspendLayout();
-            panel10.SuspendLayout();
             panel11.SuspendLayout();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnAyuda).BeginInit();
@@ -118,7 +115,12 @@ namespace CaidaPresion
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel15.SuspendLayout();
             panel17.SuspendLayout();
+            customPanel3.SuspendLayout();
+            customPanel2.SuspendLayout();
+            customPanel1.SuspendLayout();
             panel16.SuspendLayout();
+            customPanel5.SuspendLayout();
+            customPanel4.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
@@ -129,13 +131,14 @@ namespace CaidaPresion
             dataGridView1.BorderStyle = BorderStyle.Fixed3D;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Variable, Resultado });
-            dataGridView1.Location = new Point(761, 660);
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(373, 218);
+            dataGridView1.Size = new Size(406, 229);
             dataGridView1.TabIndex = 44;
             // 
             // Variable
@@ -162,7 +165,7 @@ namespace CaidaPresion
             btnValoresIniciales.BackgroundImageLayout = ImageLayout.Stretch;
             btnValoresIniciales.FlatStyle = FlatStyle.Flat;
             btnValoresIniciales.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnValoresIniciales.Location = new Point(124, 60);
+            btnValoresIniciales.Location = new Point(113, 37);
             btnValoresIniciales.Name = "btnValoresIniciales";
             btnValoresIniciales.Size = new Size(44, 50);
             btnValoresIniciales.TabIndex = 43;
@@ -172,7 +175,7 @@ namespace CaidaPresion
             // txtJsl
             // 
             txtJsl.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtJsl.Location = new Point(329, 158);
+            txtJsl.Location = new Point(327, 157);
             txtJsl.Name = "txtJsl";
             txtJsl.Size = new Size(84, 30);
             txtJsl.TabIndex = 30;
@@ -180,9 +183,10 @@ namespace CaidaPresion
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(219, 161);
+            label6.Location = new Point(217, 160);
             label6.Name = "label6";
             label6.Size = new Size(102, 24);
             label6.TabIndex = 42;
@@ -194,7 +198,7 @@ namespace CaidaPresion
             btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnNuevo.Location = new Point(24, 62);
+            btnNuevo.Location = new Point(13, 39);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(44, 50);
             btnNuevo.TabIndex = 35;
@@ -204,35 +208,37 @@ namespace CaidaPresion
             // rbtManual
             // 
             rbtManual.AutoSize = true;
+            rbtManual.BackColor = Color.Transparent;
             rbtManual.Checked = true;
             rbtManual.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             rbtManual.ForeColor = Color.White;
-            rbtManual.Location = new Point(37, 62);
+            rbtManual.Location = new Point(44, 69);
             rbtManual.Name = "rbtManual";
             rbtManual.Size = new Size(103, 28);
             rbtManual.TabIndex = 34;
             rbtManual.TabStop = true;
             rbtManual.Text = "Manual";
-            rbtManual.UseVisualStyleBackColor = true;
+            rbtManual.UseVisualStyleBackColor = false;
             rbtManual.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // radioButton1
             // 
             radioButton1.AutoSize = true;
+            radioButton1.BackColor = Color.Transparent;
             radioButton1.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             radioButton1.ForeColor = Color.White;
-            radioButton1.Location = new Point(37, 122);
+            radioButton1.Location = new Point(44, 129);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(142, 28);
             radioButton1.TabIndex = 33;
             radioButton1.Text = "Automático";
-            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.UseVisualStyleBackColor = false;
             radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // txtVelLinealGas
             // 
             txtVelLinealGas.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtVelLinealGas.Location = new Point(329, 115);
+            txtVelLinealGas.Location = new Point(327, 114);
             txtVelLinealGas.Name = "txtVelLinealGas";
             txtVelLinealGas.Size = new Size(84, 30);
             txtVelLinealGas.TabIndex = 29;
@@ -240,9 +246,10 @@ namespace CaidaPresion
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(26, 121);
+            label2.Location = new Point(24, 120);
             label2.Name = "label2";
             label2.Size = new Size(295, 24);
             label2.TabIndex = 32;
@@ -255,7 +262,7 @@ namespace CaidaPresion
             btnCalibrar.Enabled = false;
             btnCalibrar.FlatStyle = FlatStyle.Flat;
             btnCalibrar.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCalibrar.Location = new Point(174, 60);
+            btnCalibrar.Location = new Point(163, 37);
             btnCalibrar.Name = "btnCalibrar";
             btnCalibrar.Size = new Size(63, 50);
             btnCalibrar.TabIndex = 31;
@@ -268,7 +275,7 @@ namespace CaidaPresion
             btnGraficar.BackgroundImageLayout = ImageLayout.Stretch;
             btnGraficar.FlatStyle = FlatStyle.Flat;
             btnGraficar.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnGraficar.Location = new Point(244, 62);
+            btnGraficar.Location = new Point(233, 39);
             btnGraficar.Name = "btnGraficar";
             btnGraficar.Size = new Size(64, 50);
             btnGraficar.TabIndex = 28;
@@ -278,7 +285,7 @@ namespace CaidaPresion
             // txtDeltaP
             // 
             txtDeltaP.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDeltaP.Location = new Point(329, 72);
+            txtDeltaP.Location = new Point(327, 71);
             txtDeltaP.Name = "txtDeltaP";
             txtDeltaP.Size = new Size(84, 30);
             txtDeltaP.TabIndex = 27;
@@ -289,7 +296,7 @@ namespace CaidaPresion
             BtnOtrosResultados.BackgroundImageLayout = ImageLayout.Stretch;
             BtnOtrosResultados.FlatStyle = FlatStyle.Flat;
             BtnOtrosResultados.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BtnOtrosResultados.Location = new Point(74, 60);
+            BtnOtrosResultados.Location = new Point(63, 37);
             BtnOtrosResultados.Name = "BtnOtrosResultados";
             BtnOtrosResultados.Size = new Size(44, 50);
             BtnOtrosResultados.TabIndex = 44;
@@ -301,28 +308,13 @@ namespace CaidaPresion
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
-            // panel5
-            // 
-            panel5.BackColor = Color.FromArgb(42, 46, 50);
-            panel5.Controls.Add(label15);
-            panel5.Controls.Add(label7);
-            panel5.Controls.Add(label2);
-            panel5.Controls.Add(label6);
-            panel5.Controls.Add(txtVelLinealGas);
-            panel5.Controls.Add(txtJsl);
-            panel5.Controls.Add(txtDeltaP);
-            panel5.Location = new Point(40, 660);
-            panel5.Margin = new Padding(4, 5, 4, 5);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(436, 218);
-            panel5.TabIndex = 46;
-            // 
             // label15
             // 
             label15.AutoSize = true;
+            label15.BackColor = Color.Transparent;
             label15.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.White;
-            label15.Location = new Point(152, 76);
+            label15.Location = new Point(150, 75);
             label15.Name = "label15";
             label15.Size = new Size(169, 24);
             label15.TabIndex = 54;
@@ -331,9 +323,10 @@ namespace CaidaPresion
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
             label7.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(103, 18);
+            label7.Location = new Point(101, 17);
             label7.Name = "label7";
             label7.Size = new Size(211, 24);
             label7.TabIndex = 53;
@@ -490,77 +483,30 @@ namespace CaidaPresion
             panel2.Size = new Size(1146, 20);
             panel2.TabIndex = 1;
             // 
-            // panel9
-            // 
-            panel9.BackColor = Color.FromArgb(42, 46, 50);
-            panel9.Controls.Add(label14);
-            panel9.Controls.Add(lblReloj);
-            panel9.Location = new Point(24, 447);
-            panel9.Margin = new Padding(4, 5, 4, 5);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(294, 112);
-            panel9.TabIndex = 49;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.White;
-            label14.Location = new Point(11, 4);
-            label14.Name = "label14";
-            label14.Size = new Size(76, 24);
-            label14.TabIndex = 53;
-            label14.Text = "RELOJ";
-            // 
             // lblReloj
             // 
             lblReloj.AutoSize = true;
             lblReloj.BackColor = Color.Transparent;
             lblReloj.Font = new Font("Centaur", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblReloj.ForeColor = Color.White;
-            lblReloj.Location = new Point(10, 28);
+            lblReloj.Location = new Point(30, 34);
             lblReloj.Margin = new Padding(4, 0, 4, 0);
             lblReloj.Name = "lblReloj";
             lblReloj.Size = new Size(219, 64);
             lblReloj.TabIndex = 0;
             lblReloj.Text = "00:00:00";
             // 
-            // panel8
-            // 
-            panel8.BackColor = Color.FromArgb(42, 46, 50);
-            panel8.Controls.Add(label1);
-            panel8.Controls.Add(rbtManual);
-            panel8.Controls.Add(radioButton1);
-            panel8.Location = new Point(24, 33);
-            panel8.Margin = new Padding(4, 5, 4, 5);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(254, 193);
-            panel8.TabIndex = 50;
-            // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(10, 10);
+            label1.Location = new Point(17, 17);
             label1.Name = "label1";
             label1.Size = new Size(226, 24);
             label1.TabIndex = 52;
             label1.Text = "MODO DE EJECUCIÓN";
-            // 
-            // panel10
-            // 
-            panel10.BackColor = Color.FromArgb(42, 46, 50);
-            panel10.Controls.Add(BtnOtrosResultados);
-            panel10.Controls.Add(btnGraficar);
-            panel10.Controls.Add(btnValoresIniciales);
-            panel10.Controls.Add(btnNuevo);
-            panel10.Controls.Add(btnCalibrar);
-            panel10.Location = new Point(24, 260);
-            panel10.Margin = new Padding(4, 5, 4, 5);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(314, 152);
-            panel10.TabIndex = 51;
             // 
             // panel11
             // 
@@ -788,9 +734,9 @@ namespace CaidaPresion
             // 
             // panel17
             // 
-            panel17.Controls.Add(panel8);
-            panel17.Controls.Add(panel10);
-            panel17.Controls.Add(panel9);
+            panel17.Controls.Add(customPanel3);
+            panel17.Controls.Add(customPanel2);
+            panel17.Controls.Add(customPanel1);
             panel17.Dock = DockStyle.Fill;
             panel17.Location = new Point(1146, 0);
             panel17.Margin = new Padding(4, 5, 4, 5);
@@ -798,17 +744,112 @@ namespace CaidaPresion
             panel17.Size = new Size(349, 968);
             panel17.TabIndex = 53;
             // 
+            // customPanel3
+            // 
+            customPanel3.BackColor = SystemColors.WindowText;
+            customPanel3.BorderRadius = 30;
+            customPanel3.Controls.Add(label16);
+            customPanel3.Controls.Add(lblReloj);
+            customPanel3.ForeColor = Color.FromArgb(42, 46, 50);
+            customPanel3.GradientAngle = 90F;
+            customPanel3.GradientBottomColor = Color.FromArgb(42, 46, 50);
+            customPanel3.GradientTopColor = Color.FromArgb(42, 46, 50);
+            customPanel3.Location = new Point(27, 442);
+            customPanel3.Name = "customPanel3";
+            customPanel3.Size = new Size(294, 112);
+            customPanel3.TabIndex = 53;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.BackColor = Color.Transparent;
+            label16.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(17, 10);
+            label16.Name = "label16";
+            label16.Size = new Size(76, 24);
+            label16.TabIndex = 54;
+            label16.Text = "RELOJ";
+            // 
+            // customPanel2
+            // 
+            customPanel2.BackColor = SystemColors.WindowText;
+            customPanel2.BorderRadius = 30;
+            customPanel2.Controls.Add(BtnOtrosResultados);
+            customPanel2.Controls.Add(btnGraficar);
+            customPanel2.Controls.Add(btnCalibrar);
+            customPanel2.Controls.Add(btnValoresIniciales);
+            customPanel2.Controls.Add(btnNuevo);
+            customPanel2.ForeColor = Color.FromArgb(42, 46, 50);
+            customPanel2.GradientAngle = 90F;
+            customPanel2.GradientBottomColor = Color.FromArgb(42, 46, 50);
+            customPanel2.GradientTopColor = Color.FromArgb(42, 46, 50);
+            customPanel2.Location = new Point(24, 229);
+            customPanel2.Name = "customPanel2";
+            customPanel2.Size = new Size(308, 130);
+            customPanel2.TabIndex = 52;
+            // 
+            // customPanel1
+            // 
+            customPanel1.BackColor = SystemColors.WindowText;
+            customPanel1.BorderRadius = 30;
+            customPanel1.Controls.Add(label1);
+            customPanel1.Controls.Add(rbtManual);
+            customPanel1.Controls.Add(radioButton1);
+            customPanel1.ForeColor = Color.FromArgb(42, 46, 50);
+            customPanel1.GradientAngle = 90F;
+            customPanel1.GradientBottomColor = Color.FromArgb(42, 46, 50);
+            customPanel1.GradientTopColor = Color.FromArgb(42, 46, 50);
+            customPanel1.Location = new Point(35, 20);
+            customPanel1.Name = "customPanel1";
+            customPanel1.Size = new Size(297, 192);
+            customPanel1.TabIndex = 41;
+            // 
             // panel16
             // 
+            panel16.Controls.Add(customPanel5);
+            panel16.Controls.Add(customPanel4);
             panel16.Controls.Add(pnlGraficas);
-            panel16.Controls.Add(panel5);
-            panel16.Controls.Add(dataGridView1);
             panel16.Dock = DockStyle.Left;
             panel16.Location = new Point(0, 0);
             panel16.Margin = new Padding(4, 5, 4, 5);
             panel16.Name = "panel16";
             panel16.Size = new Size(1146, 968);
             panel16.TabIndex = 52;
+            // 
+            // customPanel5
+            // 
+            customPanel5.BackColor = SystemColors.WindowText;
+            customPanel5.BorderRadius = 30;
+            customPanel5.Controls.Add(dataGridView1);
+            customPanel5.ForeColor = Color.FromArgb(42, 46, 50);
+            customPanel5.GradientAngle = 90F;
+            customPanel5.GradientBottomColor = Color.FromArgb(42, 46, 50);
+            customPanel5.GradientTopColor = Color.FromArgb(42, 46, 50);
+            customPanel5.Location = new Point(733, 660);
+            customPanel5.Name = "customPanel5";
+            customPanel5.Size = new Size(406, 229);
+            customPanel5.TabIndex = 48;
+            // 
+            // customPanel4
+            // 
+            customPanel4.BackColor = SystemColors.WindowText;
+            customPanel4.BorderRadius = 30;
+            customPanel4.Controls.Add(label15);
+            customPanel4.Controls.Add(label7);
+            customPanel4.Controls.Add(txtDeltaP);
+            customPanel4.Controls.Add(label2);
+            customPanel4.Controls.Add(txtJsl);
+            customPanel4.Controls.Add(label6);
+            customPanel4.Controls.Add(txtVelLinealGas);
+            customPanel4.ForeColor = Color.FromArgb(42, 46, 50);
+            customPanel4.GradientAngle = 90F;
+            customPanel4.GradientBottomColor = Color.FromArgb(42, 46, 50);
+            customPanel4.GradientTopColor = Color.FromArgb(42, 46, 50);
+            customPanel4.Location = new Point(28, 660);
+            customPanel4.Name = "customPanel4";
+            customPanel4.Size = new Size(450, 229);
+            customPanel4.TabIndex = 47;
             // 
             // frmPrincipal
             // 
@@ -829,17 +870,10 @@ namespace CaidaPresion
             WindowState = FormWindowState.Maximized;
             Load += frmPrincipal_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             pnlGraficas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)grafica).EndInit();
             panel18.ResumeLayout(false);
             panel18.PerformLayout();
-            panel9.ResumeLayout(false);
-            panel9.PerformLayout();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            panel10.ResumeLayout(false);
             panel11.ResumeLayout(false);
             panel11.PerformLayout();
             panel6.ResumeLayout(false);
@@ -857,7 +891,15 @@ namespace CaidaPresion
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel15.ResumeLayout(false);
             panel17.ResumeLayout(false);
+            customPanel3.ResumeLayout(false);
+            customPanel3.PerformLayout();
+            customPanel2.ResumeLayout(false);
+            customPanel1.ResumeLayout(false);
+            customPanel1.PerformLayout();
             panel16.ResumeLayout(false);
+            customPanel5.ResumeLayout(false);
+            customPanel4.ResumeLayout(false);
+            customPanel4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -877,12 +919,8 @@ namespace CaidaPresion
         private TextBox txtDeltaP;
         private Button BtnOtrosResultados;
         private System.Windows.Forms.Timer timer1;
-        private Panel panel5;
         private Panel pnlGraficas;
-        private Panel panel9;
         private Label lblReloj;
-        private Panel panel8;
-        private Panel panel10;
         private Label label7;
         private Label label1;
         private Panel panel2;
@@ -923,8 +961,13 @@ namespace CaidaPresion
         private ResultadoRepository resultadoRepository;
         private GraficaRepository graficaRepository;
         private OtrosResultadosRepository OtrosResultadosRepository;
-        private Label label14;
         private Label label15;
         private PictureBox btnMinimizar;
+        private Controles.CustomPanel customPanel1;
+        private Controles.CustomPanel customPanel3;
+        private Controles.CustomPanel customPanel2;
+        private Label label16;
+        private Controles.CustomPanel customPanel4;
+        private Controles.CustomPanel customPanel5;
     }
 }

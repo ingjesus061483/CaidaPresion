@@ -58,26 +58,30 @@
             cmbConcentracion = new ComboBox();
             label10 = new Label();
             cmbEspumante = new ComboBox();
+            customPanel1 = new Controles.CustomPanel();
+            customPanel2 = new Controles.CustomPanel();
             ((System.ComponentModel.ISupportInitialize)dgOtrosResultados).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgResultados).BeginInit();
             panel18.SuspendLayout();
+            customPanel1.SuspendLayout();
+            customPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // dgOtrosResultados
             // 
             dgOtrosResultados.AllowUserToAddRows = false;
             dgOtrosResultados.AllowUserToDeleteRows = false;
-            dgOtrosResultados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgOtrosResultados.BackgroundColor = Color.FromArgb(42, 46, 50);
             dgOtrosResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgOtrosResultados.Columns.AddRange(new DataGridViewColumn[] { idOtro, PrimerTermino, ReynoldEnjambre, SegundoTermino, TercerTermino, FuncionObjetivo, DiametroBurbuja, resultado_id });
-            dgOtrosResultados.Location = new Point(39, 375);
+            dgOtrosResultados.Dock = DockStyle.Fill;
+            dgOtrosResultados.Location = new Point(0, 0);
             dgOtrosResultados.Margin = new Padding(4, 5, 4, 5);
             dgOtrosResultados.Name = "dgOtrosResultados";
             dgOtrosResultados.ReadOnly = true;
             dgOtrosResultados.RowHeadersVisible = false;
             dgOtrosResultados.RowHeadersWidth = 62;
-            dgOtrosResultados.Size = new Size(1075, 231);
+            dgOtrosResultados.Size = new Size(1075, 229);
             dgOtrosResultados.TabIndex = 0;
             // 
             // idOtro
@@ -164,18 +168,18 @@
             // 
             dgResultados.AllowUserToAddRows = false;
             dgResultados.AllowUserToDeleteRows = false;
-            dgResultados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgResultados.BackgroundColor = Color.FromArgb(42, 46, 50);
             dgResultados.BorderStyle = BorderStyle.Fixed3D;
             dgResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgResultados.Columns.AddRange(new DataGridViewColumn[] { id, Jg, DeltaP, Jsl, Holdup, Db, Ub, Reb, Usg, concentracion_id, concentracion, espumante_id, espumante });
-            dgResultados.Location = new Point(39, 141);
+            dgResultados.Dock = DockStyle.Fill;
+            dgResultados.Location = new Point(0, 0);
             dgResultados.Name = "dgResultados";
             dgResultados.ReadOnly = true;
             dgResultados.RowHeadersVisible = false;
             dgResultados.RowHeadersWidth = 62;
             dgResultados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgResultados.Size = new Size(1075, 188);
+            dgResultados.Size = new Size(1075, 192);
             dgResultados.TabIndex = 45;
             dgResultados.CellContentClick += dgResultados_CellContentClick;
             // 
@@ -191,7 +195,7 @@
             // Jg
             // 
             Jg.DataPropertyName = "jg";
-            Jg.HeaderText = "Jg";
+            Jg.HeaderText = "Jg (cm/s)";
             Jg.MinimumWidth = 8;
             Jg.Name = "Jg";
             Jg.ReadOnly = true;
@@ -200,7 +204,7 @@
             // DeltaP
             // 
             DeltaP.DataPropertyName = "DeltaP";
-            DeltaP.HeaderText = "Delta p";
+            DeltaP.HeaderText = "Delta p (Psi)";
             DeltaP.MinimumWidth = 8;
             DeltaP.Name = "DeltaP";
             DeltaP.ReadOnly = true;
@@ -209,7 +213,7 @@
             // Jsl
             // 
             Jsl.DataPropertyName = "Jsl";
-            Jsl.HeaderText = "Jsl";
+            Jsl.HeaderText = "Jsl (cm/s)";
             Jsl.MinimumWidth = 8;
             Jsl.Name = "Jsl";
             Jsl.ReadOnly = true;
@@ -227,7 +231,7 @@
             // Db
             // 
             Db.DataPropertyName = "Db";
-            Db.HeaderText = "Db";
+            Db.HeaderText = "Db (mm)";
             Db.MinimumWidth = 8;
             Db.Name = "Db";
             Db.ReadOnly = true;
@@ -236,7 +240,7 @@
             // Ub
             // 
             Ub.DataPropertyName = "Ub";
-            Ub.HeaderText = "Ub";
+            Ub.HeaderText = "Ub (cm/s)";
             Ub.MinimumWidth = 8;
             Ub.Name = "Ub";
             Ub.ReadOnly = true;
@@ -370,15 +374,43 @@
             cmbEspumante.TabIndex = 0;
             cmbEspumante.SelectedIndexChanged += cmbEspumante_SelectedIndexChanged;
             // 
+            // customPanel1
+            // 
+            customPanel1.BackColor = SystemColors.WindowText;
+            customPanel1.BorderRadius = 30;
+            customPanel1.Controls.Add(dgResultados);
+            customPanel1.ForeColor = Color.FromArgb(42, 46, 50);
+            customPanel1.GradientAngle = 90F;
+            customPanel1.GradientBottomColor = Color.FromArgb(42, 46, 50);
+            customPanel1.GradientTopColor = Color.FromArgb(42, 46, 50);
+            customPanel1.Location = new Point(39, 161);
+            customPanel1.Name = "customPanel1";
+            customPanel1.Size = new Size(1075, 192);
+            customPanel1.TabIndex = 47;
+            // 
+            // customPanel2
+            // 
+            customPanel2.BackColor = SystemColors.WindowText;
+            customPanel2.BorderRadius = 30;
+            customPanel2.Controls.Add(dgOtrosResultados);
+            customPanel2.ForeColor = Color.FromArgb(42, 46, 50);
+            customPanel2.GradientAngle = 90F;
+            customPanel2.GradientBottomColor = Color.FromArgb(42, 46, 50);
+            customPanel2.GradientTopColor = Color.FromArgb(42, 46, 50);
+            customPanel2.Location = new Point(39, 388);
+            customPanel2.Name = "customPanel2";
+            customPanel2.Size = new Size(1075, 229);
+            customPanel2.TabIndex = 48;
+            // 
             // frmDatosEntrada
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(1143, 639);
-            Controls.Add(dgOtrosResultados);
+            Controls.Add(customPanel2);
+            Controls.Add(customPanel1);
             Controls.Add(panel18);
-            Controls.Add(dgResultados);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(4, 5, 4, 5);
             Name = "frmDatosEntrada";
@@ -388,6 +420,8 @@
             ((System.ComponentModel.ISupportInitialize)dgResultados).EndInit();
             panel18.ResumeLayout(false);
             panel18.PerformLayout();
+            customPanel1.ResumeLayout(false);
+            customPanel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -395,19 +429,6 @@
 
         private DataGridView dgOtrosResultados;
         private DataGridView dgResultados;
-        private DataGridViewTextBoxColumn id;
-        private DataGridViewTextBoxColumn Jg;
-        private DataGridViewTextBoxColumn DeltaP;
-        private DataGridViewTextBoxColumn Jsl;
-        private DataGridViewTextBoxColumn Holdup;
-        private DataGridViewTextBoxColumn Db;
-        private DataGridViewTextBoxColumn Ub;
-        private DataGridViewTextBoxColumn Reb;
-        private DataGridViewTextBoxColumn Usg;
-        private DataGridViewTextBoxColumn concentracion_id;
-        private DataGridViewTextBoxColumn concentracion;
-        private DataGridViewTextBoxColumn espumante_id;
-        private DataGridViewTextBoxColumn espumante;
         private Panel panel18;
         private Label label5;
         private ComboBox cmbConcentracion;
@@ -422,5 +443,20 @@
         private DataGridViewTextBoxColumn FuncionObjetivo;
         private DataGridViewTextBoxColumn DiametroBurbuja;
         private DataGridViewTextBoxColumn resultado_id;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn Jg;
+        private DataGridViewTextBoxColumn DeltaP;
+        private DataGridViewTextBoxColumn Jsl;
+        private DataGridViewTextBoxColumn Holdup;
+        private DataGridViewTextBoxColumn Db;
+        private DataGridViewTextBoxColumn Ub;
+        private DataGridViewTextBoxColumn Reb;
+        private DataGridViewTextBoxColumn Usg;
+        private DataGridViewTextBoxColumn concentracion_id;
+        private DataGridViewTextBoxColumn concentracion;
+        private DataGridViewTextBoxColumn espumante_id;
+        private DataGridViewTextBoxColumn espumante;
+        private Controles.CustomPanel customPanel1;
+        private Controles.CustomPanel customPanel2;
     }
 }
