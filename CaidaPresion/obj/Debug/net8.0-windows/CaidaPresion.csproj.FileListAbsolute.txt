@@ -596,3 +596,7 @@ C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\ne
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.genruntimeconfig.cache
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\ref\CaidaPresion.dll
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.AboutBox1.resources
+D:\escritorio\CaidaPresion\CaidaPresion\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\escritorio\CaidaPresion\CaidaPresion\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\escritorio\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.AboutBox1.resources
+C:\Users\indir\OneDrive\Documentos\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.AboutBox1.resources

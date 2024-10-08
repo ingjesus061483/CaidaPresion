@@ -88,14 +88,35 @@ CREATE TABLE `grafica` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `grafica` */
 
 insert  into `grafica`(`id`,`nombre`) values 
 (1,'AirHoldup Vs Jg'),
 (2,'Usg Vs Air holdup'),
-(3,'Diámetro de burbuja Vs Jg');
+(3,'Diámetro de burbuja Vs Jg'),
+(4,'Diámetro de burbuja Vs concentración');
+
+/*Table structure for table `otros_resultados` */
+
+DROP TABLE IF EXISTS `otros_resultados`;
+
+CREATE TABLE `otros_resultados` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `PrimerTermino` decimal(15,15) NOT NULL,
+  `ReynoldEnjambre` decimal(15,15) NOT NULL,
+  `SegundoTermino` decimal(15,15) NOT NULL,
+  `TercerTermino` decimal(15,15) NOT NULL,
+  `FuncionObjetivo` decimal(15,15) NOT NULL,
+  `DiametroBurbuja` decimal(15,15) NOT NULL,
+  `resultado_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `resultado_id` (`resultado_id`),
+  CONSTRAINT `otros_resultados_ibfk_1` FOREIGN KEY (`resultado_id`) REFERENCES `resultados` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+/*Data for the table `otros_resultados` */
 
 /*Table structure for table `resultados` */
 
@@ -113,26 +134,45 @@ CREATE TABLE `resultados` (
   `jg` decimal(10,2) NOT NULL,
   `concentracion_id` int(11) NOT NULL,
   `espumante_id` int(11) NOT NULL,
-  `grafica_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `resultados_ibfk_1` (`concentracion_id`),
   KEY `espumante_id` (`espumante_id`),
-  KEY `grafica_id` (`grafica_id`),
   CONSTRAINT `resultados_ibfk_1` FOREIGN KEY (`concentracion_id`) REFERENCES `concentracion` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `resultados_ibfk_2` FOREIGN KEY (`espumante_id`) REFERENCES `espumante` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `resultados_ibfk_3` FOREIGN KEY (`grafica_id`) REFERENCES `grafica` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  CONSTRAINT `resultados_ibfk_2` FOREIGN KEY (`espumante_id`) REFERENCES `espumante` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `resultados` */
 
-/* Procedure structure for procedure `Insertar` */
+/* Procedure structure for procedure `insertar_otros_resultados` */
 
-/*!50003 DROP PROCEDURE IF EXISTS  `Insertar` */;
+/*!50003 DROP PROCEDURE IF EXISTS  `insertar_otros_resultados` */;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `Insertar`(
-					IN _deltap DECIMAL(10,2),
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `insertar_otros_resultados`(
+    in _PrimerTermino decimal(15,15),
+    in _ReynoldEnjambre DECIMAL(15,15),
+    in _SegundoTermino DECIMAL(15,15),
+    in _TercerTermino DECIMAL(15,15),
+    in _FuncionObjetivo DECIMAL(15,15),
+    in _DiametroBurbuja DECIMAL(15,15),
+    in _resultado_id int(11))
+BEGIN
+		INSERT INTO `otros_resultados`
+		(PrimerTermino,ReynoldEnjambre,SegundoTermino,TercerTermino,FuncionObjetivo,DiametroBurbuja,resultado_id)
+		VALUES 
+		( _PrimerTermino,_ReynoldEnjambre,_SegundoTermino,_TercerTermino,_FuncionObjetivo,_DiametroBurbuja,_resultado_id);
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `insertar_resultados` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `insertar_resultados` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `insertar_resultados`(
+IN _deltap DECIMAL(10,2),
 					IN _jsl DECIMAL(10,2),
 					IN _holdup DECIMAL(10,2),
 					IN _db DECIMAL(10,2), 
@@ -140,11 +180,14 @@ DELIMITER $$
 					IN _reb DECIMAL(10,2),
 					IN _usg DECIMAL(10,2),
 					IN _jg DECIMAL(10,2),
-					in _concentracion_id INT(11),
-					IN _espumante_id int (11) )
+					IN _concentracion_id INT(11),
+					IN _espumante_id INT (11),
+					OUT _id_resultado int(11)   
+    )
 BEGIN
-		INSERT INTO `resultados`(`deltap`,`jsl`,`holdup`,`db`,`ub`,`reb`,`usg`,`jg`,`concentracion_id`,`espumante_id`)VALUES(_deltap,_jsl,_holdup,_db,_ub,_reb,_usg,_jg,_concentracion_id,_espumante_id);
-	END */$$
+INSERT INTO `resultados`(`deltap`,`jsl`,`holdup`,`db`,`ub`,`reb`,`usg`,`jg`,`concentracion_id`,`espumante_id`)VALUES(_deltap,_jsl,_holdup,_db,_ub,_reb,_usg,_jg,_concentracion_id,_espumante_id);
+select max(id) into _id_resultado from resultados;
+END */$$
 DELIMITER ;
 
 /*Table structure for table `view_espumante_concentracion` */
@@ -161,12 +204,42 @@ DROP TABLE IF EXISTS `view_espumante_concentracion`;
  `concentracion` varchar(10) 
 )*/;
 
+/*Table structure for table `view_resultados` */
+
+DROP TABLE IF EXISTS `view_resultados`;
+
+/*!50001 DROP VIEW IF EXISTS `view_resultados` */;
+/*!50001 DROP TABLE IF EXISTS `view_resultados` */;
+
+/*!50001 CREATE TABLE  `view_resultados`(
+ `id` int(11) ,
+ `Jg` decimal(10,2) ,
+ `DeltaP` decimal(10,2) ,
+ `Jsl` decimal(10,2) ,
+ `Holdup` decimal(10,2) ,
+ `Db` decimal(10,2) ,
+ `Ub` decimal(10,2) ,
+ `Reb` decimal(10,2) ,
+ `Usg` decimal(10,2) ,
+ `concentracion_id` int(11) ,
+ `concentracion` varchar(10) ,
+ `espumante_id` int(11) ,
+ `espumante` varchar(10) 
+)*/;
+
 /*View structure for view view_espumante_concentracion */
 
 /*!50001 DROP TABLE IF EXISTS `view_espumante_concentracion` */;
 /*!50001 DROP VIEW IF EXISTS `view_espumante_concentracion` */;
 
 /*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_espumante_concentracion` AS select `esp`.`id` AS `espumante_id`,`esp`.`nombre` AS `espumante`,`conc`.`id` AS `concentracion_id`,`conc`.`nombre` AS `concentracion` from ((`espumante` `esp` join `espumante_concentracion` `pivote` on(`esp`.`id` = `pivote`.`espumante_id`)) join `concentracion` `conc` on(`conc`.`id` = `pivote`.`concentracion_id`)) */;
+
+/*View structure for view view_resultados */
+
+/*!50001 DROP TABLE IF EXISTS `view_resultados` */;
+/*!50001 DROP VIEW IF EXISTS `view_resultados` */;
+
+/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_resultados` AS select `resultados`.`id` AS `id`,`resultados`.`jg` AS `Jg`,`resultados`.`deltap` AS `DeltaP`,`resultados`.`jsl` AS `Jsl`,`resultados`.`holdup` AS `Holdup`,`resultados`.`db` AS `Db`,`resultados`.`ub` AS `Ub`,`resultados`.`reb` AS `Reb`,`resultados`.`usg` AS `Usg`,`concentracion`.`id` AS `concentracion_id`,`concentracion`.`nombre` AS `concentracion`,`espumante`.`id` AS `espumante_id`,`espumante`.`nombre` AS `espumante` from ((`resultados` join `espumante` on(`espumante`.`id` = `resultados`.`espumante_id`)) join `concentracion` on(`concentracion`.`id` = `resultados`.`concentracion_id`)) */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

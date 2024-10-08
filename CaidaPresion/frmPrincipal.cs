@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using Controles;
 using DataAccess.Repository;
+using ZstdSharp.Unsafe;
 namespace CaidaPresion
 {
     public partial class frmPrincipal : Form
@@ -318,18 +319,22 @@ namespace CaidaPresion
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            AboutBox1 aboutBox1 = new AboutBox1();
+            AboutBox1 aboutBox1 = new();
             aboutBox1.ShowDialog();
         }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
+        private void btnMaximizar_Click(object sender, EventArgs e)
         {
-
+            if (WindowState == FormWindowState.Normal) { WindowState = FormWindowState.Maximized; }
+            else if (WindowState == FormWindowState.Maximized) { WindowState = FormWindowState.Normal; }
         }
 
-        private void label14_Click(object sender, EventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)
         {
-
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+            else if(WindowState == FormWindowState.Maximized) { WindowState=FormWindowState.Minimized; }
         }
     }
 }

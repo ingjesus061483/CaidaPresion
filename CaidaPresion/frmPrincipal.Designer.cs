@@ -32,12 +32,12 @@ namespace CaidaPresion
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0.68D, 15D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0.6D, 10D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1.2D, 20D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0.68D, 15D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0.6D, 10D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1.2D, 20D);
             dataGridView1 = new DataGridView();
             Variable = new DataGridViewTextBoxColumn();
             Resultado = new DataGridViewTextBoxColumn();
@@ -62,11 +62,11 @@ namespace CaidaPresion
             cmbtipoGrafica = new ComboBox();
             label13 = new Label();
             label12 = new Label();
-            cmbParamGraficar = new ComboBox();
             label5 = new Label();
+            cmbEspumante = new ComboBox();
+            cmbParamGraficar = new ComboBox();
             cmbConcentracion = new ComboBox();
             label10 = new Label();
-            cmbEspumante = new ComboBox();
             panel2 = new Panel();
             lblReloj = new Label();
             label1 = new Label();
@@ -93,10 +93,17 @@ namespace CaidaPresion
             customPanel3 = new Controles.CustomPanel();
             label16 = new Label();
             customPanel2 = new Controles.CustomPanel();
+            label21 = new Label();
+            label20 = new Label();
+            label19 = new Label();
+            label18 = new Label();
+            label17 = new Label();
+            label14 = new Label();
             customPanel1 = new Controles.CustomPanel();
             panel16 = new Panel();
             customPanel5 = new Controles.CustomPanel();
             customPanel4 = new Controles.CustomPanel();
+            customPanel6 = new Controles.CustomPanel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             pnlGraficas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grafica).BeginInit();
@@ -121,6 +128,7 @@ namespace CaidaPresion
             panel16.SuspendLayout();
             customPanel5.SuspendLayout();
             customPanel4.SuspendLayout();
+            customPanel6.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
@@ -138,7 +146,7 @@ namespace CaidaPresion
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(406, 229);
+            dataGridView1.Size = new Size(436, 238);
             dataGridView1.TabIndex = 44;
             // 
             // Variable
@@ -165,7 +173,7 @@ namespace CaidaPresion
             btnValoresIniciales.BackgroundImageLayout = ImageLayout.Stretch;
             btnValoresIniciales.FlatStyle = FlatStyle.Flat;
             btnValoresIniciales.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnValoresIniciales.Location = new Point(113, 37);
+            btnValoresIniciales.Location = new Point(29, 175);
             btnValoresIniciales.Name = "btnValoresIniciales";
             btnValoresIniciales.Size = new Size(44, 50);
             btnValoresIniciales.TabIndex = 43;
@@ -175,7 +183,7 @@ namespace CaidaPresion
             // txtJsl
             // 
             txtJsl.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtJsl.Location = new Point(327, 157);
+            txtJsl.Location = new Point(334, 165);
             txtJsl.Name = "txtJsl";
             txtJsl.Size = new Size(84, 30);
             txtJsl.TabIndex = 30;
@@ -184,11 +192,11 @@ namespace CaidaPresion
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
-            label6.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(217, 160);
+            label6.Location = new Point(224, 168);
             label6.Name = "label6";
-            label6.Size = new Size(102, 24);
+            label6.Size = new Size(108, 25);
             label6.TabIndex = 42;
             label6.Text = "Jsl (cm/s)";
             // 
@@ -198,7 +206,7 @@ namespace CaidaPresion
             btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnNuevo.Location = new Point(13, 39);
+            btnNuevo.Location = new Point(29, 62);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(44, 50);
             btnNuevo.TabIndex = 35;
@@ -210,11 +218,11 @@ namespace CaidaPresion
             rbtManual.AutoSize = true;
             rbtManual.BackColor = Color.Transparent;
             rbtManual.Checked = true;
-            rbtManual.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            rbtManual.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             rbtManual.ForeColor = Color.White;
-            rbtManual.Location = new Point(44, 69);
+            rbtManual.Location = new Point(44, 68);
             rbtManual.Name = "rbtManual";
-            rbtManual.Size = new Size(103, 28);
+            rbtManual.Size = new Size(108, 29);
             rbtManual.TabIndex = 34;
             rbtManual.TabStop = true;
             rbtManual.Text = "Manual";
@@ -225,11 +233,11 @@ namespace CaidaPresion
             // 
             radioButton1.AutoSize = true;
             radioButton1.BackColor = Color.Transparent;
-            radioButton1.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            radioButton1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             radioButton1.ForeColor = Color.White;
-            radioButton1.Location = new Point(44, 129);
+            radioButton1.Location = new Point(44, 128);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(142, 28);
+            radioButton1.Size = new Size(145, 29);
             radioButton1.TabIndex = 33;
             radioButton1.Text = "Automático";
             radioButton1.UseVisualStyleBackColor = false;
@@ -238,7 +246,7 @@ namespace CaidaPresion
             // txtVelLinealGas
             // 
             txtVelLinealGas.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtVelLinealGas.Location = new Point(327, 114);
+            txtVelLinealGas.Location = new Point(334, 122);
             txtVelLinealGas.Name = "txtVelLinealGas";
             txtVelLinealGas.Size = new Size(84, 30);
             txtVelLinealGas.TabIndex = 29;
@@ -247,11 +255,11 @@ namespace CaidaPresion
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(24, 120);
+            label2.Location = new Point(10, 127);
             label2.Name = "label2";
-            label2.Size = new Size(295, 24);
+            label2.Size = new Size(309, 25);
             label2.TabIndex = 32;
             label2.Text = "Velocidad lineal del gas (cm/s)";
             // 
@@ -262,9 +270,9 @@ namespace CaidaPresion
             btnCalibrar.Enabled = false;
             btnCalibrar.FlatStyle = FlatStyle.Flat;
             btnCalibrar.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCalibrar.Location = new Point(163, 37);
+            btnCalibrar.Location = new Point(29, 232);
             btnCalibrar.Name = "btnCalibrar";
-            btnCalibrar.Size = new Size(63, 50);
+            btnCalibrar.Size = new Size(44, 50);
             btnCalibrar.TabIndex = 31;
             btnCalibrar.UseVisualStyleBackColor = true;
             btnCalibrar.Click += btnCalibrar_Click;
@@ -275,9 +283,9 @@ namespace CaidaPresion
             btnGraficar.BackgroundImageLayout = ImageLayout.Stretch;
             btnGraficar.FlatStyle = FlatStyle.Flat;
             btnGraficar.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnGraficar.Location = new Point(233, 39);
+            btnGraficar.Location = new Point(29, 288);
             btnGraficar.Name = "btnGraficar";
-            btnGraficar.Size = new Size(64, 50);
+            btnGraficar.Size = new Size(47, 50);
             btnGraficar.TabIndex = 28;
             btnGraficar.UseVisualStyleBackColor = true;
             btnGraficar.Click += btnGraficar_Click;
@@ -285,7 +293,7 @@ namespace CaidaPresion
             // txtDeltaP
             // 
             txtDeltaP.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDeltaP.Location = new Point(327, 71);
+            txtDeltaP.Location = new Point(334, 80);
             txtDeltaP.Name = "txtDeltaP";
             txtDeltaP.Size = new Size(84, 30);
             txtDeltaP.TabIndex = 27;
@@ -296,7 +304,7 @@ namespace CaidaPresion
             BtnOtrosResultados.BackgroundImageLayout = ImageLayout.Stretch;
             BtnOtrosResultados.FlatStyle = FlatStyle.Flat;
             BtnOtrosResultados.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BtnOtrosResultados.Location = new Point(63, 37);
+            BtnOtrosResultados.Location = new Point(29, 118);
             BtnOtrosResultados.Name = "BtnOtrosResultados";
             BtnOtrosResultados.Size = new Size(44, 50);
             BtnOtrosResultados.TabIndex = 44;
@@ -312,11 +320,11 @@ namespace CaidaPresion
             // 
             label15.AutoSize = true;
             label15.BackColor = Color.Transparent;
-            label15.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.White;
-            label15.Location = new Point(150, 75);
+            label15.Location = new Point(149, 85);
             label15.Name = "label15";
-            label15.Size = new Size(169, 24);
+            label15.Size = new Size(176, 25);
             label15.TabIndex = 54;
             label15.Text = "Caida de presión";
             // 
@@ -326,7 +334,7 @@ namespace CaidaPresion
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(101, 17);
+            label7.Location = new Point(109, 33);
             label7.Name = "label7";
             label7.Size = new Size(211, 24);
             label7.TabIndex = 53;
@@ -342,29 +350,29 @@ namespace CaidaPresion
             pnlGraficas.Location = new Point(0, 0);
             pnlGraficas.Margin = new Padding(4, 5, 4, 5);
             pnlGraficas.Name = "pnlGraficas";
-            pnlGraficas.Size = new Size(1146, 630);
+            pnlGraficas.Size = new Size(1220, 703);
             pnlGraficas.TabIndex = 0;
             // 
             // grafica
             // 
             grafica.BackColor = Color.FromArgb(42, 46, 50);
-            chartArea1.Name = "ChartArea1";
-            grafica.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            grafica.ChartAreas.Add(chartArea2);
             grafica.Dock = DockStyle.Fill;
-            legend1.Name = "Legend1";
-            grafica.Legends.Add(legend1);
-            grafica.Location = new Point(0, 171);
+            legend2.Name = "Legend1";
+            grafica.Legends.Add(legend2);
+            grafica.Location = new Point(0, 172);
             grafica.Margin = new Padding(4, 5, 4, 5);
             grafica.Name = "grafica";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            grafica.Series.Add(series1);
-            grafica.Size = new Size(1146, 459);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.Points.Add(dataPoint4);
+            series2.Points.Add(dataPoint5);
+            series2.Points.Add(dataPoint6);
+            grafica.Series.Add(series2);
+            grafica.Size = new Size(1220, 531);
             grafica.TabIndex = 0;
             grafica.Text = "chart1";
             // 
@@ -374,78 +382,89 @@ namespace CaidaPresion
             panel18.Controls.Add(cmbtipoGrafica);
             panel18.Controls.Add(label13);
             panel18.Controls.Add(label12);
-            panel18.Controls.Add(cmbParamGraficar);
             panel18.Controls.Add(label5);
+            panel18.Controls.Add(cmbEspumante);
+            panel18.Controls.Add(cmbParamGraficar);
             panel18.Controls.Add(cmbConcentracion);
             panel18.Controls.Add(label10);
-            panel18.Controls.Add(cmbEspumante);
             panel18.Dock = DockStyle.Top;
             panel18.Location = new Point(0, 20);
             panel18.Margin = new Padding(4, 5, 4, 5);
             panel18.Name = "panel18";
-            panel18.Size = new Size(1146, 151);
+            panel18.Size = new Size(1220, 152);
             panel18.TabIndex = 1;
             // 
             // cmbtipoGrafica
             // 
             cmbtipoGrafica.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbtipoGrafica.FormattingEnabled = true;
-            cmbtipoGrafica.Location = new Point(701, 100);
+            cmbtipoGrafica.Location = new Point(767, 97);
             cmbtipoGrafica.Margin = new Padding(4, 5, 4, 5);
             cmbtipoGrafica.Name = "cmbtipoGrafica";
-            cmbtipoGrafica.Size = new Size(227, 33);
+            cmbtipoGrafica.Size = new Size(301, 33);
             cmbtipoGrafica.TabIndex = 40;
             cmbtipoGrafica.SelectedIndexChanged += cmbtipoGrafica_SelectedIndexChanged;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.White;
-            label13.Location = new Point(539, 105);
+            label13.Location = new Point(539, 97);
             label13.Name = "label13";
-            label13.Size = new Size(152, 24);
+            label13.Size = new Size(156, 25);
             label13.TabIndex = 39;
-            label13.Text = "Tipo de grafica";
+            label13.Text = "Tipo de gráfica";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.White;
-            label12.Location = new Point(54, 105);
+            label12.Location = new Point(536, 52);
             label12.Name = "label12";
-            label12.Size = new Size(215, 24);
+            label12.Size = new Size(218, 25);
             label12.TabIndex = 38;
             label12.Text = "Parámetros a graficar";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(117, 52);
+            label5.Name = "label5";
+            label5.Size = new Size(120, 25);
+            label5.TabIndex = 36;
+            label5.Text = "Espumante";
+            // 
+            // cmbEspumante
+            // 
+            cmbEspumante.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEspumante.FormattingEnabled = true;
+            cmbEspumante.Location = new Point(273, 48);
+            cmbEspumante.Margin = new Padding(4, 5, 4, 5);
+            cmbEspumante.Name = "cmbEspumante";
+            cmbEspumante.Size = new Size(227, 33);
+            cmbEspumante.TabIndex = 0;
+            cmbEspumante.SelectedIndexChanged += cmbEspumante_SelectedIndexChanged;
             // 
             // cmbParamGraficar
             // 
             cmbParamGraficar.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbParamGraficar.FormattingEnabled = true;
-            cmbParamGraficar.Location = new Point(276, 100);
+            cmbParamGraficar.Location = new Point(767, 48);
             cmbParamGraficar.Margin = new Padding(4, 5, 4, 5);
             cmbParamGraficar.Name = "cmbParamGraficar";
-            cmbParamGraficar.Size = new Size(240, 33);
+            cmbParamGraficar.Size = new Size(301, 33);
             cmbParamGraficar.TabIndex = 37;
             cmbParamGraficar.SelectedIndexChanged += cmbParamGraficar_SelectedIndexChanged;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(54, 49);
-            label5.Name = "label5";
-            label5.Size = new Size(116, 24);
-            label5.TabIndex = 36;
-            label5.Text = "Espumante";
             // 
             // cmbConcentracion
             // 
             cmbConcentracion.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbConcentracion.FormattingEnabled = true;
-            cmbConcentracion.Location = new Point(601, 43);
+            cmbConcentracion.Location = new Point(273, 100);
             cmbConcentracion.Margin = new Padding(4, 5, 4, 5);
             cmbConcentracion.Name = "cmbConcentracion";
             cmbConcentracion.Size = new Size(227, 33);
@@ -454,24 +473,13 @@ namespace CaidaPresion
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(445, 48);
+            label10.Location = new Point(117, 105);
             label10.Name = "label10";
-            label10.Size = new Size(148, 24);
+            label10.Size = new Size(152, 25);
             label10.TabIndex = 34;
             label10.Text = "Concentración";
-            // 
-            // cmbEspumante
-            // 
-            cmbEspumante.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbEspumante.FormattingEnabled = true;
-            cmbEspumante.Location = new Point(182, 44);
-            cmbEspumante.Margin = new Padding(4, 5, 4, 5);
-            cmbEspumante.Name = "cmbEspumante";
-            cmbEspumante.Size = new Size(227, 33);
-            cmbEspumante.TabIndex = 0;
-            cmbEspumante.SelectedIndexChanged += cmbEspumante_SelectedIndexChanged;
             // 
             // panel2
             // 
@@ -480,7 +488,7 @@ namespace CaidaPresion
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1146, 20);
+            panel2.Size = new Size(1220, 20);
             panel2.TabIndex = 1;
             // 
             // lblReloj
@@ -489,7 +497,7 @@ namespace CaidaPresion
             lblReloj.BackColor = Color.Transparent;
             lblReloj.Font = new Font("Centaur", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblReloj.ForeColor = Color.White;
-            lblReloj.Location = new Point(30, 34);
+            lblReloj.Location = new Point(30, 33);
             lblReloj.Margin = new Padding(4, 0, 4, 0);
             lblReloj.Name = "lblReloj";
             lblReloj.Size = new Size(219, 64);
@@ -500,11 +508,11 @@ namespace CaidaPresion
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(17, 17);
+            label1.Location = new Point(30, 17);
             label1.Name = "label1";
-            label1.Size = new Size(226, 24);
+            label1.Size = new Size(245, 25);
             label1.TabIndex = 52;
             label1.Text = "MODO DE EJECUCIÓN";
             // 
@@ -519,7 +527,7 @@ namespace CaidaPresion
             panel11.Location = new Point(0, 0);
             panel11.Margin = new Padding(4, 5, 4, 5);
             panel11.Name = "panel11";
-            panel11.Size = new Size(1794, 138);
+            panel11.Size = new Size(1946, 128);
             panel11.TabIndex = 54;
             // 
             // panel6
@@ -529,21 +537,21 @@ namespace CaidaPresion
             panel6.Controls.Add(btnMaximizar);
             panel6.Controls.Add(btnCerrar);
             panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(1648, 0);
+            panel6.Location = new Point(1566, 0);
             panel6.Margin = new Padding(4, 5, 4, 5);
             panel6.Name = "panel6";
-            panel6.Size = new Size(146, 138);
+            panel6.Size = new Size(380, 128);
             panel6.TabIndex = 47;
             // 
             // btnAyuda
             // 
             btnAyuda.BackgroundImage = (Image)resources.GetObject("btnAyuda.BackgroundImage");
             btnAyuda.BackgroundImageLayout = ImageLayout.Stretch;
-            btnAyuda.Dock = DockStyle.Fill;
-            btnAyuda.Location = new Point(0, 0);
+            btnAyuda.Location = new Point(170, 5);
             btnAyuda.Margin = new Padding(4, 5, 4, 5);
             btnAyuda.Name = "btnAyuda";
-            btnAyuda.Size = new Size(35, 138);
+            btnAyuda.Size = new Size(49, 55);
+            btnAyuda.SizeMode = PictureBoxSizeMode.StretchImage;
             btnAyuda.TabIndex = 43;
             btnAyuda.TabStop = false;
             btnAyuda.Click += btnAyuda_Click;
@@ -552,35 +560,34 @@ namespace CaidaPresion
             // 
             btnMinimizar.BackgroundImage = (Image)resources.GetObject("btnMinimizar.BackgroundImage");
             btnMinimizar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnMinimizar.Dock = DockStyle.Right;
-            btnMinimizar.Location = new Point(35, 0);
+            btnMinimizar.Location = new Point(227, 5);
             btnMinimizar.Margin = new Padding(4, 5, 4, 5);
             btnMinimizar.Name = "btnMinimizar";
-            btnMinimizar.Size = new Size(37, 138);
+            btnMinimizar.Size = new Size(37, 55);
             btnMinimizar.TabIndex = 44;
             btnMinimizar.TabStop = false;
+            btnMinimizar.Click += btnMinimizar_Click;
             // 
             // btnMaximizar
             // 
             btnMaximizar.BackgroundImage = (Image)resources.GetObject("btnMaximizar.BackgroundImage");
             btnMaximizar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnMaximizar.Dock = DockStyle.Right;
-            btnMaximizar.Location = new Point(72, 0);
+            btnMaximizar.Location = new Point(273, 5);
             btnMaximizar.Margin = new Padding(4, 5, 4, 5);
             btnMaximizar.Name = "btnMaximizar";
-            btnMaximizar.Size = new Size(37, 138);
+            btnMaximizar.Size = new Size(37, 55);
             btnMaximizar.TabIndex = 41;
             btnMaximizar.TabStop = false;
+            btnMaximizar.Click += btnMaximizar_Click;
             // 
             // btnCerrar
             // 
             btnCerrar.BackgroundImage = (Image)resources.GetObject("btnCerrar.BackgroundImage");
             btnCerrar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnCerrar.Dock = DockStyle.Right;
-            btnCerrar.Location = new Point(109, 0);
+            btnCerrar.Location = new Point(319, 5);
             btnCerrar.Margin = new Padding(4, 5, 4, 5);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(37, 138);
+            btnCerrar.Size = new Size(37, 55);
             btnCerrar.TabIndex = 42;
             btnCerrar.TabStop = false;
             btnCerrar.Click += btnCerrar_Click;
@@ -591,21 +598,21 @@ namespace CaidaPresion
             panel3.Controls.Add(label9);
             panel3.Controls.Add(label8);
             panel3.Dock = DockStyle.Left;
-            panel3.Location = new Point(277, 0);
+            panel3.Location = new Point(346, 0);
             panel3.Margin = new Padding(4, 5, 4, 5);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1371, 138);
+            panel3.Size = new Size(1220, 128);
             panel3.TabIndex = 46;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
+            label9.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(88, 68);
+            label9.Location = new Point(96, 72);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(1132, 32);
+            label9.Size = new Size(968, 29);
             label9.TabIndex = 41;
             label9.Text = "DEL LABORATORIO DE CARBOQUIMICA  DE LA UNIVERSIDAD DEL ATLANTICO";
             // 
@@ -613,11 +620,11 @@ namespace CaidaPresion
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
+            label8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(-2, 15);
+            label8.Location = new Point(7, 25);
             label8.Name = "label8";
-            label8.Size = new Size(1366, 32);
+            label8.Size = new Size(1170, 29);
             label8.TabIndex = 40;
             label8.Text = "DISEÑO DE UNA INTERFAZ GRAFICA PARA LA COLUMNA DE FLOTACION  A ESCALA TEST RIG ";
             // 
@@ -630,18 +637,18 @@ namespace CaidaPresion
             panel12.Location = new Point(0, 0);
             panel12.Margin = new Padding(4, 5, 4, 5);
             panel12.Name = "panel12";
-            panel12.Size = new Size(277, 138);
+            panel12.Size = new Size(346, 128);
             panel12.TabIndex = 40;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(21, 67);
+            label4.Location = new Point(54, 72);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(232, 25);
+            label4.Size = new Size(273, 29);
             label4.TabIndex = 40;
             label4.Text = "INGENIERIA QUIMICA";
             // 
@@ -649,11 +656,11 @@ namespace CaidaPresion
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(51, 22);
+            label3.Location = new Point(80, 28);
             label3.Name = "label3";
-            label3.Size = new Size(170, 25);
+            label3.Size = new Size(200, 29);
             label3.TabIndex = 39;
             label3.Text = "PROGRAMA DE";
             // 
@@ -673,10 +680,10 @@ namespace CaidaPresion
             panel1.Controls.Add(panel7);
             panel1.Controls.Add(panel14);
             panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 138);
+            panel1.Location = new Point(0, 128);
             panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(299, 968);
+            panel1.Size = new Size(346, 978);
             panel1.TabIndex = 55;
             // 
             // panel7
@@ -686,37 +693,37 @@ namespace CaidaPresion
             panel7.Location = new Point(0, 703);
             panel7.Margin = new Padding(4, 5, 4, 5);
             panel7.Name = "panel7";
-            panel7.Size = new Size(299, 265);
+            panel7.Size = new Size(346, 275);
             panel7.TabIndex = 48;
             // 
             // panel13
             // 
             panel13.BackgroundImage = (Image)resources.GetObject("panel13.BackgroundImage");
             panel13.BackgroundImageLayout = ImageLayout.Stretch;
-            panel13.Location = new Point(39, 48);
+            panel13.Location = new Point(73, 38);
             panel13.Name = "panel13";
-            panel13.Size = new Size(209, 258);
+            panel13.Size = new Size(231, 228);
             panel13.TabIndex = 41;
             // 
             // panel14
             // 
-            panel14.Controls.Add(pictureBox1);
+            panel14.Controls.Add(customPanel6);
             panel14.Dock = DockStyle.Top;
             panel14.Location = new Point(0, 0);
             panel14.Margin = new Padding(4, 5, 4, 5);
             panel14.Name = "panel14";
-            panel14.Size = new Size(299, 703);
+            panel14.Size = new Size(346, 703);
             panel14.TabIndex = 47;
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(22, 20);
+            pictureBox1.Location = new Point(0, 0);
             pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(246, 610);
+            pictureBox1.Size = new Size(292, 519);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 45;
             pictureBox1.TabStop = false;
@@ -726,10 +733,10 @@ namespace CaidaPresion
             panel15.Controls.Add(panel17);
             panel15.Controls.Add(panel16);
             panel15.Dock = DockStyle.Fill;
-            panel15.Location = new Point(299, 138);
+            panel15.Location = new Point(346, 128);
             panel15.Margin = new Padding(4, 5, 4, 5);
             panel15.Name = "panel15";
-            panel15.Size = new Size(1495, 968);
+            panel15.Size = new Size(1600, 978);
             panel15.TabIndex = 56;
             // 
             // panel17
@@ -738,10 +745,10 @@ namespace CaidaPresion
             panel17.Controls.Add(customPanel2);
             panel17.Controls.Add(customPanel1);
             panel17.Dock = DockStyle.Fill;
-            panel17.Location = new Point(1146, 0);
+            panel17.Location = new Point(1220, 0);
             panel17.Margin = new Padding(4, 5, 4, 5);
             panel17.Name = "panel17";
-            panel17.Size = new Size(349, 968);
+            panel17.Size = new Size(380, 978);
             panel17.TabIndex = 53;
             // 
             // customPanel3
@@ -754,7 +761,7 @@ namespace CaidaPresion
             customPanel3.GradientAngle = 90F;
             customPanel3.GradientBottomColor = Color.FromArgb(42, 46, 50);
             customPanel3.GradientTopColor = Color.FromArgb(42, 46, 50);
-            customPanel3.Location = new Point(27, 442);
+            customPanel3.Location = new Point(70, 732);
             customPanel3.Name = "customPanel3";
             customPanel3.Size = new Size(294, 112);
             customPanel3.TabIndex = 53;
@@ -763,11 +770,11 @@ namespace CaidaPresion
             // 
             label16.AutoSize = true;
             label16.BackColor = Color.Transparent;
-            label16.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.White;
-            label16.Location = new Point(17, 10);
+            label16.Location = new Point(100, 10);
             label16.Name = "label16";
-            label16.Size = new Size(76, 24);
+            label16.Size = new Size(81, 25);
             label16.TabIndex = 54;
             label16.Text = "RELOJ";
             // 
@@ -775,6 +782,12 @@ namespace CaidaPresion
             // 
             customPanel2.BackColor = SystemColors.WindowText;
             customPanel2.BorderRadius = 30;
+            customPanel2.Controls.Add(label21);
+            customPanel2.Controls.Add(label20);
+            customPanel2.Controls.Add(label19);
+            customPanel2.Controls.Add(label18);
+            customPanel2.Controls.Add(label17);
+            customPanel2.Controls.Add(label14);
             customPanel2.Controls.Add(BtnOtrosResultados);
             customPanel2.Controls.Add(btnGraficar);
             customPanel2.Controls.Add(btnCalibrar);
@@ -784,10 +797,82 @@ namespace CaidaPresion
             customPanel2.GradientAngle = 90F;
             customPanel2.GradientBottomColor = Color.FromArgb(42, 46, 50);
             customPanel2.GradientTopColor = Color.FromArgb(42, 46, 50);
-            customPanel2.Location = new Point(24, 229);
+            customPanel2.Location = new Point(56, 272);
             customPanel2.Name = "customPanel2";
-            customPanel2.Size = new Size(308, 130);
+            customPanel2.Size = new Size(309, 357);
             customPanel2.TabIndex = 52;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.BackColor = Color.Transparent;
+            label21.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label21.ForeColor = Color.White;
+            label21.Location = new Point(81, 288);
+            label21.Name = "label21";
+            label21.Size = new Size(178, 40);
+            label21.TabIndex = 58;
+            label21.Text = "Graficar Resultados\r\n\r\n";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.BackColor = Color.Transparent;
+            label20.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.White;
+            label20.Location = new Point(79, 235);
+            label20.Name = "label20";
+            label20.Size = new Size(226, 40);
+            label20.TabIndex = 57;
+            label20.Text = "Encender/Apagar Medidor\r\n\r\n";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.BackColor = Color.Transparent;
+            label19.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.White;
+            label19.Location = new Point(79, 175);
+            label19.Name = "label19";
+            label19.Size = new Size(184, 40);
+            label19.TabIndex = 56;
+            label19.Text = "Ver Valores Iniciales\r\n\r\n";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.BackColor = Color.Transparent;
+            label18.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.ForeColor = Color.White;
+            label18.Location = new Point(79, 125);
+            label18.Name = "label18";
+            label18.Size = new Size(227, 40);
+            label18.TabIndex = 55;
+            label18.Text = "Mostrar Otros Resultados\r\n\r\n";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.BackColor = Color.Transparent;
+            label17.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.White;
+            label17.Location = new Point(79, 65);
+            label17.Name = "label17";
+            label17.Size = new Size(177, 40);
+            label17.TabIndex = 54;
+            label17.Text = "Nuevos Resultados \r\n\r\n";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(70, 17);
+            label14.Name = "label14";
+            label14.Size = new Size(181, 25);
+            label14.TabIndex = 53;
+            label14.Text = "HERRAMIENTAS\r\n";
             // 
             // customPanel1
             // 
@@ -800,9 +885,9 @@ namespace CaidaPresion
             customPanel1.GradientAngle = 90F;
             customPanel1.GradientBottomColor = Color.FromArgb(42, 46, 50);
             customPanel1.GradientTopColor = Color.FromArgb(42, 46, 50);
-            customPanel1.Location = new Point(35, 20);
+            customPanel1.Location = new Point(56, 20);
             customPanel1.Name = "customPanel1";
-            customPanel1.Size = new Size(297, 192);
+            customPanel1.Size = new Size(304, 192);
             customPanel1.TabIndex = 41;
             // 
             // panel16
@@ -814,7 +899,7 @@ namespace CaidaPresion
             panel16.Location = new Point(0, 0);
             panel16.Margin = new Padding(4, 5, 4, 5);
             panel16.Name = "panel16";
-            panel16.Size = new Size(1146, 968);
+            panel16.Size = new Size(1220, 978);
             panel16.TabIndex = 52;
             // 
             // customPanel5
@@ -826,9 +911,9 @@ namespace CaidaPresion
             customPanel5.GradientAngle = 90F;
             customPanel5.GradientBottomColor = Color.FromArgb(42, 46, 50);
             customPanel5.GradientTopColor = Color.FromArgb(42, 46, 50);
-            customPanel5.Location = new Point(733, 660);
+            customPanel5.Location = new Point(669, 732);
             customPanel5.Name = "customPanel5";
-            customPanel5.Size = new Size(406, 229);
+            customPanel5.Size = new Size(436, 238);
             customPanel5.TabIndex = 48;
             // 
             // customPanel4
@@ -846,10 +931,24 @@ namespace CaidaPresion
             customPanel4.GradientAngle = 90F;
             customPanel4.GradientBottomColor = Color.FromArgb(42, 46, 50);
             customPanel4.GradientTopColor = Color.FromArgb(42, 46, 50);
-            customPanel4.Location = new Point(28, 660);
+            customPanel4.Location = new Point(81, 732);
             customPanel4.Name = "customPanel4";
-            customPanel4.Size = new Size(450, 229);
+            customPanel4.Size = new Size(437, 238);
             customPanel4.TabIndex = 47;
+            // 
+            // customPanel6
+            // 
+            customPanel6.BackColor = Color.White;
+            customPanel6.BorderRadius = 30;
+            customPanel6.Controls.Add(pictureBox1);
+            customPanel6.ForeColor = Color.Black;
+            customPanel6.GradientAngle = 90F;
+            customPanel6.GradientBottomColor = Color.CadetBlue;
+            customPanel6.GradientTopColor = Color.DodgerBlue;
+            customPanel6.Location = new Point(25, 57);
+            customPanel6.Name = "customPanel6";
+            customPanel6.Size = new Size(292, 519);
+            customPanel6.TabIndex = 41;
             // 
             // frmPrincipal
             // 
@@ -857,7 +956,7 @@ namespace CaidaPresion
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.Black;
-            ClientSize = new Size(1794, 1106);
+            ClientSize = new Size(1946, 1106);
             Controls.Add(panel15);
             Controls.Add(panel1);
             Controls.Add(panel11);
@@ -894,12 +993,14 @@ namespace CaidaPresion
             customPanel3.ResumeLayout(false);
             customPanel3.PerformLayout();
             customPanel2.ResumeLayout(false);
+            customPanel2.PerformLayout();
             customPanel1.ResumeLayout(false);
             customPanel1.PerformLayout();
             panel16.ResumeLayout(false);
             customPanel5.ResumeLayout(false);
             customPanel4.ResumeLayout(false);
             customPanel4.PerformLayout();
+            customPanel6.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -928,7 +1029,6 @@ namespace CaidaPresion
         private Label label10;
         private ComboBox cmbEspumante;
         private Panel panel11;
-        private PictureBox btnAyuda;
         private PictureBox btnCerrar;
         private PictureBox btnMaximizar;
         private Panel panel12;
@@ -969,5 +1069,13 @@ namespace CaidaPresion
         private Label label16;
         private Controles.CustomPanel customPanel4;
         private Controles.CustomPanel customPanel5;
+        private Label label14;
+        private PictureBox btnAyuda;
+        private Label label18;
+        private Label label17;
+        private Label label21;
+        private Label label20;
+        private Label label19;
+        private Controles.CustomPanel customPanel6;
     }
 }
