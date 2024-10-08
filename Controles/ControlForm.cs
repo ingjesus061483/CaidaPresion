@@ -52,7 +52,7 @@ namespace Controles
             SetGraphicProperty(grafica, cols);
             foreach (DataRow row in table.Rows)
             {
-                double x = double.Parse( row[cols[0]].ToString());
+                double x = double.Parse(row[cols[0]].ToString());
                 double y = double.Parse(row[cols[1]].ToString());
                 grafica.Series[serie].Points.AddXY(x,y);
             }

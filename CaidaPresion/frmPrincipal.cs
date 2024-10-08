@@ -330,10 +330,7 @@ namespace CaidaPresion
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Minimized;
-            }
+            if (WindowState == FormWindowState.Normal){ WindowState = FormWindowState.Minimized;}
             else if(WindowState == FormWindowState.Maximized) { WindowState=FormWindowState.Minimized; }
         }
     }

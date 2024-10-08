@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Controles
 {
-  public class Excel
+    public class Excel
     {
         Microsoft.Office.Interop.Excel.Application ExcelApp;
         string hoja = "Hoja";

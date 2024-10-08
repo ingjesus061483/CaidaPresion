@@ -13,6 +13,7 @@ namespace Controles
         public static DataTable? tblOtrosResultados;
 
         public static double Holdup { get; set; }
+
         public static double db { get; set; }
         
         public static double ub { get; set; }
@@ -92,7 +93,6 @@ namespace Controles
         {
             // Give number of variables
             int unknownVariables = 1;
-
             double[] xGuess1 = { 0.0 };                   // Give a guess value       
             (double[] soln1, double[] fx1, string solutionCode1) = Fsolve.Fsolver(funcUb, 
                                                                                   unknownVariables,
@@ -110,10 +110,7 @@ namespace Controles
             tblOtrosResultados.Columns.Add("TercerTermino");
             tblOtrosResultados.Columns.Add("FuncionObjetivo");
             tblOtrosResultados.Columns.Add("DiametroBurbuja");
-
-        }       
-
-        
+        }               
         static double GetPrimerTerminoObjetivo(double Ut)
         {
             return  (18 * miusl * Ut) / (g * (rosl - rog)); //% Primer término de la función objetivo
@@ -130,29 +127,26 @@ namespace Controles
         {
             return Math.Pow((Usb * rosl * (1 - Holdup) / miusl), 0.687);// % Tercer término de la función objetivo                
         }
+        static double DerivadaFunciónObjetivo( double p1,double y,double db,double z)
+        {
+            return 0.10305 * Math.Sqrt(p1) * Math.Pow(y, -0.5) * Math.Pow(db, -0.313) * (z / 2) - 1;
+        }
         static double GetDiametroBurbuja(double Ut,double Usb ,ref double  tol)
         {
             Inicializar();
-            //Diametro de burbuja asumido
-            double db = 0.001;
-
-            //Tolerancia inicial
-            tol = 0.0001;
-            
+            double db = 0.001;//Diametro de burbuja asumido
+            tol = 0.0001;//Tolerancia inicial            
             // double Resb = 0;
-            int i = 0;
-            int j = 1;
             while (tol > 1e-9)
             {
-                j++;
-                double p1 = GetPrimerTerminoObjetivo(Ut);// (18 * miusl * Ut) / (g * (rosl - rog)); //% Primer término de la función objetivo
-                double Resb = GetReEnjambre(db, Usb);// db0 * Usb * rosl * (1 - holdup) / miusl; //% Re del enjambre//              
-                double y = GetSegundoTerminoObjetivo(Resb);// 1 + 0.15 * Math.Pow(Resb, 0.687); //% Segundo término de la función objetivo
-                double z = GetTercerTerminoObjetivo(Usb);// Math.Pow((Usb * rosl * (1 - holdup) / miusl), 0.687);// % Tercer término de la función objetivo                
+                double p1 = GetPrimerTerminoObjetivo(Ut);//% Primer término de la función objetivo
+                double Resb = GetReEnjambre(db, Usb);//% Re del enjambre//              
+                double y = GetSegundoTerminoObjetivo(Resb); //% Segundo término de la función objetivo
+                double z = GetTercerTerminoObjetivo(Usb);// % Tercer término de la función objetivo                
                 double fdb = Math.Sqrt((p1 * y)) - db; //% Función objetivo                
-                double ddb = 0.10305 * Math.Sqrt(p1) * Math.Pow(y, -0.5) * Math.Pow(db, -0.313) * (z / 2) - 1; //% Derivada de la función objetivo
-                double db1 = db - fdb / ddb;// % Nuevo diametro
-               DataRow row= tblOtrosResultados.NewRow();
+                double ddb = DerivadaFunciónObjetivo(p1, y, db, z);//% Derivada de la función objetivo
+                double db1 = db - fdb / ddb;// % Nuevo diametro                
+                DataRow row= tblOtrosResultados.NewRow();
                 row["PrimerTermino"]=p1;
                 row["ReynoldEnjambre"]=Resb;
                 row["SegundoTermino"]=y;
@@ -160,47 +154,40 @@ namespace Controles
                 row["FuncionObjetivo"]=fdb;
                 row["DiametroBurbuja"]=db1;
                 tblOtrosResultados.Rows.Add(row);   
-                //       LlenarArray(fdb, i, j, ref FuncionObjetivo);
-                //     LlenarArray(y, i, j, ref SegundoTermino);
-                //   LlenarArray(z, i, j, ref TercerTermino);
-                // LlenarArray(db1, i, j, ref DiametroBurbuja);
-                // LlenarArray(p1, i, j, ref PrimerTermino);
-                // LlenarArray(Resb, i, j, ref ReynoldEnjambre);                
                 tol = Math.Abs(db1 - db);// % Tolerancia
-                i++;
                 db = db1;
             }
             return db; 
         }
-     static  double FraccionOcupadaParticula(double csl,double rop,double row)
+        static  double FraccionOcupadaParticula(double csl,double rop,double row)
         {
             return 1 / (1 + ((1 / csl) - 1) * (rop / row));
         }
-      static double  FraccionOcupadaLiquido(double fip)
+        static double  FraccionOcupadaLiquido(double fip)
         {
             return 1 - fip;
         }
-    static   double DensidadSlurry(double row,double fil,double rop, double fip)
+        static   double DensidadSlurry(double row,double fil,double rop, double fip)
         {
-        return    row* fil +rop * fip;
+            return    row* fil +rop * fip;
         }
-       static double ViscosidadSlurry(double miuw,double fip)
+        static double ViscosidadSlurry(double miuw,double fip)
         {
             return miuw * Math.Pow(1 - fip, -2.5);
         }
- static     double  DensidadAire(double pmg, double pent, double t )
+        static double  DensidadAire(double pmg, double pent, double t )
         {
             return pmg *pent / (0.082 * t);
         }
-       static  double AirHoldUp(double  deltap,double rosl,double g,double dl) 
+        static  double AirHoldUp(double  deltap,double rosl,double g,double dl) 
         { 
             return 1 - (deltap / (rosl * g * dl));
         }
-       static double VelocidadRelativaDesplazamientoBurbujaLiquido(double jg, double  holdup,double  jsl )
+        static double VelocidadRelativaDesplazamientoBurbujaLiquido(double jg, double  holdup,double  jsl )
         {
             return jg / holdup + jsl / (1 - holdup);
         }
-     static    double  VelocidadTerminalGas(double usg,double holdup,double m)
+        static double  VelocidadTerminalGas(double usg,double holdup,double m)
         {
             return usg * Math.Pow(1 - holdup, (1 - m));
 
@@ -227,38 +214,36 @@ namespace Controles
             Jg *=0.01;
             jsl *= 0.01;
 
-
             //double fip = 1 / (1 + ((1 / Cs1) - 1) * (rop / row));
             double fip = FraccionOcupadaParticula(Cs1,rop,row);
 
-            //fraccion ocupada por el liquido
-            //double fil = 1 - fip;
+            //fraccion ocupada por el liquido            
             double fil = FraccionOcupadaLiquido(fip);
-            //Densidad del slurry (kg/m^3)
 
-            rosl = DensidadSlurry(row, fil, rop, fip); //row * fil + rop * fip;
+            //Densidad del slurry (kg/m^3)
+            rosl = DensidadSlurry(row, fil, rop, fip); 
 
             //Viscosidad del slurry (kg/m-s)
-            miusl = ViscosidadSlurry(miuw, fip); // miuw * Math.Pow(1 - fip, -2.5);
+            miusl = ViscosidadSlurry(miuw, fip); 
 
             //Densidad del aire (kg/m^3)            
-            rog = DensidadAire(pmg, pent, T); // pmg * pent / (0.082 * T);
+            rog = DensidadAire(pmg, pent, T);
 
             //Air hold up            
-            Holdup = AirHoldUp(deltap, rosl, g, dl);// 1 - (deltap / (rosl * g * dl));
+            Holdup = AirHoldUp(deltap, rosl, g, dl);
 
             //velocidad relativa de desplazamiento de la burbuja en el liquido (m/s)
-            Usg = VelocidadRelativaDesplazamientoBurbujaLiquido(Jg, Holdup, jsl);// Jg / holdup  + jsl / (1 - holdup);
+            Usg = VelocidadRelativaDesplazamientoBurbujaLiquido(Jg, Holdup, jsl);
 
             // velocidad terminal del gas (m/s)
-            double Ut = VelocidadTerminalGas(Usg, Holdup, m);//  Usg * Math.Pow(1 - holdup, (1 - m));
+            double Ut = VelocidadTerminalGas(Usg, Holdup, m);
             
-             double tol = 0;
-             db = GetDiametroBurbuja(Ut, Usg, ref tol);    
+            double tol = 0;
+            db = GetDiametroBurbuja(Ut, Usg, ref tol);    
              
-             ub = GetUb(FuncUb, tol);
+            ub = GetUb(FuncUb, tol);
 
-             return db * rosl * ub  / miusl;       
+            return db * rosl * ub  / miusl;       
         }
     }
 }
