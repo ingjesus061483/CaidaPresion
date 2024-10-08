@@ -244,7 +244,7 @@ namespace CaidaPresion
                                 grafica.Series.Add(serie);
                                 int.TryParse(row["concentracion_id"].ToString(), out int concentracion);
                                 table = resultadoRepository.DiámetroBurbujaVsJg(concentracion, espumante);
-                                string[] cols = { "jg", "holdup" };
+                                string[] cols = { "jg", "db" };
                                 ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), serie, cols, table);
                             }
                             break;
@@ -274,7 +274,7 @@ namespace CaidaPresion
                     case 3:
                         {
                             table = resultadoRepository.DiámetroBurbujaVsJg(concentracion, espumante);
-                            string[] cols = { "db", "jg" };
+                            string[] cols = { "jg", "db" };
                             ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), cmbParamGraficar.Text, cols, table);
                             break;
                         }

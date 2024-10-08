@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\controles\\controlform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|solutionrelative:controles\\controlform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\dataaccess\\repository\\resultadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repository\\resultadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -11,20 +23,12 @@
       "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\caidapresion\\frmvaloresiniciales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmvaloresiniciales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\dataaccess\\repository\\otrosresultadosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repository\\otrosresultadosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\dataaccess\\repository\\resultadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repository\\resultadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\controles\\controlform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|solutionrelative:controles\\controlform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\dataaccess\\repository\\concentracionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,32 +98,94 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "frmPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmPrincipal.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "CaidaPresion\\frmPrincipal.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CaidaPresion\\frmPrincipal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T02:55:58.424Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "frmPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmPrincipal.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs*",
-              "RelativeToolTip": "CaidaPresion\\frmPrincipal.cs*",
-              "ViewState": "AgIAADcBAAAAAAAAAAAAAEMBAAAJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs",
+              "RelativeToolTip": "CaidaPresion\\frmPrincipal.cs",
+              "ViewState": "AgIAAAYBAAAAAAAAAAAAwBQBAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T11:28:42.904Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
+              "Title": "frmDatosEntrada.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmDatosEntrada.cs",
+              "ToolTip": "C:\\Users\\indir\\OneDrive\\Documentos\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\indir\\OneDrive\\Documentos\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T00:07:39.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmPrincipal.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.Designer.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmPrincipal.Designer.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.Designer.cs",
+              "RelativeToolTip": "CaidaPresion\\frmPrincipal.Designer.cs",
+              "ViewState": "AgIAAHgCAAAAAAAAAAAjwIECAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T14:12:52.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ResultadoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\ResultadoRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repository\\ResultadoRepository.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\ResultadoRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repository\\ResultadoRepository.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAjwJQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T11:04:10.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ControlForm.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\ControlForm.cs",
+              "RelativeDocumentMoniker": "Controles\\ControlForm.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\ControlForm.cs",
+              "RelativeToolTip": "Controles\\ControlForm.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAjwDAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T16:51:32.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OtrosResultadosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\OtrosResultadosRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repository\\OtrosResultadosRepository.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\OtrosResultadosRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repository\\OtrosResultadosRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAcwCcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T19:49:10.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CustomPanel.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\CustomPanel.cs",
               "RelativeDocumentMoniker": "Controles\\CustomPanel.cs",
@@ -135,77 +197,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OtrosResultadosRepository.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\OtrosResultadosRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repository\\OtrosResultadosRepository.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\OtrosResultadosRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repository\\OtrosResultadosRepository.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAcwCcAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T19:49:10.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmDatosEntrada.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs",
-              "RelativeDocumentMoniker": "CaidaPresion\\frmDatosEntrada.cs",
-              "ToolTip": "C:\\Users\\indir\\OneDrive\\Documentos\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\indir\\OneDrive\\Documentos\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T00:07:39.981Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmPrincipal.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.Designer.cs",
-              "RelativeDocumentMoniker": "CaidaPresion\\frmPrincipal.Designer.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.Designer.cs*",
-              "RelativeToolTip": "CaidaPresion\\frmPrincipal.Designer.cs*",
-              "ViewState": "AgIAAHgCAAAAAAAAAAAjwIECAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T14:12:52.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "frmValoresIniciales.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmValoresIniciales.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmValoresIniciales.cs",
               "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmValoresIniciales.cs [Dise\u00F1o]",
               "RelativeToolTip": "CaidaPresion\\frmValoresIniciales.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T17:43:00.572Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ResultadoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\ResultadoRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repository\\ResultadoRepository.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\ResultadoRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repository\\ResultadoRepository.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAmwEwAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T11:04:10.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ControlForm.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\ControlForm.cs",
-              "RelativeDocumentMoniker": "Controles\\ControlForm.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\ControlForm.cs",
-              "RelativeToolTip": "Controles\\ControlForm.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAADwv2EAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T16:51:32.077Z"
+              "WhenOpened": "2024-10-05T17:43:00.572Z"
             },
             {
               "$type": "Document",
@@ -304,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\Program.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\Program.cs",
