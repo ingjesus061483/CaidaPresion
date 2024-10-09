@@ -15,6 +15,11 @@ namespace DataAccess.Repository
             throw new NotImplementedException();
         }
 
+        public override void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public override DataTable GetDataTable()
         {
             throw new NotImplementedException();
@@ -40,17 +45,17 @@ namespace DataAccess.Repository
             }
         }
 
-        public override void Save(Dictionary<string, double> colection ,ref int id)
+        public override void Save(Dictionary<string, object> colection ,ref int id)
         {
             try
             {
                 Abrir();               
-                double PrimerTermino = Math.Round(colection["PrimerTermino"], 15);
-                double ReynoldEnjambre = Math.Round(colection["ReynoldEnjambre"], 15);
-                double SegundoTermino = Math.Round(colection["SegundoTermino"], 15);
-                double TercerTermino = Math.Round(colection["TercerTermino"], 15);
-                double FuncionObjetivo = Math.Round(colection["FuncionObjetivo"], 15);
-                double DiametroBurbuja = Math.Round(colection["DiametroBurbuja"], 15);
+                double PrimerTermino = Math.Round(double.Parse( colection["PrimerTermino"].ToString()), 15);
+                double ReynoldEnjambre = Math.Round(double.Parse( colection["ReynoldEnjambre"].ToString()), 15);
+                double SegundoTermino = Math.Round(double.Parse( colection["SegundoTermino"].ToString()), 15);
+                double TercerTermino = Math.Round(double.Parse( colection["TercerTermino"].ToString()), 15);
+                double FuncionObjetivo = Math.Round(double.Parse( colection["FuncionObjetivo"].ToString()), 15);
+                double DiametroBurbuja = Math.Round(double.Parse( colection["DiametroBurbuja"].ToString()), 15);
                 Command = GetCommand("insertar_otros_resultados", CommandType.StoredProcedure);
                 Command.Parameters.Add("_PrimerTermino", MySqlDbType.Decimal).Value = PrimerTermino;
                 Command.Parameters.Add("_ReynoldEnjambre", MySqlDbType.Decimal).Value = ReynoldEnjambre;
@@ -70,6 +75,11 @@ namespace DataAccess.Repository
                 Cerrar();
             }
 
+        }
+
+        public override void Update(Dictionary<string, object> colection, int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

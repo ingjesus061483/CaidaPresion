@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -8,36 +7,21 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repository
 {
-    public class GraficaRepository : Data
+    class EspumanteConcentracionRepository : Data
     {
-        public override void Delete()
+        public override void Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public override void Delete(int id)
+        public override void Delete()
         {
             throw new NotImplementedException();
         }
 
         public override DataTable GetDataTable()
         {
-            try {
-                Abrir();
-                Command = GetCommand("select id,nombre from grafica", CommandType.Text);
-                return GetTableCommand(Command);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                Cerrar();                    
-            }
-
-
-
+            throw new NotImplementedException();
         }
 
         public override DataTable GetDataTable(int id)

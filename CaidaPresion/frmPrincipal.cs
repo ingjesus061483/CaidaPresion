@@ -1,9 +1,12 @@
 ﻿using System.Data;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using Controles;
 using DataAccess.Repository;
 using ZstdSharp.Unsafe;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace CaidaPresion
 {
     public partial class frmPrincipal : Form
@@ -13,9 +16,10 @@ namespace CaidaPresion
         double holdup;
         double ub;
         double db;
+        string[] arr = { "id", "nombre" };
 
         DataTable? tblConcentracion;
-        Dictionary<string, double>? colection;
+        Dictionary<string, object>? colection;
 
         ToolTip? toolTip;
         public frmPrincipal(EspumanteRepository _espumanteRepository,
@@ -68,7 +72,7 @@ namespace CaidaPresion
                 string[] values4 = { "Usg", CaidaDePresion.Usg.ToString() };
                 Table.SetRow(dt, columns, values4);
                 dataGridView1.DataSource = dt;
-                colection = new Dictionary<string, double> {
+                colection = new Dictionary<string, object> {
                     { "deltap", double.Parse(txtDeltaP.Text) },
                     {"jsl",double.Parse(txtJsl.Text) },
                     {"holdup",holdup },
@@ -85,7 +89,7 @@ namespace CaidaPresion
                 resultadoRepository.Save(colection, ref idresultado);
                 foreach (DataRow row in CaidaDePresion.tblOtrosResultados.Rows)
                 {
-                    colection = new Dictionary<string, double> {
+                    colection = new Dictionary<string, object> {
                         { "PrimerTermino",double.Parse( row["PrimerTermino"].ToString()) },
                         { "ReynoldEnjambre",double.Parse( row["ReynoldEnjambre"].ToString()) },
                         { "SegundoTermino",double.Parse( row["SegundoTermino"].ToString()) },
@@ -155,7 +159,6 @@ namespace CaidaPresion
         {
             lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
             timer1.Start();
-            string[] arr = { "id", "nombre" };
             string[] arrparam = { "AirHoldup Vs Jg", "Usg Vs Air holdup", "Diámetro de burbuja Vs Jg" };
             toolTip = ControlForm.GetToolTip(5000, 1000, 500, true);
             ControlForm.SetToolTip(toolTip, BtnOtrosResultados, "Mostrar otros resultados");
@@ -166,7 +169,7 @@ namespace CaidaPresion
             ControlForm.FillCombo(espumanteRepository.GetDataTable(), arr, cmbEspumante);
             ControlForm.FillCombo(graficaRepository.GetDataTable(), arr, cmbParamGraficar);
             cmbtipoGrafica.DataSource = ControlForm.SeriesChartType;
-            Nuevo();
+            //Nuevo();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -200,7 +203,6 @@ namespace CaidaPresion
                 ControlForm.GetMessage(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         void LoadGraphic()
         {
             DataTable table;
@@ -249,6 +251,19 @@ namespace CaidaPresion
                             }
                             break;
                         }
+                    case 4:
+                        {
+                            string[] arr = [];
+                            table = resultadoRepository.DiámetroBurbujaVsConcentracion( espumante);
+                            ControlForm.FillArray(grafica, table, ref arr);
+                            string[] cols = ["concentracion", "db"];
+                            for (int j = 0; j <= arr.Length - 1; j++)
+                            {
+                                var search =Table. Busqueda("jg", arr[j], table);
+                                ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), arr[j], cols, search);
+                            }
+                            break;
+                        }
                 }
             }
             else
@@ -278,10 +293,16 @@ namespace CaidaPresion
                             ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), cmbParamGraficar.Text, cols, table);
                             break;
                         }
+                    case 4:
+                        {
+                            ControlForm.GetMessage("", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            break;
+                        }
                 }
             }
         }
 
+      
         private void button1_Click(object sender, EventArgs e)
         {
             Nuevo();
@@ -330,8 +351,23 @@ namespace CaidaPresion
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Normal){ WindowState = FormWindowState.Minimized;}
-            else if(WindowState == FormWindowState.Maximized) { WindowState=FormWindowState.Minimized; }
+            if (WindowState == FormWindowState.Normal) { WindowState = FormWindowState.Minimized; }
+            else if (WindowState == FormWindowState.Maximized) { WindowState = FormWindowState.Minimized; }
         }
+
+        private void btnNuevoEspumante_Click(object sender, EventArgs e)
+        {
+           frmEspumante frmEspumante = new frmEspumante
+           {
+               EspumanteRepository=espumanteRepository,
+               ConcentracionRepository=concentracionRepository
+           };
+            frmEspumante.ShowDialog();
+            ControlForm.FillCombo(espumanteRepository.GetDataTable(), arr, cmbEspumante);
+
+        }
+ 
+    
+
     }
 }

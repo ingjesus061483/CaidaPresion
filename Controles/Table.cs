@@ -71,5 +71,55 @@ namespace Controles
             SetRow(dt, columns, values15);
             return dt;
         }
+        public static DataTable Busqueda(string filtro, string valor, DataTable Tabla)
+        {
+            try
+            {
+                DataTable TablaDatos;
+                var columnas = Tabla.Columns;
+                string tipo = "";
+                foreach (DataColumn column in columnas)
+                {
+                    if (column.ColumnName == filtro)
+                    {
+                        tipo = column.DataType.Name;
+                        break;
+                    }
+                }
+                if (tipo != "String")
+                {
+                    var query = (from tab in Tabla.AsEnumerable()
+                                 where tab.Field<decimal>(filtro) == decimal.Parse(valor)
+                                 select tab);
+                    if (query.ToList().Count != 0)
+                    {
+                        TablaDatos = query.CopyToDataTable();
+                    }
+                    else
+                    {
+                        TablaDatos = Tabla;
+                    }
+                }
+                else
+                {
+                    var query = (from tab in Tabla.AsEnumerable()
+                                 where tab.Field<string>(filtro).Contains(valor)
+                                 select tab);
+                    if (query.ToList().Count != 0)
+                    {
+                        TablaDatos = query.CopyToDataTable();
+                    }
+                    else
+                    {
+                        TablaDatos = Tabla;
+                    }
+                }
+                return TablaDatos;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

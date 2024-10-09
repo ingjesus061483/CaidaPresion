@@ -600,3 +600,4 @@ D:\escritorio\CaidaPresion\CaidaPresion\bin\Debug\net8.0-windows\Microsoft.Exten
 D:\escritorio\CaidaPresion\CaidaPresion\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\escritorio\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.AboutBox1.resources
 C:\Users\indir\OneDrive\Documentos\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.AboutBox1.resources
+C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.frmEspumante.resources

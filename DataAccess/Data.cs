@@ -11,9 +11,11 @@ namespace DataAccess
         {
             Connection = new MySqlConnection { ConnectionString = "server=" + server + ";uid=" + uid + ";pwd=" + pwd + ";database=" + database };
         }
-        public abstract void Save(Dictionary<string, double> colection, ref int id);
+        public abstract void Save(Dictionary<string, object> colection, ref int id);
         public abstract DataTable GetDataTable();
         public abstract DataTable GetDataTable(int id);
+        public abstract void Update(Dictionary<string, object> colection, int id);
+        public abstract void Delete(int id);
 
         public abstract void Delete();
         protected void Abrir()

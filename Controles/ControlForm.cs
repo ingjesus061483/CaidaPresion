@@ -46,6 +46,32 @@ namespace Controles
             grafica.ChartAreas[0].AxisX.Title = cols[0].ToUpper();
             grafica.ChartAreas[0].AxisY.Title = cols[1].ToUpper();
         }
+        
+        public static void FillArray(Chart grafica, DataTable table, ref string[] arr)
+        {
+            int i = 0;
+            foreach (DataRow row in table.Rows)
+            {
+                string serie = row["jg"].ToString();
+                var series = grafica.Series;
+                bool enc = false;
+                foreach (var item in series)
+                {
+                    if (item.Name == serie)
+                    {
+                        enc = true;
+                    }
+                }
+                if (!enc)
+                {
+
+                    grafica.Series.Add(serie);
+                    i++;
+                    Array.Resize(ref arr, i);
+                    arr[i - 1] = serie;
+                }
+            }
+        }
         public static void GetGraphic(Chart grafica,string TipoGrafica, string serie,string []  cols, DataTable table)
         {
             grafica.Series[serie].ChartType = Enum.Parse<SeriesChartType>(TipoGrafica);

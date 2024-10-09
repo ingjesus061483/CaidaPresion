@@ -59,6 +59,7 @@ namespace CaidaPresion
             pnlGraficas = new Panel();
             grafica = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panel18 = new Panel();
+            btnNuevoEspumante = new Button();
             cmbtipoGrafica = new ComboBox();
             label13 = new Label();
             label12 = new Label();
@@ -87,6 +88,7 @@ namespace CaidaPresion
             panel7 = new Panel();
             panel13 = new Panel();
             panel14 = new Panel();
+            customPanel6 = new Controles.CustomPanel();
             pictureBox1 = new PictureBox();
             panel15 = new Panel();
             panel17 = new Panel();
@@ -103,7 +105,6 @@ namespace CaidaPresion
             panel16 = new Panel();
             customPanel5 = new Controles.CustomPanel();
             customPanel4 = new Controles.CustomPanel();
-            customPanel6 = new Controles.CustomPanel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             pnlGraficas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grafica).BeginInit();
@@ -119,6 +120,7 @@ namespace CaidaPresion
             panel1.SuspendLayout();
             panel7.SuspendLayout();
             panel14.SuspendLayout();
+            customPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel15.SuspendLayout();
             panel17.SuspendLayout();
@@ -128,7 +130,6 @@ namespace CaidaPresion
             panel16.SuspendLayout();
             customPanel5.SuspendLayout();
             customPanel4.SuspendLayout();
-            customPanel6.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
@@ -379,6 +380,7 @@ namespace CaidaPresion
             // panel18
             // 
             panel18.BackColor = Color.FromArgb(42, 46, 50);
+            panel18.Controls.Add(btnNuevoEspumante);
             panel18.Controls.Add(cmbtipoGrafica);
             panel18.Controls.Add(label13);
             panel18.Controls.Add(label12);
@@ -393,6 +395,18 @@ namespace CaidaPresion
             panel18.Name = "panel18";
             panel18.Size = new Size(1220, 152);
             panel18.TabIndex = 1;
+            // 
+            // btnNuevoEspumante
+            // 
+            btnNuevoEspumante.BackgroundImage = (Image)resources.GetObject("btnNuevoEspumante.BackgroundImage");
+            btnNuevoEspumante.BackgroundImageLayout = ImageLayout.Stretch;
+            btnNuevoEspumante.FlatStyle = FlatStyle.Flat;
+            btnNuevoEspumante.Location = new Point(463, 48);
+            btnNuevoEspumante.Name = "btnNuevoEspumante";
+            btnNuevoEspumante.Size = new Size(40, 34);
+            btnNuevoEspumante.TabIndex = 41;
+            btnNuevoEspumante.UseVisualStyleBackColor = true;
+            btnNuevoEspumante.Click += btnNuevoEspumante_Click;
             // 
             // cmbtipoGrafica
             // 
@@ -445,7 +459,7 @@ namespace CaidaPresion
             cmbEspumante.Location = new Point(273, 48);
             cmbEspumante.Margin = new Padding(4, 5, 4, 5);
             cmbEspumante.Name = "cmbEspumante";
-            cmbEspumante.Size = new Size(227, 33);
+            cmbEspumante.Size = new Size(187, 33);
             cmbEspumante.TabIndex = 0;
             cmbEspumante.SelectedIndexChanged += cmbEspumante_SelectedIndexChanged;
             // 
@@ -715,6 +729,20 @@ namespace CaidaPresion
             panel14.Size = new Size(346, 703);
             panel14.TabIndex = 47;
             // 
+            // customPanel6
+            // 
+            customPanel6.BackColor = Color.White;
+            customPanel6.BorderRadius = 30;
+            customPanel6.Controls.Add(pictureBox1);
+            customPanel6.ForeColor = Color.Black;
+            customPanel6.GradientAngle = 90F;
+            customPanel6.GradientBottomColor = Color.CadetBlue;
+            customPanel6.GradientTopColor = Color.DodgerBlue;
+            customPanel6.Location = new Point(25, 57);
+            customPanel6.Name = "customPanel6";
+            customPanel6.Size = new Size(292, 519);
+            customPanel6.TabIndex = 41;
+            // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
@@ -936,20 +964,6 @@ namespace CaidaPresion
             customPanel4.Size = new Size(437, 238);
             customPanel4.TabIndex = 47;
             // 
-            // customPanel6
-            // 
-            customPanel6.BackColor = Color.White;
-            customPanel6.BorderRadius = 30;
-            customPanel6.Controls.Add(pictureBox1);
-            customPanel6.ForeColor = Color.Black;
-            customPanel6.GradientAngle = 90F;
-            customPanel6.GradientBottomColor = Color.CadetBlue;
-            customPanel6.GradientTopColor = Color.DodgerBlue;
-            customPanel6.Location = new Point(25, 57);
-            customPanel6.Name = "customPanel6";
-            customPanel6.Size = new Size(292, 519);
-            customPanel6.TabIndex = 41;
-            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -987,6 +1001,7 @@ namespace CaidaPresion
             panel1.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel14.ResumeLayout(false);
+            customPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel15.ResumeLayout(false);
             panel17.ResumeLayout(false);
@@ -1000,7 +1015,6 @@ namespace CaidaPresion
             customPanel5.ResumeLayout(false);
             customPanel4.ResumeLayout(false);
             customPanel4.PerformLayout();
-            customPanel6.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -1077,5 +1091,6 @@ namespace CaidaPresion
         private Label label20;
         private Label label19;
         private Controles.CustomPanel customPanel6;
+        private Button btnNuevoEspumante;
     }
 }

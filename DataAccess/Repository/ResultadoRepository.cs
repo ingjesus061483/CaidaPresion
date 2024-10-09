@@ -71,19 +71,19 @@ namespace DataAccess.Repository
         }
 
 
-        public override void Save(Dictionary<string, double> colection, ref int id)
+        public override void Save(Dictionary<string, object> colection, ref int id)
         {
             try
             {
                 Abrir();
-                double deltap = Math.Round( colection["deltap"],5);
-                double jsl =Math.Round( colection["jsl"],5);
-                double holdup =Math.Round( colection["holdup"],5);
-                double db = Math.Round(colection["db"], 5);   
-                double ub =Math.Round (colection["ub"],5);
-                double reb =Math.Round( colection["reb"],5);
-                double usg =Math.Round( colection["usg"],5);
-                double jg =Math.Round( colection["jg"],5);
+                double deltap = Math.Round(double.Parse( colection["deltap"].ToString()),5);
+                double jsl =Math.Round(double.Parse( colection["jsl"].ToString()),5);
+                double holdup =Math.Round(double.Parse( colection["holdup"].ToString()),5);
+                double db = Math.Round(double.Parse( colection["db"].ToString()), 5);   
+                double ub =Math.Round (double.Parse( colection["ub"].ToString()),5);
+                double reb =Math.Round(double.Parse( colection["reb"].ToString()),5);
+                double usg =Math.Round(double.Parse( colection["usg"].ToString()),5);
+                double jg =Math.Round(double.Parse( colection["jg"].ToString()),5);
                 int.TryParse( colection["concentracion_id"].ToString(),out int concentracion_id);
                 int.TryParse(colection["espumante_id"].ToString(),out int espumante_id);                
                 Command = GetCommand("Insertar_resultados", CommandType.StoredProcedure);
@@ -164,8 +164,37 @@ namespace DataAccess.Repository
                 Cerrar();
             }        
         }
- 
+        public DataTable DiámetroBurbujaVsConcentracion( int espumante)
+        {
+            try
+            {
+                Abrir();
+                Command = GetCommand("SELECT jg,db,c.alias concentracion FROM resultados JOIN concentracion c ON c.id =resultados.concentracion_id where espumante_id  ="+espumante, CommandType.Text);
+                DataTable dt = GetTableCommand(Command);
+                return dt;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                Cerrar();
+            }
+        }
+
+
         public override DataTable GetDataTable(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Update(Dictionary<string, object> colection, int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Delete(int id)
         {
             throw new NotImplementedException();
         }
