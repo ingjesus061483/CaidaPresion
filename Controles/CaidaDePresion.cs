@@ -159,15 +159,15 @@ namespace Controles
             }
             return db; 
         }
-        static  double FraccionOcupadaParticula(double csl,double rop,double row)
+        static double FraccionOcupadaParticula(double csl,double rop,double row)
         {
             return 1 / (1 + ((1 / csl) - 1) * (rop / row));
         }
-        static double  FraccionOcupadaLiquido(double fip)
+        static double FraccionOcupadaLiquido(double fip)
         {
             return 1 - fip;
         }
-        static   double DensidadSlurry(double row,double fil,double rop, double fip)
+        static double DensidadSlurry(double row,double fil,double rop, double fip)
         {
             return    row* fil +rop * fip;
         }
@@ -175,11 +175,11 @@ namespace Controles
         {
             return miuw * Math.Pow(1 - fip, -2.5);
         }
-        static double  DensidadAire(double pmg, double pent, double t )
+        static double DensidadAire(double pmg, double pent, double t )
         {
             return pmg *pent / (0.082 * t);
         }
-        static  double AirHoldUp(double  deltap,double rosl,double g,double dl) 
+        static double AirHoldUp(double  deltap,double rosl,double g,double dl) 
         { 
             return 1 - (deltap / (rosl * g * dl));
         }
@@ -187,10 +187,9 @@ namespace Controles
         {
             return jg / holdup + jsl / (1 - holdup);
         }
-        static double  VelocidadTerminalGas(double usg,double holdup,double m)
+        static double VelocidadTerminalGas(double usg,double holdup,double m)
         {
             return usg * Math.Pow(1 - holdup, (1 - m));
-
         }
 
 
@@ -204,7 +203,7 @@ namespace Controles
         /// velocidad lineal del gas (m/s)
         /// </param>
         /// <returns></returns>
-        public static  double CalcularValorReynold(double deltap, double Jg,double jsl )
+        public static double CalcularValorReynold(double deltap, double Jg,double jsl )
         {
             if (Jg == 0)
             {
@@ -235,7 +234,7 @@ namespace Controles
             //velocidad relativa de desplazamiento de la burbuja en el liquido (m/s)
             Usg = VelocidadRelativaDesplazamientoBurbujaLiquido(Jg, Holdup, jsl);
 
-            // velocidad terminal del gas (m/s)
+            //velocidad terminal del gas (m/s)
             double Ut = VelocidadTerminalGas(Usg, Holdup, m);
             
             double tol = 0;

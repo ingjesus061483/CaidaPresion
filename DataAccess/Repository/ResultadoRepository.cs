@@ -76,14 +76,14 @@ namespace DataAccess.Repository
             try
             {
                 Abrir();
-                double deltap = Math.Round( colection["deltap"],2);
-                double jsl =Math.Round( colection["jsl"],2);
-                double holdup =Math.Round( colection["holdup"],2);
-                double db = Math.Round(colection["db"], 2);   
-                double ub =Math.Round (colection["ub"],2);
-                double reb =Math.Round( colection["reb"],2);
-                double usg =Math.Round( colection["usg"],2);
-                double jg =Math.Round( colection["jg"],2);
+                double deltap = Math.Round( colection["deltap"],5);
+                double jsl =Math.Round( colection["jsl"],5);
+                double holdup =Math.Round( colection["holdup"],5);
+                double db = Math.Round(colection["db"], 5);   
+                double ub =Math.Round (colection["ub"],5);
+                double reb =Math.Round( colection["reb"],5);
+                double usg =Math.Round( colection["usg"],5);
+                double jg =Math.Round( colection["jg"],5);
                 int.TryParse( colection["concentracion_id"].ToString(),out int concentracion_id);
                 int.TryParse(colection["espumante_id"].ToString(),out int espumante_id);                
                 Command = GetCommand("Insertar_resultados", CommandType.StoredProcedure);
