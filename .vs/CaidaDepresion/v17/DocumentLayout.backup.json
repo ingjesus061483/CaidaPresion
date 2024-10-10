@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\caidapresion\\frmespumante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmespumante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\frmespumante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmespumante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\dataaccess\\repository\\resultadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repository\\resultadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\controles\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|solutionrelative:controles\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\controles\\excel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|solutionrelative:controles\\excel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\controles\\controlform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,28 +47,12 @@
       "RelativeMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repository\\otrosresultadosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\dataaccess\\repository\\resultadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repository\\resultadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\frmespumante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmespumante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\dataaccess\\repository\\espumanteconcentracionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repository\\espumanteconcentracionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\dataaccess\\repository\\concentracionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repository\\concentracionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\frmespumante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmespumante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\dataaccess\\repository\\espumanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,24 +71,12 @@
       "RelativeMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|solutionrelative:controles\\custompanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\frmcalibracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\caidapresion\\frmcalibracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmcalibracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\frmespumante.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmespumante.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\controles\\excel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|solutionrelative:controles\\excel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmdatosentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}|Controles\\Controles.csproj|c:\\users\\jesus\\onedrive\\documentos\\github\\caidapresion\\controles\\caidadepresion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,19 +119,132 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmDatosEntrada.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmDatosEntrada.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs",
+              "RelativeToolTip": "CaidaPresion\\frmDatosEntrada.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAhwCoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T11:18:49.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmEspumante.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmEspumante.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmEspumante.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmEspumante.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CaidaPresion\\frmEspumante.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:17:25.08Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ControlForm.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\ControlForm.cs",
+              "RelativeDocumentMoniker": "Controles\\ControlForm.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\ControlForm.cs",
+              "RelativeToolTip": "Controles\\ControlForm.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T16:51:32.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Table.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Table.cs",
+              "RelativeDocumentMoniker": "Controles\\Table.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Table.cs",
+              "RelativeToolTip": "Controles\\Table.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAGMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T12:46:31.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmEspumante.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmEspumante.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmEspumante.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmEspumante.cs",
+              "RelativeToolTip": "CaidaPresion\\frmEspumante.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAhwC0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T13:46:30.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "frmPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmPrincipal.cs",
               "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs",
               "RelativeToolTip": "CaidaPresion\\frmPrincipal.cs",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAAACsBAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAAgBAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T11:28:42.904Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "frmDatosEntrada.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmDatosEntrada.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CaidaPresion\\frmDatosEntrada.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T00:07:39.981Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResultadoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\ResultadoRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repository\\ResultadoRepository.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\ResultadoRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repository\\ResultadoRepository.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAEwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T11:04:10.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs",
+              "RelativeDocumentMoniker": "CaidaPresion\\frmPrincipal.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CaidaPresion\\frmPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T02:55:58.424Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Excel.cs",
+              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Excel.cs",
+              "RelativeDocumentMoniker": "Controles\\Excel.cs",
+              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Excel.cs",
+              "RelativeToolTip": "Controles\\Excel.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAADYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:49:25.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "OtrosResultadosRepository.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\OtrosResultadosRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repository\\OtrosResultadosRepository.cs",
@@ -144,83 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmEspumante.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmEspumante.cs",
-              "RelativeDocumentMoniker": "CaidaPresion\\frmEspumante.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmEspumante.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CaidaPresion\\frmEspumante.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T14:17:25.08Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ResultadoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\ResultadoRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repository\\ResultadoRepository.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\ResultadoRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repository\\ResultadoRepository.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAcwEwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T11:04:10.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ControlForm.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\ControlForm.cs",
-              "RelativeDocumentMoniker": "Controles\\ControlForm.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\ControlForm.cs",
-              "RelativeToolTip": "Controles\\ControlForm.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T16:51:32.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Table.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Table.cs",
-              "RelativeDocumentMoniker": "Controles\\Table.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Table.cs",
-              "RelativeToolTip": "Controles\\Table.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAAAEkAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T12:46:31.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "frmEspumante.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmEspumante.cs",
-              "RelativeDocumentMoniker": "CaidaPresion\\frmEspumante.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmEspumante.cs",
-              "RelativeToolTip": "CaidaPresion\\frmEspumante.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T13:46:30.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs",
-              "RelativeDocumentMoniker": "CaidaPresion\\frmPrincipal.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CaidaPresion\\frmPrincipal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T02:55:58.424Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "EspumanteConcentracionRepository.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\EspumanteConcentracionRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repository\\EspumanteConcentracionRepository.cs",
@@ -228,12 +265,11 @@
               "RelativeToolTip": "DataAccess\\Repository\\EspumanteConcentracionRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T18:36:45.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-09T18:36:45.333Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "ConcentracionRepository.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\ConcentracionRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repository\\ConcentracionRepository.cs",
@@ -241,12 +277,11 @@
               "RelativeToolTip": "DataAccess\\Repository\\ConcentracionRepository.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAcwEoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T04:59:31.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T04:59:31.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "GraficaRepository.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\GraficaRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repository\\GraficaRepository.cs",
@@ -254,12 +289,11 @@
               "RelativeToolTip": "DataAccess\\Repository\\GraficaRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T05:00:37.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T05:00:37.195Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "EspumanteRepository.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Repository\\EspumanteRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repository\\EspumanteRepository.cs",
@@ -267,12 +301,11 @@
               "RelativeToolTip": "DataAccess\\Repository\\EspumanteRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T05:00:19.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T05:00:19.758Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Data.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\Data.cs",
               "RelativeDocumentMoniker": "DataAccess\\Data.cs",
@@ -280,12 +313,11 @@
               "RelativeToolTip": "DataAccess\\Data.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T20:23:34.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T20:23:34.28Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "CustomPanel.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\CustomPanel.cs",
               "RelativeDocumentMoniker": "Controles\\CustomPanel.cs",
@@ -293,24 +325,22 @@
               "RelativeToolTip": "Controles\\CustomPanel.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAcwDsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T12:59:49.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T12:59:49.29Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "frmCalibracion.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmCalibracion.cs",
               "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmCalibracion.cs [Dise\u00F1o]",
               "RelativeToolTip": "CaidaPresion\\frmCalibracion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T13:02:28.212Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-10-09T13:02:28.212Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "frmEspumante.Designer.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmEspumante.Designer.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmEspumante.Designer.cs",
@@ -323,30 +353,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Excel.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Excel.cs",
-              "RelativeDocumentMoniker": "Controles\\Excel.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Excel.cs",
-              "RelativeToolTip": "Controles\\Excel.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADEAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T19:49:25.917Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "frmDatosEntrada.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs",
-              "RelativeDocumentMoniker": "CaidaPresion\\frmDatosEntrada.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CaidaPresion\\frmDatosEntrada.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T00:07:39.981Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 19,
               "Title": "CaidaDePresion.cs",
               "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\CaidaDePresion.cs",
@@ -356,18 +362,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T19:49:26.9Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "frmDatosEntrada.cs",
-              "DocumentMoniker": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs",
-              "RelativeDocumentMoniker": "CaidaPresion\\frmDatosEntrada.cs",
-              "ToolTip": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\frmDatosEntrada.cs",
-              "RelativeToolTip": "CaidaPresion\\frmDatosEntrada.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAhwGgAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T11:18:49.431Z"
             },
             {
               "$type": "Document",
@@ -403,7 +397,8 @@
               "RelativeToolTip": "Controles\\Controles.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-04T19:48:34.365Z"
+              "WhenOpened": "2024-10-04T19:48:34.365Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

@@ -43,11 +43,14 @@ namespace CaidaPresion
 
         private void dgEspumante_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Espumante_id = int.Parse(dgEspumante.Rows[e.RowIndex].Cells["id"].Value.ToString());
-            txtNombre.Text = dgEspumante.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
-            txtDescripcion.Text = dgEspumante.Rows[e.RowIndex].Cells["descripcion"].Value.ToString();
-            dtConcentracion = ConcentracionRepository.GetDataTable(Espumante_id);
-            dgConcentracion.DataSource = dtConcentracion;
+            if (e.RowIndex >= 0)
+            {
+                Espumante_id = int.Parse(dgEspumante.Rows[e.RowIndex].Cells["id"].Value.ToString());
+                txtNombre.Text = dgEspumante.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+                txtDescripcion.Text = dgEspumante.Rows[e.RowIndex].Cells["descripcion"].Value.ToString();
+                dtConcentracion = ConcentracionRepository.GetDataTable(Espumante_id);
+                dgConcentracion.DataSource = dtConcentracion;
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

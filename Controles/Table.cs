@@ -71,48 +71,44 @@ namespace Controles
             SetRow(dt, columns, values15);
             return dt;
         }
+       static string GetType(DataTable tabla ,string filtro)
+        {
+            var columnas = tabla.Columns;
+            string tipo = "";
+            foreach (DataColumn column in columnas)
+            {
+                if (column.ColumnName == filtro)
+                {
+                    tipo = column.DataType.Name;
+                    break;
+                }
+            }
+            return tipo;
+        }
         public static DataTable Busqueda(string filtro, string valor, DataTable Tabla)
         {
             try
             {
-                DataTable TablaDatos;
-                var columnas = Tabla.Columns;
-                string tipo = "";
-                foreach (DataColumn column in columnas)
+                DataTable TablaDatos=new();
+                string tipo = GetType(Tabla,filtro);
+                switch (tipo)
                 {
-                    if (column.ColumnName == filtro)
-                    {
-                        tipo = column.DataType.Name;
-                        break;
-                    }
-                }
-                if (tipo != "String")
-                {
-                    var query = (from tab in Tabla.AsEnumerable()
-                                 where tab.Field<decimal>(filtro) == decimal.Parse(valor)
-                                 select tab);
-                    if (query.ToList().Count != 0)
-                    {
-                        TablaDatos = query.CopyToDataTable();
-                    }
-                    else
-                    {
-                        TablaDatos = Tabla;
-                    }
-                }
-                else
-                {
-                    var query = (from tab in Tabla.AsEnumerable()
-                                 where tab.Field<string>(filtro).Contains(valor)
-                                 select tab);
-                    if (query.ToList().Count != 0)
-                    {
-                        TablaDatos = query.CopyToDataTable();
-                    }
-                    else
-                    {
-                        TablaDatos = Tabla;
-                    }
+                    case "Decimal":
+                        {
+                            var query = (from tab in Tabla.AsEnumerable()
+                                         where tab.Field<decimal>(filtro) == decimal.Parse(valor)
+                                         select tab);
+                            TablaDatos = query.ToList().Count != 0 ? query.CopyToDataTable() : Tabla;
+                            break;
+                        }
+                    case "String":
+                        {
+                            var query = (from tab in Tabla.AsEnumerable()
+                                         where tab.Field<string>(filtro).Contains(valor)
+                                         select tab);
+                            TablaDatos = query.ToList().Count != 0 ? query.CopyToDataTable() : Tabla;
+                            break ;
+                        }
                 }
                 return TablaDatos;
             }

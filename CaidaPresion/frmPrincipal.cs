@@ -16,11 +16,9 @@ namespace CaidaPresion
         double holdup;
         double ub;
         double db;
-        string[] arr = { "id", "nombre" };
-
+        string[] arr = ["id", "nombre"];
         DataTable? tblConcentracion;
         Dictionary<string, object>? colection;
-
         ToolTip? toolTip;
         public frmPrincipal(EspumanteRepository _espumanteRepository,
                             ConcentracionRepository _concentracionRepository,
@@ -61,7 +59,7 @@ namespace CaidaPresion
                 holdup = CaidaDePresion.Holdup * 100;
                 ub = CaidaDePresion.ub * 100;
                 db = CaidaDePresion.db * 1000;
-                string[] columns = { "Variable", "Resultado" };
+                string[] columns = ["Variable", "Resultado"];
                 DataTable dt = Table.GetDataTable(columns);
                 string[] values = { "Reynold", reynold.ToString() };
                 Table.SetRow(dt, columns, values);
@@ -72,7 +70,7 @@ namespace CaidaPresion
                 string[] values4 = { "Usg", CaidaDePresion.Usg.ToString() };
                 Table.SetRow(dt, columns, values4);
                 dataGridView1.DataSource = dt;
-                colection = new Dictionary<string, object> {
+                colection = new (){
                     { "deltap", double.Parse(txtDeltaP.Text) },
                     {"jsl",double.Parse(txtJsl.Text) },
                     {"holdup",holdup },
@@ -89,7 +87,7 @@ namespace CaidaPresion
                 resultadoRepository.Save(colection, ref idresultado);
                 foreach (DataRow row in CaidaDePresion.tblOtrosResultados.Rows)
                 {
-                    colection = new Dictionary<string, object> {
+                    colection = new () {
                         { "PrimerTermino",double.Parse( row["PrimerTermino"].ToString()) },
                         { "ReynoldEnjambre",double.Parse( row["ReynoldEnjambre"].ToString()) },
                         { "SegundoTermino",double.Parse( row["SegundoTermino"].ToString()) },
@@ -99,7 +97,6 @@ namespace CaidaPresion
                     };
                     OtrosResultadosRepository.Save(colection, ref idresultado);
                 }
-
                 cmbParamGraficar.SelectedIndex = 0;
                 txtDeltaP.Clear();
                 txtJsl.Clear();
@@ -131,20 +128,20 @@ namespace CaidaPresion
 
         private void btnCalibrar_Click(object sender, EventArgs e)
         {
-            frmCalibracion form = new frmCalibracion();
+            frmCalibracion form = new();
             form.ShowDialog();
             txtDeltaP.Text = ControlForm.textBox != null ? ControlForm.textBox.Text : "";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmValoresIniciales frmValoresIniciales = new frmValoresIniciales { dt = Table.GetInitialValues() };
+            frmValoresIniciales frmValoresIniciales = new() { dt = Table.GetInitialValues() };
             frmValoresIniciales.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            frmDatosEntrada frmDatos = new frmDatosEntrada
+            frmDatosEntrada frmDatos = new()
             {
                 ResultadoRepository = resultadoRepository,
                 EspumanteRepository = espumanteRepository,
@@ -159,7 +156,6 @@ namespace CaidaPresion
         {
             lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
             timer1.Start();
-            string[] arrparam = { "AirHoldup Vs Jg", "Usg Vs Air holdup", "Diámetro de burbuja Vs Jg" };
             toolTip = ControlForm.GetToolTip(5000, 1000, 500, true);
             ControlForm.SetToolTip(toolTip, BtnOtrosResultados, "Mostrar otros resultados");
             ControlForm.SetToolTip(toolTip, btnNuevo, "Nuevos valores");
@@ -169,7 +165,12 @@ namespace CaidaPresion
             ControlForm.FillCombo(espumanteRepository.GetDataTable(), arr, cmbEspumante);
             ControlForm.FillCombo(graficaRepository.GetDataTable(), arr, cmbParamGraficar);
             cmbtipoGrafica.DataSource = ControlForm.SeriesChartType;
-            //Nuevo();
+            grafica.Series.Clear();
+            DialogResult result = MessageBox.Show("Desea eliminar este registro", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Nuevo();
+            }
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -335,7 +336,11 @@ namespace CaidaPresion
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Desea salir de esta aplicación", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)

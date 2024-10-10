@@ -7,7 +7,7 @@
     <Compile Update="frmCalibracion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmDatosEntrada.cs">
+    <Compile Update="frmOtrosResultados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmEspumante.cs">

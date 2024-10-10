@@ -40,10 +40,13 @@ namespace CaidaPresion
 
         private void dgResultados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = int.Parse(dgResultados.Rows[e.RowIndex].Cells["id"].Value.ToString());
-            tableOtrosResultados = OtrosResultadosRepository.GetDataTable(id);
-            tableOtrosResultados.TableName = "Otros resultados";
-            dgOtrosResultados.DataSource = tableOtrosResultados;
+            if (e.RowIndex >= 0)
+            {
+                int id = int.Parse(dgResultados.Rows[e.RowIndex].Cells["id"].Value.ToString());
+                tableOtrosResultados = OtrosResultadosRepository.GetDataTable(id);
+                tableOtrosResultados.TableName = "Otros resultados";
+                dgOtrosResultados.DataSource = tableOtrosResultados;
+            }
         }
 
         private void cmbEspumante_SelectedIndexChanged(object sender, EventArgs e)
