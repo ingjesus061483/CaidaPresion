@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace CaidaPresion
 {
-    public partial class frmDatosEntrada : Form
+    public partial class frmOtrosResultados : Form
     {
         DataSet ds;
 
@@ -23,7 +23,7 @@ namespace CaidaPresion
         DataTable? tableResultados { get; set; }
         DataTable? tableOtrosResultados { get; set; }
         Excel? excel;
-        public frmDatosEntrada()
+        public frmOtrosResultados()
         {
             InitializeComponent();
         }
@@ -40,7 +40,7 @@ namespace CaidaPresion
 
         private void dgResultados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if(e.RowIndex >= 0)
             {
                 int id = int.Parse(dgResultados.Rows[e.RowIndex].Cells["id"].Value.ToString());
                 tableOtrosResultados = OtrosResultadosRepository.GetDataTable(id);

@@ -584,7 +584,6 @@ C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\bin\Debug\ne
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.csproj.AssemblyReference.cache
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.AboutBox1.resources
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.frmCalibracion.resources
-C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.frmDatosEntrada.resources
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.frmEspumante.resources
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.frmPrincipal.resources
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.frmValoresIniciales.resources
@@ -601,3 +600,4 @@ C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\ne
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.pdb
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.genruntimeconfig.cache
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\ref\CaidaPresion.dll
+C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CaidaPresion\obj\Debug\net8.0-windows\CaidaPresion.frmOtrosResultados.resources

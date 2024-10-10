@@ -1,6 +1,6 @@
 ﻿namespace CaidaPresion
 {
-    partial class frmDatosEntrada
+    partial class frmOtrosResultados
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatosEntrada));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOtrosResultados));
             dgOtrosResultados = new DataGridView();
             idOtro = new DataGridViewTextBoxColumn();
             PrimerTermino = new DataGridViewTextBoxColumn();

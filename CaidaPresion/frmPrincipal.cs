@@ -70,7 +70,7 @@ namespace CaidaPresion
                 string[] values4 = { "Usg", CaidaDePresion.Usg.ToString() };
                 Table.SetRow(dt, columns, values4);
                 dataGridView1.DataSource = dt;
-                colection = new (){
+                colection = new(){
                     { "deltap", double.Parse(txtDeltaP.Text) },
                     {"jsl",double.Parse(txtJsl.Text) },
                     {"holdup",holdup },
@@ -87,7 +87,7 @@ namespace CaidaPresion
                 resultadoRepository.Save(colection, ref idresultado);
                 foreach (DataRow row in CaidaDePresion.tblOtrosResultados.Rows)
                 {
-                    colection = new () {
+                    colection = new() {
                         { "PrimerTermino",double.Parse( row["PrimerTermino"].ToString()) },
                         { "ReynoldEnjambre",double.Parse( row["ReynoldEnjambre"].ToString()) },
                         { "SegundoTermino",double.Parse( row["SegundoTermino"].ToString()) },
@@ -141,7 +141,7 @@ namespace CaidaPresion
 
         private void button4_Click(object sender, EventArgs e)
         {
-            frmDatosEntrada frmDatos = new()
+            frmOtrosResultados frmDatos = new()
             {
                 ResultadoRepository = resultadoRepository,
                 EspumanteRepository = espumanteRepository,
@@ -166,11 +166,8 @@ namespace CaidaPresion
             ControlForm.FillCombo(graficaRepository.GetDataTable(), arr, cmbParamGraficar);
             cmbtipoGrafica.DataSource = ControlForm.SeriesChartType;
             grafica.Series.Clear();
-            DialogResult result = MessageBox.Show("Desea eliminar este registro", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
                 Nuevo();
-            }
+            
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -196,8 +193,12 @@ namespace CaidaPresion
         {
             try
             {
-                grafica.Series.Clear();
-                resultadoRepository.Delete();
+                DialogResult result = MessageBox.Show("Desea eliminar este registro", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    grafica.Series.Clear();
+                    resultadoRepository.Delete();
+                }
             }
             catch (Exception ex)
             {
@@ -255,12 +256,12 @@ namespace CaidaPresion
                     case 4:
                         {
                             string[] arr = [];
-                            table = resultadoRepository.DiámetroBurbujaVsConcentracion( espumante);
+                            table = resultadoRepository.DiámetroBurbujaVsConcentracion(espumante);
                             ControlForm.FillArray(grafica, table, ref arr);
                             string[] cols = ["concentracion", "db"];
                             for (int j = 0; j <= arr.Length - 1; j++)
                             {
-                                var search =Table. Busqueda("jg", arr[j], table);
+                                var search = Table.Busqueda("jg", arr[j], table);
                                 ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), arr[j], cols, search);
                             }
                             break;
@@ -303,7 +304,7 @@ namespace CaidaPresion
             }
         }
 
-      
+
         private void button1_Click(object sender, EventArgs e)
         {
             Nuevo();
@@ -362,17 +363,16 @@ namespace CaidaPresion
 
         private void btnNuevoEspumante_Click(object sender, EventArgs e)
         {
-           frmEspumante frmEspumante = new frmEspumante
-           {
-               EspumanteRepository=espumanteRepository,
-               ConcentracionRepository=concentracionRepository
-           };
+            frmEspumante frmEspumante = new frmEspumante
+            {
+                EspumanteRepository = espumanteRepository,
+                ConcentracionRepository = concentracionRepository
+            };
             frmEspumante.ShowDialog();
             ControlForm.FillCombo(espumanteRepository.GetDataTable(), arr, cmbEspumante);
 
         }
- 
-    
 
+       
     }
 }
