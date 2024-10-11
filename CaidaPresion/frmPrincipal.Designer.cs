@@ -403,7 +403,7 @@ namespace CaidaPresion
             btnNuevoEspumante.FlatStyle = FlatStyle.Flat;
             btnNuevoEspumante.Location = new Point(463, 48);
             btnNuevoEspumante.Name = "btnNuevoEspumante";
-            btnNuevoEspumante.Size = new Size(40, 34);
+            btnNuevoEspumante.Size = new Size(40, 33);
             btnNuevoEspumante.TabIndex = 41;
             btnNuevoEspumante.UseVisualStyleBackColor = true;
             btnNuevoEspumante.Click += btnNuevoEspumante_Click;

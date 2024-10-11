@@ -39,19 +39,6 @@
             DiametroBurbuja = new DataGridViewTextBoxColumn();
             resultado_id = new DataGridViewTextBoxColumn();
             dgResultados = new DataGridView();
-            id = new DataGridViewTextBoxColumn();
-            Jg = new DataGridViewTextBoxColumn();
-            DeltaP = new DataGridViewTextBoxColumn();
-            Jsl = new DataGridViewTextBoxColumn();
-            Holdup = new DataGridViewTextBoxColumn();
-            Db = new DataGridViewTextBoxColumn();
-            Ub = new DataGridViewTextBoxColumn();
-            Reb = new DataGridViewTextBoxColumn();
-            Usg = new DataGridViewTextBoxColumn();
-            concentracion_id = new DataGridViewTextBoxColumn();
-            concentracion = new DataGridViewTextBoxColumn();
-            espumante_id = new DataGridViewTextBoxColumn();
-            espumante = new DataGridViewTextBoxColumn();
             panel18 = new Panel();
             btnExportar = new Button();
             label5 = new Label();
@@ -60,6 +47,19 @@
             cmbEspumante = new ComboBox();
             customPanel1 = new Controles.CustomPanel();
             customPanel2 = new Controles.CustomPanel();
+            id = new DataGridViewTextBoxColumn();
+            Jg = new DataGridViewTextBoxColumn();
+            DeltaP = new DataGridViewTextBoxColumn();
+            Jsl = new DataGridViewTextBoxColumn();
+            Holdup = new DataGridViewTextBoxColumn();
+            Db = new DataGridViewTextBoxColumn();
+            Ub = new DataGridViewTextBoxColumn();
+            Usg = new DataGridViewTextBoxColumn();
+            Reb = new DataGridViewTextBoxColumn();
+            concentracion_id = new DataGridViewTextBoxColumn();
+            concentracion = new DataGridViewTextBoxColumn();
+            espumante_id = new DataGridViewTextBoxColumn();
+            espumante = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgOtrosResultados).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgResultados).BeginInit();
             panel18.SuspendLayout();
@@ -171,7 +171,7 @@
             dgResultados.BackgroundColor = Color.FromArgb(42, 46, 50);
             dgResultados.BorderStyle = BorderStyle.Fixed3D;
             dgResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgResultados.Columns.AddRange(new DataGridViewColumn[] { id, Jg, DeltaP, Jsl, Holdup, Db, Ub, Reb, Usg, concentracion_id, concentracion, espumante_id, espumante });
+            dgResultados.Columns.AddRange(new DataGridViewColumn[] { id, Jg, DeltaP, Jsl, Holdup, Db, Ub, Usg, Reb, concentracion_id, concentracion, espumante_id, espumante });
             dgResultados.Dock = DockStyle.Fill;
             dgResultados.Location = new Point(0, 0);
             dgResultados.Name = "dgResultados";
@@ -182,125 +182,6 @@
             dgResultados.Size = new Size(1075, 192);
             dgResultados.TabIndex = 45;
             dgResultados.CellContentClick += dgResultados_CellContentClick;
-            // 
-            // id
-            // 
-            id.DataPropertyName = "id";
-            id.HeaderText = "id";
-            id.MinimumWidth = 8;
-            id.Name = "id";
-            id.ReadOnly = true;
-            id.Width = 150;
-            // 
-            // Jg
-            // 
-            Jg.DataPropertyName = "jg";
-            Jg.HeaderText = "Jg (cm/s)";
-            Jg.MinimumWidth = 8;
-            Jg.Name = "Jg";
-            Jg.ReadOnly = true;
-            Jg.Width = 150;
-            // 
-            // DeltaP
-            // 
-            DeltaP.DataPropertyName = "DeltaP";
-            DeltaP.HeaderText = "Delta p (Psi)";
-            DeltaP.MinimumWidth = 8;
-            DeltaP.Name = "DeltaP";
-            DeltaP.ReadOnly = true;
-            DeltaP.Width = 150;
-            // 
-            // Jsl
-            // 
-            Jsl.DataPropertyName = "Jsl";
-            Jsl.HeaderText = "Jsl (cm/s)";
-            Jsl.MinimumWidth = 8;
-            Jsl.Name = "Jsl";
-            Jsl.ReadOnly = true;
-            Jsl.Width = 150;
-            // 
-            // Holdup
-            // 
-            Holdup.DataPropertyName = "Holdup";
-            Holdup.HeaderText = "Holdup";
-            Holdup.MinimumWidth = 8;
-            Holdup.Name = "Holdup";
-            Holdup.ReadOnly = true;
-            Holdup.Width = 150;
-            // 
-            // Db
-            // 
-            Db.DataPropertyName = "Db";
-            Db.HeaderText = "Db (mm)";
-            Db.MinimumWidth = 8;
-            Db.Name = "Db";
-            Db.ReadOnly = true;
-            Db.Width = 150;
-            // 
-            // Ub
-            // 
-            Ub.DataPropertyName = "Ub";
-            Ub.HeaderText = "Ub (cm/s)";
-            Ub.MinimumWidth = 8;
-            Ub.Name = "Ub";
-            Ub.ReadOnly = true;
-            Ub.Width = 150;
-            // 
-            // Reb
-            // 
-            Reb.DataPropertyName = "Reb";
-            Reb.HeaderText = "Reb";
-            Reb.MinimumWidth = 8;
-            Reb.Name = "Reb";
-            Reb.ReadOnly = true;
-            Reb.Width = 150;
-            // 
-            // Usg
-            // 
-            Usg.DataPropertyName = "Usg";
-            Usg.HeaderText = "Usg";
-            Usg.MinimumWidth = 8;
-            Usg.Name = "Usg";
-            Usg.ReadOnly = true;
-            Usg.Width = 150;
-            // 
-            // concentracion_id
-            // 
-            concentracion_id.DataPropertyName = "concentracion_id";
-            concentracion_id.HeaderText = "concentracion_id";
-            concentracion_id.MinimumWidth = 8;
-            concentracion_id.Name = "concentracion_id";
-            concentracion_id.ReadOnly = true;
-            concentracion_id.Visible = false;
-            concentracion_id.Width = 150;
-            // 
-            // concentracion
-            // 
-            concentracion.DataPropertyName = "concentracion";
-            concentracion.HeaderText = "Concentración";
-            concentracion.MinimumWidth = 8;
-            concentracion.Name = "concentracion";
-            concentracion.ReadOnly = true;
-            concentracion.Width = 150;
-            // 
-            // espumante_id
-            // 
-            espumante_id.DataPropertyName = "espumante_id";
-            espumante_id.HeaderText = "espumante_id";
-            espumante_id.MinimumWidth = 8;
-            espumante_id.Name = "espumante_id";
-            espumante_id.ReadOnly = true;
-            espumante_id.Visible = false;
-            espumante_id.Width = 150;
-            // 
-            // espumante
-            // 
-            espumante.DataPropertyName = "espumante";
-            espumante.HeaderText = "Espumante";
-            espumante.MinimumWidth = 8;
-            espumante.Name = "espumante";
-            espumante.ReadOnly = true;
-            espumante.Width = 150;
             // 
             // panel18
             // 
@@ -402,7 +283,126 @@
             customPanel2.Size = new Size(1075, 229);
             customPanel2.TabIndex = 48;
             // 
-            // frmDatosEntrada
+            // id
+            // 
+            id.DataPropertyName = "id";
+            id.HeaderText = "id";
+            id.MinimumWidth = 8;
+            id.Name = "id";
+            id.ReadOnly = true;
+            id.Width = 150;
+            // 
+            // Jg
+            // 
+            Jg.DataPropertyName = "Jg(cm/s)";
+            Jg.HeaderText = "Jg(cm/s)";
+            Jg.MinimumWidth = 8;
+            Jg.Name = "Jg";
+            Jg.ReadOnly = true;
+            Jg.Width = 150;
+            // 
+            // DeltaP
+            // 
+            DeltaP.DataPropertyName = "DeltaP(Psi)";
+            DeltaP.HeaderText = "DeltaP(Psi)";
+            DeltaP.MinimumWidth = 8;
+            DeltaP.Name = "DeltaP";
+            DeltaP.ReadOnly = true;
+            DeltaP.Width = 150;
+            // 
+            // Jsl
+            // 
+            Jsl.DataPropertyName = "Jsl(cm/s)";
+            Jsl.HeaderText = "Jsl(cm/s)";
+            Jsl.MinimumWidth = 8;
+            Jsl.Name = "Jsl";
+            Jsl.ReadOnly = true;
+            Jsl.Width = 150;
+            // 
+            // Holdup
+            // 
+            Holdup.DataPropertyName = "%Holdup";
+            Holdup.HeaderText = "%Holdup";
+            Holdup.MinimumWidth = 8;
+            Holdup.Name = "Holdup";
+            Holdup.ReadOnly = true;
+            Holdup.Width = 150;
+            // 
+            // Db
+            // 
+            Db.DataPropertyName = "Db(mm)";
+            Db.HeaderText = "Db(mm)";
+            Db.MinimumWidth = 8;
+            Db.Name = "Db";
+            Db.ReadOnly = true;
+            Db.Width = 150;
+            // 
+            // Ub
+            // 
+            Ub.DataPropertyName = "Ub(cm/s)";
+            Ub.HeaderText = "Ub(cm/s)";
+            Ub.MinimumWidth = 8;
+            Ub.Name = "Ub";
+            Ub.ReadOnly = true;
+            Ub.Width = 150;
+            // 
+            // Usg
+            // 
+            Usg.DataPropertyName = "Usg(m/s)";
+            Usg.HeaderText = "Usg(m/s)";
+            Usg.MinimumWidth = 8;
+            Usg.Name = "Usg";
+            Usg.ReadOnly = true;
+            Usg.Width = 150;
+            // 
+            // Reb
+            // 
+            Reb.DataPropertyName = "Reb";
+            Reb.HeaderText = "Reb";
+            Reb.MinimumWidth = 8;
+            Reb.Name = "Reb";
+            Reb.ReadOnly = true;
+            Reb.Width = 150;
+            // 
+            // concentracion_id
+            // 
+            concentracion_id.DataPropertyName = "concentracion_id";
+            concentracion_id.HeaderText = "concentracion_id";
+            concentracion_id.MinimumWidth = 8;
+            concentracion_id.Name = "concentracion_id";
+            concentracion_id.ReadOnly = true;
+            concentracion_id.Visible = false;
+            concentracion_id.Width = 150;
+            // 
+            // concentracion
+            // 
+            concentracion.DataPropertyName = "Concentración(ppm)";
+            concentracion.HeaderText = "Concentración(ppm)";
+            concentracion.MinimumWidth = 8;
+            concentracion.Name = "concentracion";
+            concentracion.ReadOnly = true;
+            concentracion.Width = 150;
+            // 
+            // espumante_id
+            // 
+            espumante_id.DataPropertyName = "espumante_id";
+            espumante_id.HeaderText = "espumante_id";
+            espumante_id.MinimumWidth = 8;
+            espumante_id.Name = "espumante_id";
+            espumante_id.ReadOnly = true;
+            espumante_id.Visible = false;
+            espumante_id.Width = 150;
+            // 
+            // espumante
+            // 
+            espumante.DataPropertyName = "espumante";
+            espumante.HeaderText = "Espumante";
+            espumante.MinimumWidth = 8;
+            espumante.Name = "espumante";
+            espumante.ReadOnly = true;
+            espumante.Width = 150;
+            // 
+            // frmOtrosResultados
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -413,7 +413,7 @@
             Controls.Add(panel18);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(4, 5, 4, 5);
-            Name = "frmDatosEntrada";
+            Name = "frmOtrosResultados";
             Text = "frmDatosEntrada";
             Load += frmDatosEntrada_Load;
             ((System.ComponentModel.ISupportInitialize)dgOtrosResultados).EndInit();
@@ -443,6 +443,8 @@
         private DataGridViewTextBoxColumn FuncionObjetivo;
         private DataGridViewTextBoxColumn DiametroBurbuja;
         private DataGridViewTextBoxColumn resultado_id;
+        private Controles.CustomPanel customPanel1;
+        private Controles.CustomPanel customPanel2;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn Jg;
         private DataGridViewTextBoxColumn DeltaP;
@@ -450,13 +452,11 @@
         private DataGridViewTextBoxColumn Holdup;
         private DataGridViewTextBoxColumn Db;
         private DataGridViewTextBoxColumn Ub;
-        private DataGridViewTextBoxColumn Reb;
         private DataGridViewTextBoxColumn Usg;
+        private DataGridViewTextBoxColumn Reb;
         private DataGridViewTextBoxColumn concentracion_id;
         private DataGridViewTextBoxColumn concentracion;
         private DataGridViewTextBoxColumn espumante_id;
         private DataGridViewTextBoxColumn espumante;
-        private Controles.CustomPanel customPanel1;
-        private Controles.CustomPanel customPanel2;
     }
 }

@@ -28,10 +28,8 @@ namespace DataAccess.Repository
             try
             {
                 Abrir();
-                Command = GetCommand("select id,Jg,DeltaP,Jsl,Holdup," +
-                                   "Db,Ub,Reb,Usg,concentracion_id," +
-                                   "concentracion,espumante_id,espumante " +
-                                   "from view_resultados", CommandType.Text);
+                Command = GetCommand("SELECT id, `Jg(cm/s)`, `DeltaP(Psi)`, `Jsl(cm/s)`, `%Holdup`,`Db(mm)`,`Ub(cm/s)`,`Usg(m/s)`," +
+                                     "Reb, concentracion_id,`Concentración(ppm)`,  espumante_id,  espumante FROM view_resultados", CommandType.Text);
                 DataTable dt = GetTableCommand(Command);
                 return dt;
             }
@@ -51,11 +49,10 @@ namespace DataAccess.Repository
             try
             {
                 Abrir();
-                Command = GetCommand("select id,Jg,DeltaP,Jsl,Holdup," +
-                                   "Db,Ub,Reb,Usg,concentracion_id," +
-                                   "concentracion,espumante_id,espumante " +
-                                   "from view_resultados where espumante_id="+espumante+" and " +
-                                   "concentracion_id="+concentracion, CommandType.Text);
+                Command = GetCommand("select id, `Jg(cm/s)`, `DeltaP(Psi)`, `Jsl(cm/s)`, `%Holdup`,`Db(mm)`," +
+                                     "`Ub(cm/s)`,`Usg(m/s)`,Reb, concentracion_id,`Concentración(ppm)`," +
+                                     "espumante_id,  espumante from view_resultados where espumante_id="
+                                     +espumante+" and " +"concentracion_id="+concentracion, CommandType.Text);
                 DataTable dt = GetTableCommand(Command);
                 return dt;
             }
@@ -115,7 +112,7 @@ namespace DataAccess.Repository
             try
             {
                 Abrir();
-                Command = GetCommand("select holdup,jg from resultados where concentracion_id=" + concentracion + " and espumante_id=" + espumante , CommandType.Text);
+                Command = GetCommand("SELECT `%Holdup`, `Jg(cm/s)` FROM view_resultados where concentracion_id=" + concentracion + " and espumante_id=" + espumante , CommandType.Text);
                 DataTable dt = GetTableCommand(Command);
                 return dt;
             }
@@ -133,7 +130,7 @@ namespace DataAccess.Repository
             try
             {
                 Abrir();                
-                Command = GetCommand("select holdup,usg from resultados where concentracion_id="+concentracion+" and espumante_id="+espumante, CommandType.Text);
+                Command = GetCommand("select `%Holdup`,`Usg(m/s)` from view_resultados where concentracion_id=" + concentracion+" and espumante_id="+espumante, CommandType.Text);
                 DataTable dt = GetTableCommand(Command);
                 return dt;
             }
@@ -151,7 +148,7 @@ namespace DataAccess.Repository
             try
             {
                 Abrir();                
-                Command = GetCommand("select db,jg from resultados where concentracion_id=" + concentracion + " and espumante_id=" + espumante, CommandType.Text);
+                Command = GetCommand("select `Db(mm)`,`Jg(cm/s)` from view_resultados where concentracion_id=" + concentracion + " and espumante_id=" + espumante, CommandType.Text);
                 DataTable dt = GetTableCommand(Command);
                 return dt;
             }
@@ -169,7 +166,7 @@ namespace DataAccess.Repository
             try
             {
                 Abrir();
-                Command = GetCommand("SELECT jg,db,c.alias concentracion FROM resultados JOIN concentracion c ON c.id =resultados.concentracion_id where espumante_id  ="+espumante, CommandType.Text);
+                Command = GetCommand("SELECT `Jg(cm/s)`,`Db(mm)`,`Concentración(ppm)` FROM view_resultados where espumante_id  =" + espumante, CommandType.Text);
                 DataTable dt = GetTableCommand(Command);
                 return dt;
             }

@@ -33,56 +33,6 @@ namespace Controles
             };
             return toolTip;
         }
-        static void  SetGraphicProperty(Chart grafica,string[] cols)
-        {
-            grafica.ChartAreas[0].BorderColor = Color.White;
-            grafica.ChartAreas[0].BackColor = Color.FromArgb(42, 46, 50);
-            grafica.ChartAreas[0].AxisY.LineColor = Color.White;
-            grafica.ChartAreas[0].AxisX.LineColor = Color.White;
-            grafica.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
-            grafica.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
-            grafica.ChartAreas[0].AxisX.TitleForeColor = Color.White;
-            grafica.ChartAreas[0].AxisY.TitleForeColor = Color.White;
-            grafica.ChartAreas[0].AxisX.Title = cols[0].ToUpper();
-            grafica.ChartAreas[0].AxisY.Title = cols[1].ToUpper();
-        }
-        
-        public static void FillArray(Chart grafica, DataTable table, ref string[] arr)
-        {
-            int i = 0;
-            foreach (DataRow row in table.Rows)
-            {
-                string serie = row["jg"].ToString();
-                var series = grafica.Series;
-                bool enc = false;
-                foreach (var item in series)
-                {
-                    if (item.Name == serie)
-                    {
-                        enc = true;
-                    }
-                }
-                if (!enc)
-                {
-
-                    grafica.Series.Add(serie);
-                    i++;
-                    Array.Resize(ref arr, i);
-                    arr[i - 1] = serie;
-                }
-            }
-        }
-        public static void GetGraphic(Chart grafica,string TipoGrafica, string serie,string []  cols, DataTable table)
-        {
-            grafica.Series[serie].ChartType = Enum.Parse<SeriesChartType>(TipoGrafica);
-            SetGraphicProperty(grafica, cols);
-            foreach (DataRow row in table.Rows)
-            {
-                double x = double.Parse(row[cols[0]].ToString());
-                double y = double.Parse(row[cols[1]].ToString());
-                grafica.Series[serie].Points.AddXY(x,y);
-            }
-        }
       
         public static void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {

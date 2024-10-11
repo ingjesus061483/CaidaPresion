@@ -37,12 +37,7 @@ namespace CaidaPresion
         private void btnGraficar_Click(object sender, EventArgs e)
         {
             try
-            {
-                if (cmbParamGraficar.SelectedValue == null)
-                {
-                    ControlForm.GetMessage("Debe seleccionar a que concentracion esta el espunante", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+            {             
                 if (cmbConcentracion.SelectedValue == null)
                 {
                     ControlForm.GetMessage("Debe seleccionar a que concentracion esta el espunante", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -166,14 +161,12 @@ namespace CaidaPresion
             ControlForm.FillCombo(graficaRepository.GetDataTable(), arr, cmbParamGraficar);
             cmbtipoGrafica.DataSource = ControlForm.SeriesChartType;
             grafica.Series.Clear();
-                Nuevo();
-            
+            Nuevo();            
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
         }
-
         private void cmbEspumante_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -210,98 +203,94 @@ namespace CaidaPresion
             DataTable table;
             grafica.Series.Clear();
             int.TryParse(cmbEspumante.SelectedValue != null ? cmbEspumante.SelectedValue.ToString() : "", out int espumante);
-            if (cmbConcentracion.SelectedValue == null)
+            int.TryParse(cmbConcentracion.SelectedValue!=null? cmbConcentracion.SelectedValue.ToString():"", out int concentracion);
+            switch (cmbParamGraficar.SelectedValue)
             {
-                switch (cmbParamGraficar.SelectedValue)
-                {
-                    case 1:
+                case 1:
+                    {         
+                        string[] cols = ["Jg(cm/s)", "%Holdup"];
+                        if (cmbConcentracion.SelectedValue == null)
                         {
                             foreach (DataRow row in tblConcentracion.Rows)
                             {
                                 string serie = cmbParamGraficar.Text + " " + row["concentracion"].ToString();
-                                grafica.Series.Add(serie);
-                                int.TryParse(row["concentracion_id"].ToString(), out int concentracion);
+                                int.TryParse(row["concentracion_id"].ToString(), out concentracion);
                                 table = resultadoRepository.AirHoldupVsJg(concentracion, espumante);
-                                string[] cols = { "jg", "holdup" };
-                                ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), serie, cols, table);
+                                Grafica.LoadGraphic(serie, grafica, table, cols, cmbtipoGrafica.SelectedValue.ToString());
                             }
-                            break;
                         }
-                    case 2:
+                        else
+                        {          
+                            string serie = cmbParamGraficar.Text;
+                            table = resultadoRepository.AirHoldupVsJg(concentracion, espumante);
+                            Grafica.LoadGraphic(serie, grafica, table, cols, cmbtipoGrafica.SelectedValue.ToString());
+                        }
+                        break;
+                    }
+                case 2:
+                    {     
+                        string[] cols = ["%Holdup", "Usg(m/s)"];
+                        if (cmbConcentracion.SelectedValue == null)
                         {
                             foreach (DataRow row in tblConcentracion.Rows)
                             {
                                 string serie = cmbParamGraficar.Text + " " + row["concentracion"].ToString();
-                                grafica.Series.Add(serie);
-                                int.TryParse(row["concentracion_id"].ToString(), out int concentracion);
-                                table = resultadoRepository.AirHoldupVsJg(concentracion, espumante);
-                                string[] cols = { "jg", "holdup" };
-                                ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), serie, cols, table);
+                                int.TryParse(row["concentracion_id"].ToString(), out concentracion);
+                                table = resultadoRepository.UsgVsAirHoldup(concentracion, espumante);
+                                Grafica.LoadGraphic(serie, grafica, table, cols, cmbtipoGrafica.SelectedValue.ToString());
                             }
-                            break;
                         }
-                    case 3:
+                        else
+                        {
+                            table = resultadoRepository.UsgVsAirHoldup(concentracion, espumante);
+                            string serie = cmbParamGraficar.Text;
+                            Grafica.LoadGraphic(serie, grafica, table, cols, cmbtipoGrafica.SelectedValue.ToString());
+                        }
+                        break;
+                    }
+                case 3:
+                    {  
+                        string[] cols = ["Jg(cm/s)", "Db(mm)"];
+                        if (cmbConcentracion.SelectedValue == null)
                         {
                             foreach (DataRow row in tblConcentracion.Rows)
                             {
                                 string serie = cmbParamGraficar.Text + " " + row["concentracion"].ToString();
-                                grafica.Series.Add(serie);
-                                int.TryParse(row["concentracion_id"].ToString(), out int concentracion);
+                                int.TryParse(row["concentracion_id"].ToString(), out concentracion);
                                 table = resultadoRepository.DiámetroBurbujaVsJg(concentracion, espumante);
-                                string[] cols = { "jg", "db" };
-                                ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), serie, cols, table);
+                                Grafica.LoadGraphic(serie, grafica, table, cols, cmbtipoGrafica.SelectedValue.ToString());
                             }
-                            break;
                         }
-                    case 4:
+                        else
+                        {
+                            table = resultadoRepository.DiámetroBurbujaVsJg(concentracion, espumante);
+                            string serie = cmbParamGraficar.Text;
+                            Grafica.LoadGraphic(serie, grafica, table, cols, cmbtipoGrafica.SelectedValue.ToString());
+                        }
+                        break;
+                    }
+                case 4:
+                    {  
+                        string[] cols = ["Concentración(ppm)", "Db(mm)"];
+                        if (cmbConcentracion.SelectedValue == null)
                         {
                             string[] arr = [];
                             table = resultadoRepository.DiámetroBurbujaVsConcentracion(espumante);
-                            ControlForm.FillArray(grafica, table, ref arr);
-                            string[] cols = ["concentracion", "db"];
-                            for (int j = 0; j <= arr.Length - 1; j++)
-                            {
-                                var search = Table.Busqueda("jg", arr[j], table);
-                                ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), arr[j], cols, search);
-                            }
-                            break;
+                            Grafica.FillArray(grafica, table, ref arr);
+                            Grafica.LoadGraphic(table, arr, grafica, cols, cmbtipoGrafica.SelectedValue.ToString());
                         }
-                }
-            }
-            else
-            {
-                grafica.Series.Add(cmbParamGraficar.Text);
-                int.TryParse(cmbConcentracion.SelectedValue.ToString(), out int concentracion);
-                switch (cmbParamGraficar.SelectedValue)
-                {
-                    case 1:
-                        {
-                            table = resultadoRepository.AirHoldupVsJg(concentracion, espumante);
-                            string[] cols = { "jg", "holdup" };
-                            ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), cmbParamGraficar.Text, cols, table);
-                            break;
-                        }
-                    case 2:
-                        {
-                            table = resultadoRepository.UsgVsAirHoldup(concentracion, espumante);
-                            string[] cols = { "holdup", "usg" };
-                            ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), cmbParamGraficar.Text, cols, table);
-                            break;
-                        }
-                    case 3:
-                        {
-                            table = resultadoRepository.DiámetroBurbujaVsJg(concentracion, espumante);
-                            string[] cols = { "jg", "db" };
-                            ControlForm.GetGraphic(grafica, cmbtipoGrafica.SelectedValue.ToString(), cmbParamGraficar.Text, cols, table);
-                            break;
-                        }
-                    case 4:
+                        else
                         {
                             ControlForm.GetMessage("", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            break;
+                            grafica.Series.Clear();
+
                         }
-                }
+                        break;
+                    }
             }
+
+
+
         }
 
 
