@@ -357,8 +357,8 @@
             // 
             // Reb
             // 
-            Reb.DataPropertyName = "Reb";
-            Reb.HeaderText = "Reb";
+            Reb.DataPropertyName = "Reynold de burbuja";
+            Reb.HeaderText = "Reynold de burbuja";
             Reb.MinimumWidth = 8;
             Reb.Name = "Reb";
             Reb.ReadOnly = true;

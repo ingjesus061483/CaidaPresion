@@ -71,26 +71,21 @@ namespace Controles
             SetRow(dt, columns, values15);
             return dt;
         }
-       static string GetType(DataTable tabla ,string filtro)
-        {
-            var columnas = tabla.Columns;
-            string tipo = "";
-            foreach (DataColumn column in columnas)
-            {
-                if (column.ColumnName == filtro)
-                {
-                    tipo = column.DataType.Name;
-                    break;
-                }
-            }
-            return tipo;
+        
+        static DataColumn[] GetColumns(DataTable tabla )
+        { 
+            DataColumn[] columns=new DataColumn [tabla.Columns.Count ];
+            tabla.Columns.CopyTo(columns, 0);      
+            return columns;
         }
         public static DataTable Busqueda(string filtro, string valor, DataTable Tabla)
         {
             try
             {
                 DataTable TablaDatos=new();
-                string tipo = GetType(Tabla,filtro);
+                DataColumn[] columns = GetColumns(Tabla);                
+                DataColumn column = columns.ToList().Where(x => x.ColumnName == filtro).FirstOrDefault();
+                string tipo  = column != null ? column.DataType.Name : ""; 
                 switch (tipo)
                 {
                     case "Decimal":

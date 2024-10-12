@@ -19,6 +19,7 @@ namespace CaidaPresion
         Dictionary<string, object> colection;
         int Espumante_id;
         public EspumanteRepository EspumanteRepository { get; set; }
+        public EspumanteConcentracionRepository EspumanteConcentracionRepository { get; set; }
         public ConcentracionRepository ConcentracionRepository { get; set; }
         public frmEspumante()
         {
@@ -80,12 +81,12 @@ namespace CaidaPresion
                     foreach (DataRow row in dt.Rows)
                     {
                         colection = new Dictionary<string, object>
-                    {
-                        { "espumante_id", Espumante_id },
-                        {"concentracion_id",row["id"].ToString() }
-                    };
+                        {
+                            { "espumante_id", Espumante_id },
+                            {"concentracion_id",row["id"].ToString() }
+                        };
 
-                        ConcentracionRepository.Save(colection, ref Espumante_id);
+                        EspumanteConcentracionRepository.Save(colection, ref Espumante_id);
                     }
                     Controles.ControlForm.GetMessage("El registro se ha guardado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

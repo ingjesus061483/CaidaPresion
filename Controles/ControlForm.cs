@@ -53,7 +53,7 @@ namespace Controles
             combo.ValueMember = arr.GetValue(0).ToString();
             combo.SelectedIndex = -1;
         }
-        public static void FillCombo(Enum  table, Array arr, System.Windows.Forms.ComboBox combo)
+        public static void FillCombo(Enum table,Array arr, System.Windows.Forms.ComboBox combo)
         {
             combo.DataSource = table;
             combo.DisplayMember = arr.GetValue(1).ToString();
@@ -62,6 +62,7 @@ namespace Controles
         }
         public static void FillCombo( Array arr, System.Windows.Forms.ComboBox comboBox)
         {
+   //         comboBox.Items.AddRange((object[])arr);
             foreach (var value in arr)
             {
                 comboBox.Items.Add(value);

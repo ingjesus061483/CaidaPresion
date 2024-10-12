@@ -24,11 +24,13 @@ namespace CaidaPresion
                             ConcentracionRepository _concentracionRepository,
                             ResultadoRepository _resultadoRepository,
                             GraficaRepository _graficaRepository,
+                            EspumanteConcentracionRepository _espumanteConcentracionRepository,
                             OtrosResultadosRepository _otrosResultadosRepository)
         {
             InitializeComponent();
             OtrosResultadosRepository = _otrosResultadosRepository;
             espumanteRepository = _espumanteRepository;
+            espumanteConcentracionRepository = _espumanteConcentracionRepository;
             concentracionRepository = _concentracionRepository;
             resultadoRepository = _resultadoRepository;
             graficaRepository = _graficaRepository;
@@ -352,10 +354,11 @@ namespace CaidaPresion
 
         private void btnNuevoEspumante_Click(object sender, EventArgs e)
         {
-            frmEspumante frmEspumante = new frmEspumante
+            frmEspumante frmEspumante = new ()
             {
                 EspumanteRepository = espumanteRepository,
-                ConcentracionRepository = concentracionRepository
+                ConcentracionRepository = concentracionRepository, 
+                EspumanteConcentracionRepository=espumanteConcentracionRepository,
             };
             frmEspumante.ShowDialog();
             ControlForm.FillCombo(espumanteRepository.GetDataTable(), arr, cmbEspumante);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -23,27 +24,13 @@ namespace Controles
             grafica.ChartAreas[0].AxisX.Title = cols[0];
             grafica.ChartAreas[0].AxisY.Title = cols[1];
         }
-        static bool FindSerieInChart(Chart grafica, string serie)
-        {
-            var series = grafica.Series;
-            bool enc = false;
-            foreach (var item in series)
-            {
-                if (item.Name == serie)
-                {
-                    enc = true;
-                    break;
-                }
-            }
-            return enc;
-        }
         public static void FillArray(Chart grafica, DataTable table, ref string[] arr)
         {
             int i = 0;
             foreach (DataRow row in table.Rows)
             {
                 string serie ="Jg(cm/s) => "+ row["jg(cm/s)"].ToString();
-                bool enc = FindSerieInChart(grafica, serie);
+                bool enc =grafica.Series.ToList().Exists(x => x.Name == serie);                
                 if (!enc)
                 {
                     i++;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repository
 {
-    class EspumanteConcentracionRepository : Data
+    public class EspumanteConcentracionRepository : Data
     {
         public override void Delete(int id)
         {
@@ -31,7 +31,22 @@ namespace DataAccess.Repository
 
         public override void Save(Dictionary<string, object> colection, ref int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Abrir();
+                Command = GetCommand("insertar_espumante_concentracion", CommandType.StoredProcedure);
+                Command.Parameters.Add("_espumante_id", MySql.Data.MySqlClient.MySqlDbType.Int32).Value = int.Parse(colection["espumante_id"].ToString());
+                Command.Parameters.Add("_concentracion_id", MySql.Data.MySqlClient.MySqlDbType.Int32).Value = int.Parse(colection["concentracion_id"].ToString());
+                Command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Cerrar();
+            }
         }
 
         public override void Update(Dictionary<string, object> colection, int id)

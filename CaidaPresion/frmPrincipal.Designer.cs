@@ -1071,6 +1071,7 @@ namespace CaidaPresion
         private ComboBox cmbtipoGrafica;
         private Label label13; 
         private EspumanteRepository espumanteRepository;
+        private EspumanteConcentracionRepository espumanteConcentracionRepository;
         private ConcentracionRepository concentracionRepository;
         private ResultadoRepository resultadoRepository;
         private GraficaRepository graficaRepository;

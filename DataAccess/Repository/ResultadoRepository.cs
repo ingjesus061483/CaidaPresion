@@ -29,7 +29,7 @@ namespace DataAccess.Repository
             {
                 Abrir();
                 Command = GetCommand("SELECT id, `Jg(cm/s)`, `DeltaP(Psi)`, `Jsl(cm/s)`, `%Holdup`,`Db(mm)`,`Ub(cm/s)`,`Usg(m/s)`," +
-                                     "Reb, concentracion_id,`Concentración(ppm)`,  espumante_id,  espumante FROM view_resultados", CommandType.Text);
+                                     "`Reynold de burbuja`, concentracion_id,`Concentración(ppm)`,  espumante_id,  espumante FROM view_resultados", CommandType.Text);
                 DataTable dt = GetTableCommand(Command);
                 return dt;
             }
@@ -50,7 +50,7 @@ namespace DataAccess.Repository
             {
                 Abrir();
                 Command = GetCommand("select id, `Jg(cm/s)`, `DeltaP(Psi)`, `Jsl(cm/s)`, `%Holdup`,`Db(mm)`," +
-                                     "`Ub(cm/s)`,`Usg(m/s)`,Reb, concentracion_id,`Concentración(ppm)`," +
+                                     "`Ub(cm/s)`,`Usg(m/s)`,`Reynold de burbuja`, concentracion_id,`Concentración(ppm)`," +
                                      "espumante_id,  espumante from view_resultados where espumante_id="
                                      +espumante+" and " +"concentracion_id="+concentracion, CommandType.Text);
                 DataTable dt = GetTableCommand(Command);
