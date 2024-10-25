@@ -464,11 +464,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\SerialPort\\PuertoSerie.csproj",
+      "projectUniqueName": "C:\\Users\\jesus\\Documents\\CaidaPresion\\SerialPort\\PuertoSerie.csproj",
       "projectName": "PuertoSerie",
-      "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\SerialPort\\PuertoSerie.csproj",
+      "projectPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\SerialPort\\PuertoSerie.csproj",
       "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\SerialPort\\obj\\",
+      "outputPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\SerialPort\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -490,8 +490,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Controles.csproj": {
-              "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Controles.csproj"
+            "C:\\Users\\jesus\\Documents\\CaidaPresion\\Controles\\Controles.csproj": {
+              "projectPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Controles\\Controles.csproj"
             }
           }
         }
@@ -535,7 +535,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

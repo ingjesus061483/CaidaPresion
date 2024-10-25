@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\CaidaPresion.csproj": {}
+    "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\CaidaPresion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\CaidaPresion.csproj": {
+    "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\CaidaPresion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\CaidaPresion.csproj",
+        "projectUniqueName": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\CaidaPresion.csproj",
         "projectName": "CaidaPresion",
-        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\CaidaPresion.csproj",
+        "projectPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\CaidaPresion.csproj",
         "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CaidaPresion\\obj\\",
+        "outputPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,14 +33,14 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Controles.csproj": {
-                "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Controles.csproj"
+              "C:\\Users\\jesus\\Documents\\CaidaPresion\\Controles\\Controles.csproj": {
+                "projectPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Controles\\Controles.csproj"
               },
-              "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj": {
-                "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj"
+              "C:\\Users\\jesus\\Documents\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj": {
+                "projectPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj"
               },
-              "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\jesus\\Documents\\CaidaPresion\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -96,18 +96,18 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Controles.csproj": {
+    "C:\\Users\\jesus\\Documents\\CaidaPresion\\Controles\\Controles.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Controles.csproj",
+        "projectUniqueName": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Controles\\Controles.csproj",
         "projectName": "Controles",
-        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\Controles.csproj",
+        "projectPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Controles\\Controles.csproj",
         "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\Controles\\obj\\",
+        "outputPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\Controles\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -178,18 +178,18 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj": {
+    "C:\\Users\\jesus\\Documents\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj",
+        "projectUniqueName": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj",
         "projectName": "CxProgrammer",
-        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj",
+        "projectPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj",
         "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CxProgrammer\\obj\\",
+        "outputPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CxProgrammer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -243,18 +243,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\jesus\\Documents\\CaidaPresion\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\jesus\\Documents\\CaidaPresion\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -314,7 +314,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

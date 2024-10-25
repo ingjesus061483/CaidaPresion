@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj",
+      "projectUniqueName": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj",
       "projectName": "CxProgrammer",
-      "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj",
+      "projectPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CxProgrammer\\CxProgrammer.vbproj",
       "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\CaidaPresion\\CxProgrammer\\obj\\",
+      "outputPath": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CxProgrammer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -72,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
