@@ -9,9 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuertoSerie", "SerialPort\P
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "CxProgrammer", "CxProgrammer\CxProgrammer.vbproj", "{6B8B1B5C-A215-4FED-8C53-ABA0189D0AC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controles", "Controles\Controles.csproj", "{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controles", "Controles\Controles.csproj", "{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{27D911E6-9A02-4A5E-84B8-E1EA2C667782}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{27D911E6-9A02-4A5E-84B8-E1EA2C667782}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacion", "Aplicacion", "{8D2760EC-577D-4327-A731-8246B6E87F69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logica", "Logica", "{34B8D6AA-4A1B-4616-B164-79D9A73C383E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +46,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9D799C47-8B9A-4ED8-8079-4341F8661352} = {8D2760EC-577D-4327-A731-8246B6E87F69}
+		{DA460A8A-4A3C-4223-ACAD-CFF6BB1F5FBA} = {8D2760EC-577D-4327-A731-8246B6E87F69}
+		{6B8B1B5C-A215-4FED-8C53-ABA0189D0AC4} = {8D2760EC-577D-4327-A731-8246B6E87F69}
+		{55BE8F41-6F8F-46F3-BFB4-DC4317A643BF} = {8D2760EC-577D-4327-A731-8246B6E87F69}
+		{27D911E6-9A02-4A5E-84B8-E1EA2C667782} = {34B8D6AA-4A1B-4616-B164-79D9A73C383E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DD95384-A5B6-47E9-AC4B-01049C1F2734}
