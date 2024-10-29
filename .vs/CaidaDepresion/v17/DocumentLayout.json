@@ -27,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmvaloresiniciales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\frmvaloresiniciales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|C:\\Users\\jesus\\Documents\\CaidaPresion\\caidapresion\\frmvaloresiniciales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmvaloresiniciales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -63,7 +63,7 @@
       "RelativeMoniker": "D:0:0:{27D911E6-9A02-4A5E-84B8-E1EA2C667782}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|c:\\users\\jesus\\documents\\caidapresion\\caidapresion\\frmotrosresultados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|C:\\Users\\jesus\\Documents\\CaidaPresion\\caidapresion\\frmotrosresultados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9D799C47-8B9A-4ED8-8079-4341F8661352}|CaidaPresion\\CaidaPresion.csproj|solutionrelative:caidapresion\\frmotrosresultados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -116,14 +116,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "frmValoresIniciales.cs [Dise\u00F1o]",
+              "Title": "frmValoresIniciales.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmValoresIniciales.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmValoresIniciales.cs",
-              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmValoresIniciales.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CaidaPresion\\frmValoresIniciales.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmValoresIniciales.cs [Design]",
+              "RelativeToolTip": "CaidaPresion\\frmValoresIniciales.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-29T01:18:30.93Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -135,8 +135,7 @@
               "RelativeToolTip": "CaidaPresion\\frmCalibracion.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T00:50:21.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T00:50:21.179Z"
             },
             {
               "$type": "Document",
@@ -200,8 +199,7 @@
               "RelativeToolTip": "DataAccess\\Repository\\ResultadoRepository.cs",
               "ViewState": "AQIAAK4AAAAAAAAAAAAuwLsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T21:19:22.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T21:19:22.539Z"
             },
             {
               "$type": "Document",
@@ -213,8 +211,7 @@
               "RelativeToolTip": "DataAccess\\Repository\\OtrosResultadosRepository.cs",
               "ViewState": "AQIAAD0AAAAAAAAAAAAAwEoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T21:46:44.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T21:46:44.114Z"
             },
             {
               "$type": "Document",
@@ -226,8 +223,7 @@
               "RelativeToolTip": "DataAccess\\Repository\\GraficaRepository.cs",
               "ViewState": "AQIAACMAAAAAAAAAAAAuwDAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T00:42:18.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T00:42:18.655Z"
             },
             {
               "$type": "Document",
@@ -239,8 +235,7 @@
               "RelativeToolTip": "DataAccess\\Repository\\EspumanteRepository.cs",
               "ViewState": "AQIAAEcAAAAAAAAAAAAuwFsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T21:52:45.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T21:52:45.734Z"
             },
             {
               "$type": "Document",
@@ -252,8 +247,7 @@
               "RelativeToolTip": "DataAccess\\Repository\\EspumanteConcentracionRepository.cs",
               "ViewState": "AQIAACMAAAAAAAAAAAAAwC4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T12:36:37.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T12:36:37.186Z"
             },
             {
               "$type": "Document",
@@ -265,8 +259,7 @@
               "RelativeToolTip": "CaidaPresion\\Program.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAAwBoAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T12:43:06.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T12:43:06.886Z"
             },
             {
               "$type": "Document",
@@ -278,8 +271,7 @@
               "RelativeToolTip": "DataAccess\\Repository\\ConcentracionRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T05:34:49.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T05:34:49.651Z"
             },
             {
               "$type": "Document",
@@ -291,8 +283,7 @@
               "RelativeToolTip": "DataAccess\\Data.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAqwBUAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T05:23:18.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T05:23:18.753Z"
             },
             {
               "$type": "Document",
@@ -333,14 +324,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "frmEspumante.cs [Dise\u00F1o]",
+              "Title": "frmEspumante.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmEspumante.cs",
               "RelativeDocumentMoniker": "CaidaPresion\\frmEspumante.cs",
-              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmEspumante.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CaidaPresion\\frmEspumante.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\jesus\\Documents\\CaidaPresion\\CaidaPresion\\frmEspumante.cs [Design]",
+              "RelativeToolTip": "CaidaPresion\\frmEspumante.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T12:37:42.455Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
