@@ -1,17 +1,11 @@
 ﻿using System.Data;
-using System.Runtime.CompilerServices;
-using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using Controles;
 using DataAccess.Repository;
-using ZstdSharp.Unsafe;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace CaidaPresion
 {
     public partial class frmPrincipal : Form
     {
-
         string msg = "";
         double holdup;
         double ub;
@@ -35,7 +29,6 @@ namespace CaidaPresion
             resultadoRepository = _resultadoRepository;
             graficaRepository = _graficaRepository;
         }
-
         private void btnGraficar_Click(object sender, EventArgs e)
         {
             try
@@ -106,7 +99,6 @@ namespace CaidaPresion
                 ControlForm.GetMessage(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             btnCalibrar.Enabled = radioButton1.Checked;
@@ -116,26 +108,22 @@ namespace CaidaPresion
             txtDeltaP.Clear();
             txtJsl.Clear();
         }
-
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             btnCalibrar.Enabled = radioButton1.Checked;
             txtDeltaP.Focus();
         }
-
         private void btnCalibrar_Click(object sender, EventArgs e)
         {
             frmCalibracion form = new();
             form.ShowDialog();
             txtDeltaP.Text = ControlForm.textBox != null ? ControlForm.textBox.Text : "";
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             frmValoresIniciales frmValoresIniciales = new() { dt = Table.GetInitialValues() };
             frmValoresIniciales.ShowDialog();
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             frmOtrosResultados frmDatos = new()
@@ -147,8 +135,6 @@ namespace CaidaPresion
             };
             frmDatos.ShowDialog();
         }
-
-
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
@@ -290,17 +276,11 @@ namespace CaidaPresion
                         break;
                     }
             }
-
-
-
         }
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             Nuevo();
         }
-
         private void cmbParamGraficar_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -309,14 +289,12 @@ namespace CaidaPresion
                 {
                     LoadGraphic();
                 }
-
             }
             catch (Exception ex)
             {
                 ControlForm.GetMessage(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void cmbtipoGrafica_SelectedIndexChanged(object sender, EventArgs e)
         {
             var serie = Enum.Parse<SeriesChartType>(cmbtipoGrafica.SelectedValue.ToString());
@@ -325,7 +303,6 @@ namespace CaidaPresion
                 series.ChartType = serie;
             }
         }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Desea salir de esta aplicación", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -334,7 +311,6 @@ namespace CaidaPresion
                 Application.Exit();
             }
         }
-
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             AboutBox1 aboutBox1 = new();
@@ -345,13 +321,11 @@ namespace CaidaPresion
             if (WindowState == FormWindowState.Normal) { WindowState = FormWindowState.Maximized; }
             else if (WindowState == FormWindowState.Maximized) { WindowState = FormWindowState.Normal; }
         }
-
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal) { WindowState = FormWindowState.Minimized; }
             else if (WindowState == FormWindowState.Maximized) { WindowState = FormWindowState.Minimized; }
         }
-
         private void btnNuevoEspumante_Click(object sender, EventArgs e)
         {
             frmEspumante frmEspumante = new ()
@@ -363,8 +337,6 @@ namespace CaidaPresion
             frmEspumante.ShowDialog();
             ControlForm.FillCombo(espumanteRepository.GetDataTable(), arr, cmbEspumante);
 
-        }
-
-       
+        }       
     }
 }

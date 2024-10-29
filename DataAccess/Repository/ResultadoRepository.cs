@@ -6,13 +6,11 @@ namespace DataAccess.Repository
     {
         public override void Delete()
         {
-
             try
             {
                 Abrir();
                 Command = GetCommand("delete from resultados", CommandType.Text);
-                Command.ExecuteNonQuery();
-                
+                Command.ExecuteNonQuery();                
             }
             catch (Exception ex)
             {
@@ -59,15 +57,12 @@ namespace DataAccess.Repository
             catch(Exception ex)
             {
                 throw ex;
-
             }
             finally
             {
                 Cerrar();
             }
         }
-
-
         public override void Save(Dictionary<string, object> colection, ref int id)
         {
             try
@@ -179,18 +174,14 @@ namespace DataAccess.Repository
                 Cerrar();
             }
         }
-
-
         public override DataTable GetDataTable(int id)
         {
             throw new NotImplementedException();
         }
-
         public override void Update(Dictionary<string, object> colection, int id)
         {
             throw new NotImplementedException();
         }
-
         public override void Delete(int id)
         {
             throw new NotImplementedException();

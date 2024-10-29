@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO.Ports;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Controles;
+﻿using Controles;
 namespace CaidaPresion
 {
     public partial class frmCalibracion : Form
@@ -65,8 +55,6 @@ namespace CaidaPresion
         {
             try
             {
-
-
                 CxProgrammer.Ole.ExtreaerDatos("C:\\Users\\indir\\OneDrive\\Documentos\\Bkp PLc.cxp");
             }
             catch(Exception ex)

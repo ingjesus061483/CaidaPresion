@@ -176,10 +176,7 @@
           "WinForms.DataVisualization": "1.9.2"
         },
         "runtime": {
-          "Controles.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Controles.dll": {}
         }
       }
     }

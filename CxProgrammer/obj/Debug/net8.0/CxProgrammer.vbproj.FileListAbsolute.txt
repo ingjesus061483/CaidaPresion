@@ -34,3 +34,15 @@ C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CxProgrammer\obj\Debug\ne
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CxProgrammer\obj\Debug\net8.0\refint\CxProgrammer.dll
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CxProgrammer\obj\Debug\net8.0\CxProgrammer.pdb
 C:\Users\jesus\OneDrive\Documentos\GitHub\CaidaPresion\CxProgrammer\obj\Debug\net8.0\ref\CxProgrammer.dll
+C:\Users\jesus\Documents\CaidaPresion\CxProgrammer\bin\Debug\net8.0\CxProgrammer.deps.json
+C:\Users\jesus\Documents\CaidaPresion\CxProgrammer\bin\Debug\net8.0\CxProgrammer.dll
+C:\Users\jesus\Documents\CaidaPresion\CxProgrammer\bin\Debug\net8.0\CxProgrammer.pdb
+C:\Users\jesus\Documents\CaidaPresion\CxProgrammer\obj\Debug\net8.0\CxProgrammer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesus\Documents\CaidaPresion\CxProgrammer\obj\Debug\net8.0\CxProgrammer.AssemblyInfoInputs.cache
+C:\Users\jesus\Documents\CaidaPresion\CxProgrammer\obj\Debug\net8.0\CxProgrammer.AssemblyInfo.vb
+C:\Users\jesus\Documents\CaidaPresion\CxProgrammer\obj\Debug\net8.0\CxProgrammer.vbproj.CoreCompileInputs.cache
+C:\Users\jesus\Documents\CaidaPresion\CxProgrammer\obj\Debug\net8.0\CxProgrammer.sourcelink.json
+C:\Users\jesus\Documents\CaidaPresion\CxProgrammer\obj\Debug\net8.0\CxProgrammer.dll
+C:\Users\jesus\Documents\CaidaPresion\CxProgrammer\obj\Debug\net8.0\refint\CxProgrammer.dll
+C:\Users\jesus\Documents\CaidaPresion\CxProgrammer\obj\Debug\net8.0\CxProgrammer.pdb
+C:\Users\jesus\Documents\CaidaPresion\CxProgrammer\obj\Debug\net8.0\ref\CxProgrammer.dll
