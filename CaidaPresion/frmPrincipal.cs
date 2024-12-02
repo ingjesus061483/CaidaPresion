@@ -116,8 +116,16 @@ namespace CaidaPresion
         private void btnCalibrar_Click(object sender, EventArgs e)
         {
             frmCalibracion form = new();
+            ControlForm.Form=this;
+            ControlForm.textBox = txtJsl;
             form.ShowDialog();
-            txtDeltaP.Text = ControlForm.textBox != null ? ControlForm.textBox.Text : "";
+            if(!form .puertoSerial.SerialPort.IsOpen)
+            {
+                ControlForm.GetMessage("No hay puertos abiertos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+           // txtDeltaP.Text = ControlForm.textBox != null ? ControlForm.textBox.Text : "";
         }
         private void button3_Click(object sender, EventArgs e)
         {

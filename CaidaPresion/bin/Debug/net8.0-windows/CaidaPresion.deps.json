@@ -484,12 +484,18 @@
           "WinForms.DataVisualization": "1.9.2"
         },
         "runtime": {
-          "Controles.dll": {}
+          "Controles.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "CxProgrammer/1.0.0": {
         "runtime": {
-          "CxProgrammer.dll": {}
+          "CxProgrammer.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "DataAccess/1.0.0": {
@@ -498,7 +504,10 @@
           "MySql.Data": "9.0.0"
         },
         "runtime": {
-          "DataAccess.dll": {}
+          "DataAccess.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

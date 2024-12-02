@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("CxProgrammer"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbd445ecbd8bea3618da6603bc12152d477077fa"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33ce617ccb3dcca1e810978d601b1937d9fde52e"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("CxProgrammer"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("CxProgrammer"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")> 
