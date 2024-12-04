@@ -985,6 +985,7 @@ namespace CaidaPresion
             Controls.Add(panel1);
             Controls.Add(panel11);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmPrincipal";
